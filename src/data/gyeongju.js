@@ -16,6 +16,22 @@ export const trip = {
   arrival: 'Sono Calm Bomun Resort sits beside a lake. Taxi from Singyeongju Station, ₩18,000, about 20 minutes. You are leaving the city behind. Feel it.',
   transport: {
     headline: 'Getting Around Gyeongju',
+    mapsAndApps: {
+      apps: [
+        {
+          name: 'Naver Maps',
+          description: 'Naver Maps is the Google Maps of Korea — but it actually works here. Download it before you leave South Africa. When you open a location in the app, tap the Naver Maps button and it will navigate you there with live local transport, walking routes, and taxi options. Always shows your current GPS position.',
+          url: 'https://map.naver.com',
+          note: 'Download the Naver Map app from your app store before departure.',
+        },
+        {
+          name: 'Kakao Taxi',
+          description: 'Kakao Taxi is how Koreans book taxis. Safe, metered, no language barrier — you type the destination and the driver sees it in Korean. More reliable than hailing on the street, especially late at night.',
+          url: 'https://www.kakaomobility.com',
+          note: 'Download the Kakao T app from your app store before departure.',
+        },
+      ],
+    },
     tips: [
       {
         icon: '🚄',
@@ -26,16 +42,6 @@ export const trip = {
         icon: '💳',
         title: 'T-money Card',
         body: 'Your T-money card works here. Buses connect the main sites — Bulguksa, Tumuli Park, and the city centre — but the routes are infrequent. A taxi is often faster.',
-      },
-      {
-        icon: '🚕',
-        title: 'Kakao Taxi',
-        body: 'Gyeongju is spread out — the sites are too far apart to walk between comfortably. Use Kakao Taxi to move between Bulguksa, the tumuli, the observatory, and your hotel.',
-      },
-      {
-        icon: '🗺️',
-        title: 'Naver Maps',
-        body: 'Essential here. Gyeongju\'s sites don\'t always have obvious street addresses. Search by name in Korean (or copy from this app) and Naver will find them.',
       },
     ],
     closing: 'If you get lost — show your phone to any Korean. They will help.',
@@ -64,6 +70,7 @@ export const days = [
         practical: 'Naver Maps for navigation. Show the driver "소노캄 보문" if needed. Kakao Taxi from the station. If you get lost — show your phone to any Korean. They will help you find your way.',
         gradient: 'linear-gradient(135deg, #0c0a1e 0%, #181535 50%, #100e28 100%)',
         accent: '#fbbf24',
+        coords: { lat: 35.8439, lng: 129.2118 },
       },
       {
         id: 'bulguksa',
@@ -80,6 +87,7 @@ export const days = [
         practical: '₩6,000 entry. 40-minute bus from Gyeongju centre (Bus 10 or 11). Book taxi for the return.',
         gradient: 'linear-gradient(135deg, #0a1f0e 0%, #163a1a 50%, #0d2a12 100%)',
         accent: '#4ade80',
+        coords: { lat: 35.7893, lng: 129.3316 },
       },
       {
         id: 'seokguram',
@@ -96,6 +104,7 @@ export const days = [
         practical: 'Included in Bulguksa ticket. Shuttle from Bulguksa ₩1,200. Best before midday crowds.',
         gradient: 'linear-gradient(135deg, #1a1408 0%, #3a2e12 50%, #2a2010 100%)',
         accent: '#fbbf24',
+        coords: { lat: 35.7953, lng: 129.3487 },
       },
       {
         id: 'cheomseongdae',
@@ -112,6 +121,7 @@ export const days = [
         practical: '₩3,000 entry (includes adjacent sites). In central Gyeongju — walkable from most hotels.',
         gradient: 'linear-gradient(135deg, #081020 0%, #121e3a 50%, #0c1830 100%)',
         accent: '#60a5fa',
+        coords: { lat: 35.8348, lng: 129.2194 },
       },
       {
         id: 'tumuli',
@@ -128,6 +138,7 @@ export const days = [
         practical: '₩3,000 (combined with Cheomseongdae ticket). Closes at 10 PM.',
         gradient: 'linear-gradient(135deg, #0a160a 0%, #162814 50%, #0e1e10 100%)',
         accent: '#86efac',
+        coords: { lat: 35.8355, lng: 129.2139 },
       },
       {
         id: 'museum',
@@ -144,6 +155,7 @@ export const days = [
         practical: 'Free entry. Closes 6 PM (last entry 5:30 PM). 15-minute walk from Tumuli.',
         gradient: 'linear-gradient(135deg, #1a1208 0%, #342614 50%, #261c0e 100%)',
         accent: '#f59e0b',
+        coords: { lat: 35.8353, lng: 129.2249 },
       },
       {
         id: 'banwolseong',
@@ -160,6 +172,7 @@ export const days = [
         practical: 'Free. Open until 10 PM. Floodlit at night. Taxi back to Sono Calm Bomun Resort: ₩8,000.',
         gradient: 'linear-gradient(135deg, #0e0c20 0%, #1c1a3a 50%, #141228 100%)',
         accent: '#c4b5fd',
+        coords: { lat: 35.8336, lng: 129.2227 },
       },
     ],
   },

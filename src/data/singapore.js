@@ -59,6 +59,7 @@ export const days = [
         practical: 'Yotelair is in Terminal 3, two minutes from Jewel by walkway. Jewel connects to T1, T2, and T3. No entry fee. Bags can be stored at Yotelair before your room is ready.',
         gradient: 'linear-gradient(135deg, #061824 0%, #0d3352 50%, #0a2540 100%)',
         accent: '#38bdf8',
+        coords: { lat: 1.3592, lng: 103.9896 },
       },
       {
         id: 'gardens',
@@ -75,6 +76,7 @@ export const days = [
         practical: 'Outdoor gardens free. Domes SGD $28 each. Book online.',
         gradient: 'linear-gradient(135deg, #0a3d2e 0%, #1a6b4a 50%, #0d4a35 100%)',
         accent: '#4ade80',
+        coords: { lat: 1.2816, lng: 103.8636 },
       },
       {
         id: 'maxwell',
@@ -91,6 +93,7 @@ export const days = [
         practical: 'Cash. Most dishes under SGD $6. Closes 3 PM.',
         gradient: 'linear-gradient(135deg, #3d1a0a 0%, #7a3510 50%, #5c2a0d 100%)',
         accent: '#fb923c',
+        coords: { lat: 1.2804, lng: 103.8448 },
       },
       {
         id: 'chinatown',
@@ -107,6 +110,7 @@ export const days = [
         practical: 'Temple free. Heritage Centre SGD $18. Walk from Maxwell — 5 min.',
         gradient: 'linear-gradient(135deg, #3d0a1a 0%, #8b1a3a 50%, #5c0d26 100%)',
         accent: '#f472b6',
+        coords: { lat: 1.2815, lng: 103.8444 },
       },
       {
         id: 'mbs-sky',
@@ -123,6 +127,7 @@ export const days = [
         practical: 'Observation Deck SGD $32. Book ahead. Closes 10 PM.',
         gradient: 'linear-gradient(135deg, #0a1a3d 0%, #1a3a8b 50%, #0d265c 100%)',
         accent: '#60a5fa',
+        coords: { lat: 1.2834, lng: 103.8607 },
       },
       {
         id: 'supertree-night',
@@ -139,6 +144,7 @@ export const days = [
         practical: 'Free from outside the fence. SGD $5 entry to the grove itself.',
         gradient: 'linear-gradient(135deg, #1a0a3d 0%, #3d1a8b 50%, #26104a 100%)',
         accent: '#a78bfa',
+        coords: { lat: 1.2826, lng: 103.8637 },
       },
     ],
   },
@@ -163,6 +169,7 @@ export const days = [
         practical: 'Gardens free. Orchid Garden SGD $15. Arrive early to beat heat.',
         gradient: 'linear-gradient(135deg, #0a2d1a 0%, #1a5c35 50%, #0d3d22 100%)',
         accent: '#34d399',
+        coords: { lat: 1.3152, lng: 103.8152 },
       },
       {
         id: 'little-india',
@@ -179,6 +186,7 @@ export const days = [
         practical: 'Temple free. Shoes off, dress modestly. 10-min walk from Bugis MRT.',
         gradient: 'linear-gradient(135deg, #3d1f0a 0%, #8b4a10 50%, #5c3010 100%)',
         accent: '#fbbf24',
+        coords: { lat: 1.3066, lng: 103.8517 },
       },
       {
         id: 'haji-lane',
@@ -195,6 +203,7 @@ export const days = [
         practical: 'All walkable from Bugis MRT. Mosque: cover up, scarves available at door.',
         gradient: 'linear-gradient(135deg, #1a1a0a 0%, #4a4a10 50%, #2d2d0d 100%)',
         accent: '#eab308',
+        coords: { lat: 1.3026, lng: 103.8609 },
       },
       {
         id: 'clarke-quay',
@@ -211,6 +220,7 @@ export const days = [
         practical: 'Free to walk. Grab dinner here or head back to Chinatown. Leave the city by 21:00 — see below.',
         gradient: 'linear-gradient(135deg, #0a1a2d 0%, #1a3d5c 50%, #0d2640 100%)',
         accent: '#38bdf8',
+        coords: { lat: 1.2904, lng: 103.8465 },
       },
       {
         id: 'sg-departure',
@@ -227,6 +237,7 @@ export const days = [
         practical: 'The flight crosses into Korean Standard Time (KST) — one hour ahead of Singapore. Sleep on the plane. Korea is waiting.',
         gradient: 'linear-gradient(135deg, #061824 0%, #0d3352 50%, #0a2540 100%)',
         accent: '#38bdf8',
+        coords: { lat: 1.3592, lng: 103.9896 },
       },
     ],
   },

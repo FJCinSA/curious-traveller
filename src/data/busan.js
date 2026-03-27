@@ -16,6 +16,23 @@ export const trip = {
   arrival: 'You have been travelling since yesterday. Shilla Stay Haeundae is in the best neighbourhood in Busan. Take Airport Bus 307 — 60 minutes, ₩3,000 with your T-money card. Or taxi if you need the comfort — ₩45,000 to 55,000. Check in. Sleep. Tomorrow Jinhae is waiting.',
   transport: {
     headline: 'Getting Around Busan',
+    mapsAndApps: {
+      downloadReminder: 'Before you land in Korea — download these two apps on both phones while you still have good wifi in Singapore: Naver Map and Kakao T. They will save you every single day.',
+      apps: [
+        {
+          name: 'Naver Maps',
+          description: 'Naver Maps is the Google Maps of Korea — but it actually works here. Download it before you leave South Africa. When you open a location in the app, tap the Naver Maps button and it will navigate you there with live local transport, walking routes, and taxi options. Always shows your current GPS position.',
+          url: 'https://map.naver.com',
+          note: 'Download the Naver Map app from your app store before departure.',
+        },
+        {
+          name: 'Kakao Taxi',
+          description: 'Kakao Taxi is how Koreans book taxis. Safe, metered, no language barrier — you type the destination and the driver sees it in Korean. More reliable than hailing on the street, especially late at night.',
+          url: 'https://www.kakaomobility.com',
+          note: 'Download the Kakao T app from your app store before departure.',
+        },
+      ],
+    },
     tips: [
       {
         icon: '💳',
@@ -36,16 +53,6 @@ export const trip = {
         icon: '🚇',
         title: 'Busan Metro',
         body: 'Four lines covering the whole city. Haeundae, Jagalchi, Gamcheon, and the city centre are all on the metro. Clean, frequent, and air-conditioned.',
-      },
-      {
-        icon: '🗺️',
-        title: 'Naver Maps',
-        body: 'Download Naver Maps — it is far better than Google Maps for Korea. Shows real-time transit, walking routes, and Korean addresses correctly. Use it for everything.',
-      },
-      {
-        icon: '🚕',
-        title: 'Kakao Taxi',
-        body: 'Korea\'s taxi app — like Grab but for Korea. Download it before you need it. Set your destination in English, price shown upfront. More reliable than hailing a cab on the street.',
       },
     ],
     closing: 'If you get lost — show your phone to any Korean. They will help.',
@@ -74,6 +81,7 @@ export const days = [
         practical: 'Download Naver Maps before you arrive — it works far better than Google in Korea. Kakao Taxi for on-demand taxis. If you get lost — show your phone to any Korean. They will help you find your way.',
         gradient: 'linear-gradient(135deg, #041220 0%, #0a2438 60%, #0d3050 100%)',
         accent: '#38bdf8',
+        coords: { lat: 35.1795, lng: 128.9384 },
       },
       {
         id: 'haeundae',
@@ -90,6 +98,7 @@ export const days = [
         practical: 'Shilla Stay Haeundae is walking distance from the beach. No entry fee.',
         gradient: 'linear-gradient(135deg, #041220 0%, #0a2438 60%, #0d3050 100%)',
         accent: '#38bdf8',
+        coords: { lat: 35.1588, lng: 129.1604 },
       },
       {
         id: 'gwangalli-night',
@@ -106,6 +115,7 @@ export const days = [
         practical: 'Free. Convenience stores on the beach road for drinks and snacks. Kakao Taxi to get back. T-money card works.',
         gradient: 'linear-gradient(135deg, #08082e 0%, #10104a 50%, #0a0a30 100%)',
         accent: '#818cf8',
+        coords: { lat: 35.1532, lng: 129.1185 },
       },
     ],
   },
@@ -130,6 +140,7 @@ export const days = [
         practical: 'Jinhae is 70km from Haeundae. Festival traffic builds from 9 AM. Your early start is the whole plan. T-money card not needed today — your taxi handles everything. Naver Maps if needed.',
         gradient: 'linear-gradient(135deg, #1a0826 0%, #2d1245 50%, #200a38 100%)',
         accent: '#f9a8d4',
+        coords: { lat: 35.1565, lng: 128.6676 },
       },
     ],
   },
@@ -154,6 +165,7 @@ export const days = [
         practical: '₩2,000 entry. Wear proper shoes — steep stairs everywhere. Opens 9 AM. Kakao Taxi back to centre.',
         gradient: 'linear-gradient(135deg, #1a0a08 0%, #3d2210 50%, #2a1508 100%)',
         accent: '#fb923c',
+        coords: { lat: 35.0979, lng: 128.9929 },
       },
       {
         id: 'jagalchi',
@@ -170,6 +182,7 @@ export const days = [
         practical: 'Ground floor: buy raw. Upper floors: eat cooked. Cash. Very cheap.',
         gradient: 'linear-gradient(135deg, #04141a 0%, #082836 50%, #061c28 100%)',
         accent: '#22d3ee',
+        coords: { lat: 35.0968, lng: 129.0286 },
       },
       {
         id: 'biff-square',
@@ -186,6 +199,7 @@ export const days = [
         practical: 'Free to walk. 10 minutes from Jagalchi. Budget ₩10,000–20,000 for street food.',
         gradient: 'linear-gradient(135deg, #0f0a1a 0%, #1e1232 50%, #160e28 100%)',
         accent: '#a78bfa',
+        coords: { lat: 35.0972, lng: 129.0279 },
       },
     ],
   },
@@ -210,6 +224,7 @@ export const days = [
         practical: '₩1,000 entry. 40-minute taxi from Haeundae. Worth every minute of the early start. Kakao Taxi for the return.',
         gradient: 'linear-gradient(135deg, #0a1f14 0%, #163a22 50%, #0d2a1a 100%)',
         accent: '#4ade80',
+        coords: { lat: 35.1876, lng: 129.2218 },
       },
       {
         id: 'dongbaek',
@@ -226,6 +241,7 @@ export const days = [
         practical: 'Free. 15-minute walk from Shilla Stay Haeundae along the beach road.',
         gradient: 'linear-gradient(135deg, #0a1f2e 0%, #163352 50%, #0d2840 100%)',
         accent: '#34d399',
+        coords: { lat: 35.1588, lng: 129.1640 },
       },
       {
         id: 'spaland',
@@ -242,6 +258,7 @@ export const days = [
         practical: '₩18,000–22,000 entry. Open 6 AM–midnight. Spend at least 3 hours.',
         gradient: 'linear-gradient(135deg, #1a0a22 0%, #30123d 50%, #240d2e 100%)',
         accent: '#c084fc',
+        coords: { lat: 35.1692, lng: 129.1319 },
       },
     ],
   },

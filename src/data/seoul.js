@@ -17,6 +17,22 @@ export const trip = {
   arrival: 'Grand Walkerhill sits above the Han River. Take Line 5 to Gwangnaru Station then a short taxi. Eight nights in one of the great cities of the world. Take your time getting there.',
   transport: {
     headline: 'Getting Around Seoul',
+    mapsAndApps: {
+      apps: [
+        {
+          name: 'Naver Maps',
+          description: 'Naver Maps is the Google Maps of Korea — but it actually works here. Download it before you leave South Africa. When you open a location in the app, tap the Naver Maps button and it will navigate you there with live local transport, walking routes, and taxi options. Always shows your current GPS position.',
+          url: 'https://map.naver.com',
+          note: 'Download the Naver Map app from your app store before departure.',
+        },
+        {
+          name: 'Kakao Taxi',
+          description: 'Kakao Taxi is how Koreans book taxis. Safe, metered, no language barrier — you type the destination and the driver sees it in Korean. More reliable than hailing on the street, especially late at night.',
+          url: 'https://www.kakaomobility.com',
+          note: 'Download the Kakao T app from your app store before departure.',
+        },
+      ],
+    },
     tips: [
       {
         icon: '💳',
@@ -27,16 +43,6 @@ export const trip = {
         icon: '🚇',
         title: 'Seoul Metro',
         body: 'Nine lines, 300+ stations — Seoul\'s metro goes everywhere. Gyeongbokgung, Insadong, Hongdae, Itaewon, Myeongdong, Namsan, Han River parks. Everything on the map is on the metro.',
-      },
-      {
-        icon: '🗺️',
-        title: 'Naver Maps',
-        body: 'Still better than Google Maps in Korea. Use it for walking directions, transit routes, and finding restaurants by name. The English mode works well in Seoul.',
-      },
-      {
-        icon: '🚕',
-        title: 'Kakao Taxi',
-        body: 'Seoul has more taxis than any city you\'ve visited. Kakao Taxi finds one in under two minutes, almost anywhere, day or night. Essential for late evenings and anywhere the metro doesn\'t quite reach.',
       },
       {
         icon: '🚄',
@@ -75,6 +81,7 @@ export const days = [
         practical: 'Book SRT at the korail.go.kr website or the Let\'s Korail app. T-money card for all subway transfers. Show the driver "그랜드 워커힐 서울" if needed. If you get lost — show your phone to any Korean. They will help you find your way.',
         gradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
         accent: '#f59e0b',
+        coords: { lat: 37.4854, lng: 127.0947 },
       },
       {
         id: 'walkerhill',
@@ -91,6 +98,7 @@ export const days = [
         practical: 'The hotel shuttle runs to Gangbyeon Station (Line 2) every 20 minutes. Keep the schedule. Seven nights here — this hill is home.',
         gradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
         accent: '#f59e0b',
+        coords: { lat: 37.5461, lng: 127.0857 },
       },
       {
         id: 'han-river-night',
@@ -107,6 +115,7 @@ export const days = [
         practical: 'Free. Bring a jacket — April evenings are cool on the river.',
         gradient: 'linear-gradient(135deg, #08101e 0%, #101c36 50%, #0c1828 100%)',
         accent: '#38bdf8',
+        coords: { lat: 37.5446, lng: 127.0738 },
       },
     ],
   },
@@ -131,6 +140,7 @@ export const days = [
         practical: '₩3,000 entry. Free if wearing hanbok. Subway: Gyeongbokgung Station (Line 3).',
         gradient: 'linear-gradient(135deg, #0a1f08 0%, #182e10 50%, #0e2008 100%)',
         accent: '#86efac',
+        coords: { lat: 37.5796, lng: 126.9770 },
       },
       {
         id: 'hanbok',
@@ -147,6 +157,7 @@ export const days = [
         practical: '₩15,000–25,000 for 2 hours including accessories and hair styling.',
         gradient: 'linear-gradient(135deg, #1a0820 0%, #2e1038 50%, #220c2c 100%)',
         accent: '#e879f9',
+        coords: { lat: 37.5769, lng: 126.9768 },
       },
       {
         id: 'bukchon',
@@ -163,6 +174,7 @@ export const days = [
         practical: 'Free. 10-minute walk from Gyeongbokgung north gate. Steep hills — wear good shoes.',
         gradient: 'linear-gradient(135deg, #1a0e08 0%, #2e1c10 50%, #221408 100%)',
         accent: '#fdba74',
+        coords: { lat: 37.5826, lng: 126.9831 },
       },
       {
         id: 'insadong',
@@ -179,6 +191,7 @@ export const days = [
         practical: 'Free to walk. Budget ₩20,000–40,000 for tea and snacks. Subway: Anguk (Line 3).',
         gradient: 'linear-gradient(135deg, #14100a 0%, #261e10 50%, #1c1608 100%)',
         accent: '#fde68a',
+        coords: { lat: 37.5735, lng: 126.9850 },
       },
     ],
   },
@@ -203,6 +216,7 @@ export const days = [
         practical: 'Free. Subway: Yeouido Station (Lines 5 & 9). Bring cash for street food vendors.',
         gradient: 'linear-gradient(135deg, #1e0c2a 0%, #341545 50%, #280e38 100%)',
         accent: '#f0abfc',
+        coords: { lat: 37.5262, lng: 126.9249 },
       },
       {
         id: 'han-river-yeouido',
@@ -219,6 +233,7 @@ export const days = [
         practical: 'Free. Bicycle rental ₩3,000/hour. 63 Building observation deck ₩27,000.',
         gradient: 'linear-gradient(135deg, #061420 0%, #0e2438 50%, #0a1c2e 100%)',
         accent: '#7dd3fc',
+        coords: { lat: 37.5240, lng: 126.9354 },
       },
     ],
   },
@@ -243,6 +258,7 @@ export const days = [
         practical: '₩8,000 (palace only) or ₩5,000 additional for Huwon tour. MUST BOOK AHEAD in April.',
         gradient: 'linear-gradient(135deg, #0a1e0c 0%, #163018 50%, #0e2410 100%)',
         accent: '#4ade80',
+        coords: { lat: 37.5794, lng: 126.9909 },
       },
       {
         id: 'jongmyo',
@@ -259,6 +275,7 @@ export const days = [
         practical: '₩1,000 entry (or free Saturday). Subway: Jongno 3-ga (Lines 1, 3, 5).',
         gradient: 'linear-gradient(135deg, #0e0c08 0%, #1c1810 50%, #161208 100%)',
         accent: '#fde68a',
+        coords: { lat: 37.5745, lng: 126.9939 },
       },
       {
         id: 'gwangjang',
@@ -275,6 +292,7 @@ export const days = [
         practical: 'Cash only. Full meal under ₩15,000. Subway: Jongno 5-ga (Line 1).',
         gradient: 'linear-gradient(135deg, #1a0c08 0%, #2e1810 50%, #22120a 100%)',
         accent: '#fb923c',
+        coords: { lat: 37.5702, lng: 127.0079 },
       },
     ],
   },
@@ -300,6 +318,7 @@ export const days = [
         practical: '₩16,000 entry. Scrub-cloth suits provided. No tattoo policy — check with staff.',
         gradient: 'linear-gradient(135deg, #1a0a1e 0%, #2e1238 50%, #240e2c 100%)',
         accent: '#c084fc',
+        coords: { lat: 37.5322, lng: 126.9645 },
       },
       {
         id: 'yongsan',
@@ -316,6 +335,7 @@ export const days = [
         practical: 'Free to browse. Subway: Yongsan Station (Line 1 & KTX). 5 minutes from Dragon Hill.',
         gradient: 'linear-gradient(135deg, #0c1020 0%, #162038 50%, #101828 100%)',
         accent: '#60a5fa',
+        coords: { lat: 37.5285, lng: 126.9641 },
       },
     ],
   },
@@ -340,6 +360,7 @@ export const days = [
         practical: 'Mountain free. Cable car ₩12,500 return. N Seoul Tower entry ₩21,000 (observation deck).',
         gradient: 'linear-gradient(135deg, #0a140a 0%, #162014 50%, #101810 100%)',
         accent: '#6ee7b7',
+        coords: { lat: 37.5511, lng: 126.9882 },
       },
       {
         id: 'n-seoul-tower',
@@ -356,6 +377,7 @@ export const days = [
         practical: 'Observation deck ₩21,000. Cable car included from Namsan base.',
         gradient: 'linear-gradient(135deg, #08101e 0%, #121e36 50%, #0e1828 100%)',
         accent: '#93c5fd',
+        coords: { lat: 37.5512, lng: 126.9882 },
       },
       {
         id: 'myeongdong',
@@ -372,6 +394,7 @@ export const days = [
         practical: 'Free to walk. Budget ₩20,000–40,000 for street food. Subway: Myeongdong Station (Line 4).',
         gradient: 'linear-gradient(135deg, #1a100a 0%, #2e1c10 50%, #22160a 100%)',
         accent: '#fca5a5',
+        coords: { lat: 37.5631, lng: 126.9858 },
       },
     ],
   },
@@ -397,6 +420,7 @@ export const days = [
         practical: 'Budget ₩40,000–60,000 per person with drinks. Cash preferred. Mapo-daero has 20+ options.',
         gradient: 'linear-gradient(135deg, #1e0a08 0%, #381210 50%, #2c0e0c 100%)',
         accent: '#f87171',
+        coords: { lat: 37.5495, lng: 126.9092 },
       },
       {
         id: 'hongdae',
@@ -413,6 +437,7 @@ export const days = [
         practical: '15-minute walk from Mapo. Cover charge ₩10,000–20,000. Last subway 00:30 — or Kakao Taxi home.',
         gradient: 'linear-gradient(135deg, #0e081e 0%, #1a1038 50%, #14102c 100%)',
         accent: '#a78bfa',
+        coords: { lat: 37.5571, lng: 126.9253 },
       },
     ],
   },
@@ -437,6 +462,7 @@ export const days = [
         practical: 'Exterior free. Exhibitions ₩5,000–15,000. Subway: Dongdaemun History & Culture Park (Lines 2, 4, 5).',
         gradient: 'linear-gradient(135deg, #101020 0%, #1c1c3a 50%, #18182e 100%)',
         accent: '#818cf8',
+        coords: { lat: 37.5671, lng: 127.0096 },
       },
       {
         id: 'banpo-bridge',
@@ -453,6 +479,7 @@ export const days = [
         practical: 'Free. Subway: Express Bus Terminal (Lines 3, 7, 9) + 10-minute walk to river.',
         gradient: 'linear-gradient(135deg, #060e20 0%, #0e1c3c 50%, #0a1830 100%)',
         accent: '#7dd3fc',
+        coords: { lat: 37.5083, lng: 126.9997 },
       },
       {
         id: 'itaewon',
@@ -469,6 +496,7 @@ export const days = [
         practical: 'Free to walk. Budget ₩30,000–50,000 for lunch. Subway: Itaewon Station (Line 6).',
         gradient: 'linear-gradient(135deg, #100c08 0%, #201810 50%, #18120c 100%)',
         accent: '#fcd34d',
+        coords: { lat: 37.5344, lng: 126.9935 },
       },
     ],
   },
@@ -493,6 +521,7 @@ export const days = [
         practical: 'CX419 — Cathay Pacific to Hong Kong. Flight time: 3 hours. Arrives Hong Kong 23:00. Your boarding pass covers both CX419 and the onward CX749.',
         gradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
         accent: '#f59e0b',
+        coords: { lat: 37.4602, lng: 126.4407 },
       },
       {
         id: 'hk-transit',
@@ -511,6 +540,7 @@ export const days = [
         practical: 'CX749 departs 01:05. Arrives Johannesburg OR Tambo 07:55. Your boarding pass was issued in Seoul. Just follow the signs.',
         gradient: 'linear-gradient(135deg, #08081e 0%, #10103a 50%, #0c0c28 100%)',
         accent: '#a78bfa',
+        coords: { lat: 22.3080, lng: 113.9185 },
       },
     ],
   },

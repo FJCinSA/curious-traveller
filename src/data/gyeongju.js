@@ -19,7 +19,7 @@ export const trip = {
       {
         icon: '🚄',
         title: 'KTX from Busan',
-        body: 'From Bujeon Station in Busan — KTX to Singyeongju, 20 minutes, ₩8,400. Then a taxi from Singyeongju Station to Sono Calm Bomun Resort (about 15 minutes, ₩10,000–13,000).',
+        body: 'From Bujeon Station in Busan — KTX to Singyeongju, 20 minutes, ₩8,400. Then a taxi from Singyeongju Station to Sono Calm Bomun Resort: ₩18,000, about 15 minutes.',
       },
       {
         icon: '💳',

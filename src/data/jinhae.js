@@ -15,26 +15,31 @@ export const trip = {
   heroAccent: '#f9a8d4',
   transport: {
     headline: 'Getting to Jinhae',
-    warning: 'Ask the hotel tonight to book your taxi for 07:00 tomorrow morning. Do not leave this until morning — the festival crowds move fast and you want to arrive before them.',
+    warning: 'Ask the hotel front desk tonight to book a taxi for 07:00 tomorrow morning. The cherry trees will not wait.',
     tips: [
       {
         icon: '🚖',
-        title: 'Hotel Taxi (07:00)',
-        body: 'Your hotel-booked taxi departs at 07:00. The drive is around 50–60 minutes. Get there before the crowds and you will have the canal almost to yourselves.',
+        title: 'Step 1 — Taxi to Seobu Terminal (07:00)',
+        body: 'Taxi from Shilla Stay Haeundae to Seobu Intercity Bus Terminal. About 30 minutes, ₩25,000. Ask the hotel front desk tonight to book it for 07:00.',
+      },
+      {
+        icon: '🚌',
+        title: 'Step 2 — Bus to Jinhae (07:30)',
+        body: 'Buses from Seobu Terminal to Jinhae run every 30 minutes from 06:00. Take the 07:30 — journey time 60 minutes, fare ₩2,800 with your T-money card. You arrive at 08:30, before the crowds.',
       },
       {
         icon: '💳',
         title: 'T-money Card',
-        body: 'Bring your T-money card from Busan — it works in Jinhae too, on local buses if you need them during the day.',
+        body: 'Your T-money card from Busan covers the bus fare both ways — ₩2,800 per journey.',
       },
       {
-        icon: '🚕',
-        title: 'Kakao Taxi (Return)',
-        body: 'Use Kakao Taxi for the return journey. Set the destination to Shilla Stay Haeundae. Straightforward from the festival area.',
+        icon: '🚌',
+        title: 'Return Bus',
+        body: 'Buses from Jinhae back to Seobu Terminal run frequently throughout the day. Last bus at 21:00. Then taxi or metro back to Haeundae from the terminal.',
       },
       {
         icon: '🚶',
-        title: 'On Foot',
+        title: 'On Foot in Jinhae',
         body: 'The entire festival area — Yeojwacheon Stream, Jinhae Tower, the naval base entrance — is walkable. Follow the canal. The petals will guide you.',
       },
     ],

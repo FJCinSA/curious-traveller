@@ -18,8 +18,18 @@ export const trip = {
     tips: [
       {
         icon: '💳',
-        title: 'T-money Card',
-        body: 'Korea\'s contactless transit card — buy one at the airport arrivals or any GS25/CU/7-Eleven. Works on every subway line, every city bus, and in taxis. Top up at any convenience store. One card covers your whole trip across Korea.',
+        title: 'T-money Card — Buy First',
+        body: 'Before you do anything else at the airport: buy a T-money card at the convenience store in arrivals. It covers every bus, metro, and taxi in Korea. One card for the whole trip.',
+      },
+      {
+        icon: '🚌',
+        title: 'Airport Bus 307 (to Haeundae)',
+        body: 'Blue express bus from outside arrivals — direct to Haeundae in 60 minutes, ₩3,000 with T-money. Look for the bus stop signs as you exit. Simple, frequent, and fast.',
+      },
+      {
+        icon: '🚖',
+        title: 'Airport Taxi (to Haeundae)',
+        body: '₩45,000–55,000, about 50 minutes. More comfortable with luggage after a night flight. Standard metered taxis only — no need to negotiate.',
       },
       {
         icon: '🚇',

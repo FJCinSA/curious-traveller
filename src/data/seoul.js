@@ -39,8 +39,13 @@ export const trip = {
       },
       {
         icon: '🚄',
-        title: 'SRT from Gyeongju',
-        body: 'From Singyeongju Station — SRT to Seoul Suseo Station, about 2 hours, ₩41,000. Suseo is on the eastern edge of the city, well connected to the metro.',
+        title: 'Train from Gyeongju',
+        body: 'From Singyeongju Station to Seoul — two options: SRT to Suseo Station (2 hours, ₩41,000, book at srt.co.kr) or KTX to Seoul Station (2h10min, ₩52,000, book at letskorail.com). Recommend booking before you leave South Africa.',
+      },
+      {
+        icon: '🏨',
+        title: 'Suseo / Seoul Station → Grand Walkerhill',
+        body: 'From Seoul Station: take Subway Line 5 to Gwangnaru Station, then a short taxi — ₩8,000, about 10 minutes. Total journey from Seoul Station to the hotel is around 40 minutes.',
       },
     ],
     closing: 'If you get lost — show your phone to any Korean. They will help.',

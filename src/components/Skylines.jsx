@@ -1,4 +1,8 @@
-/* All city skyline SVGs. Gradient IDs are namespaced per city to avoid DOM conflicts. */
+// All city skyline SVGs used as card backgrounds and trip-page heroes.
+// Gradient IDs are namespaced per city (e.g. skyGrad-sg, skyGrad-busan) to avoid
+// conflicts when multiple skylines are rendered simultaneously on the home screen.
+// Window opacity uses a deterministic formula instead of Math.random() so the output
+// is stable across re-renders and React Strict Mode double-invocations.
 
 const stars = [
   [50,30],[120,15],[200,45],[310,20],[420,35],[550,18],[650,40],[720,12],
@@ -9,6 +13,17 @@ const stars = [
 // Deterministic window opacity — no Math.random() in render
 function winOpacity(row, col) {
   return 0.08 + ((row * 4 + col * 7) % 10) * 0.028
+}
+
+// Shared lookup map: trip.theme string → skyline component.
+// Imported by Home.jsx (card grid) and Hero.jsx (trip page header) so the
+// mapping is defined once and never duplicated.
+export const skylineMap = {
+  singapore: SingaporeSkyline,
+  busan:     BusanSkyline,
+  jinhae:    JinhaeSkyline,
+  gyeongju:  GyeongjuSkyline,
+  seoul:     SeoulSkyline,
 }
 
 // ─── SINGAPORE ───────────────────────────────────────────────────────────────

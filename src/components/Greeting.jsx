@@ -1,37 +1,41 @@
+// Personalised greeting shown on the home screen below the header.
+// Reads the device clock and today's date, matches against the trip itinerary,
+// and returns one of three states:
+//   • A specific honeymoon-day message (if today is a trip day)
+//   • A countdown message (before the trip starts)
+//   • A memory message (after the trip ends)
 import { useMemo } from 'react'
-import { days } from '../data/itinerary'
+import { days, TRIP_START } from '../data/itinerary'
 import styles from './Greeting.module.css'
 
+// Returns the appropriate time-of-day salutation for the current hour
 function salutation(hour) {
   if (hour < 12) return 'Good morning'
   if (hour < 17) return 'Good afternoon'
   return 'Good evening'
 }
 
+// Returns today's date as a YYYY-MM-DD string — matches the format used in itinerary.js
 function todayISO() {
-  const d = new Date()
-  const y = d.getFullYear()
-  const m = String(d.getMonth() + 1).padStart(2, '0')
-  const dd = String(d.getDate()).padStart(2, '0')
-  return `${y}-${m}-${dd}`
+  return new Date().toISOString().slice(0, 10)
 }
 
 export default function Greeting() {
+  // Computed once at mount — the greeting only needs to change on page refresh,
+  // not dynamically while the app is open, so an empty dependency array is correct.
   const content = useMemo(() => {
     const hour = new Date().getHours()
     const greeting = salutation(hour)
     const today = todayISO()
-    const entry = days.find(d => d.date === today)
 
+    // Check if today matches a specific day in the itinerary
+    const entry = days.find(d => d.date === today)
     if (entry) {
-      return {
-        greeting,
-        dayLine: entry.dayLine,
-        messageLine: entry.messageLine,
-      }
+      return { greeting, dayLine: entry.dayLine, messageLine: entry.messageLine }
     }
 
-    if (today < '2026-03-30') {
+    // Before the trip — show a pre-departure message
+    if (today < TRIP_START) {
       return {
         greeting,
         dayLine: 'Your honeymoon begins on 30 March.',
@@ -39,6 +43,7 @@ export default function Greeting() {
       }
     }
 
+    // After the trip — show a retrospective message
     return {
       greeting,
       dayLine: 'The honeymoon.',

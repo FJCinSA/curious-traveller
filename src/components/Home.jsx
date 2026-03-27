@@ -1,18 +1,14 @@
-import { SingaporeSkyline, BusanSkyline, JinhaeSkyline, GyeongjuSkyline, SeoulSkyline } from './Skylines'
+// Home screen — header, personalised greeting, and the destination card grid.
+// Each card is a button that navigates to that trip's chapter via onSelect.
+// Cards with trip.wide === true span two columns in the grid.
+import { skylineMap } from './Skylines'
 import Greeting from './Greeting'
 import styles from './Home.module.css'
-
-const skylineMap = {
-  singapore: SingaporeSkyline,
-  busan: BusanSkyline,
-  jinhae: JinhaeSkyline,
-  gyeongju: GyeongjuSkyline,
-  seoul: SeoulSkyline,
-}
 
 export default function Home({ trips, onSelect }) {
   return (
     <div className={styles.home}>
+
       <header className={styles.header}>
         <p className={styles.eyebrow}>For Francois &amp; James</p>
         <h1 className={styles.title}>The Curious<br />Traveller</h1>
@@ -20,30 +16,34 @@ export default function Home({ trips, onSelect }) {
         <p className={styles.companionLine}>A wise and patient companion for the curious.</p>
       </header>
 
+      {/* Daily greeting — reads device clock and itinerary to show a contextual message */}
       <Greeting />
 
       <main className={styles.main}>
         <div className={styles.grid}>
           {trips.map(trip => {
             const SkylineSVG = skylineMap[trip.theme]
+            // Total stops across all days — shown as a badge on the card
             const totalStops = trip.days.reduce((n, d) => n + d.locations.length, 0)
 
             return (
               <button
                 key={trip.id}
-                className={`${styles.card} ${trip.id === 'seoul' || trip.id === 'singapore' ? styles.wide : ''}`}
+                className={`${styles.card} ${trip.wide ? styles.wide : ''}`}
                 onClick={() => onSelect(trip.id)}
                 aria-label={`Open ${trip.city} chapter`}
               >
-                {/* Mini skyline */}
-                <div className={styles.cardSkyline}>
-                  <SkylineSVG />
-                </div>
+                {/* Skyline SVG fills the card background */}
+                {SkylineSVG && (
+                  <div className={styles.cardSkyline}>
+                    <SkylineSVG />
+                  </div>
+                )}
 
-                {/* Gradient overlay on skyline */}
+                {/* Gradient overlay dims the skyline so card text stays readable */}
                 <div className={styles.cardOverlay} style={{ background: trip.cardGradient }} />
 
-                {/* Card content */}
+                {/* Text content — positioned above the overlay via z-index */}
                 <div className={styles.cardBody}>
                   <div className={styles.cardTop}>
                     <span className={styles.flag}>{trip.flag}</span>
@@ -67,6 +67,7 @@ export default function Home({ trips, onSelect }) {
                   </div>
                 </div>
 
+                {/* Arrow slides right on hover via CSS transition */}
                 <div className={styles.cardArrow} style={{ color: trip.heroAccent }}>→</div>
               </button>
             )
@@ -77,6 +78,7 @@ export default function Home({ trips, onSelect }) {
       <footer className={styles.footer}>
         <p>The Curious Traveller · 2026</p>
       </footer>
+
     </div>
   )
 }

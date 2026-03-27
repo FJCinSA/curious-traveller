@@ -8,6 +8,7 @@ export const trip = {
   tagline: 'Four nights. Sea, fire, and the end of the railway line.',
   theme: 'busan',
   flag: '🇰🇷',
+  order: 2,   // Display position on the home screen grid
   cardGradient: 'linear-gradient(135deg, #04121e 0%, #0a2438 50%, #0d2d4a 100%)',
   heroAccent: '#38bdf8',
 }

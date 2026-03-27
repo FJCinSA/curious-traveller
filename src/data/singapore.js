@@ -8,6 +8,8 @@ export const trip = {
   tagline: 'Two days. One city. Go hard.',
   theme: 'singapore',
   flag: '🇸🇬',
+  order: 1,   // Display position on the home screen grid
+  wide: true, // Spans 2 columns on the home screen card grid
   cardGradient: 'linear-gradient(135deg, #061824 0%, #0d3352 50%, #0a2540 100%)',
   heroAccent: '#38bdf8',
 }

@@ -8,6 +8,7 @@ export const trip = {
   tagline: 'One night in the city that was a kingdom for 1,000 years.',
   theme: 'gyeongju',
   flag: '🇰🇷',
+  order: 4,   // Display position on the home screen grid
   cardGradient: 'linear-gradient(135deg, #0c0a1e 0%, #181535 50%, #100e28 100%)',
   heroAccent: '#fbbf24',
 }

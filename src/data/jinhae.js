@@ -8,6 +8,7 @@ export const trip = {
   tagline: 'Leave at 7. The petals are already falling.',
   theme: 'jinhae',
   flag: '🇰🇷',
+  order: 3,   // Display position on the home screen grid
   cardGradient: 'linear-gradient(135deg, #12062a 0%, #240d45 50%, #1a0835 100%)',
   heroAccent: '#f9a8d4',
 }

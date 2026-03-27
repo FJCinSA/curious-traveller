@@ -8,6 +8,8 @@ export const trip = {
   tagline: 'Seven nights. Ten million people. One capital.',
   theme: 'seoul',
   flag: '🇰🇷',
+  order: 5,   // Display position on the home screen grid
+  wide: true, // Spans 2 columns on the home screen card grid
   cardGradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
   heroAccent: '#f59e0b',
 }

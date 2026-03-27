@@ -1,15 +1,26 @@
 // A single location card — the core content unit of every trip chapter.
 // Shows neighbourhood, name, and a one-sentence wow fact at all times.
-// Two expandable panels are available:
+// Three expandable/action areas:
 //   "Tell me more" — history, suggested activities, and practical info
 //   "What's nearby" — other locations on the same day, from the siblings prop
+//   "Navigate here" — opens Naver Maps from current GPS to this location (if coords present)
 // Only one panel can be open at a time.
 import { useState } from 'react'
+import { useSlowTravel } from '../context/SlowTravelContext'
 import styles from './LocationCard.module.css'
 
+// Builds a Naver Maps directions URL from current GPS location to the given coordinates.
+// lng,lat order is correct for Naver Maps path parameters.
+function buildNaverUrl(coords, name) {
+  const { lat, lng } = coords
+  return `https://map.naver.com/v5/directions/-/${lng},${lat},${encodeURIComponent(name)},-/walk`
+}
+
 export default function LocationCard({ location, siblings = [] }) {
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore]     = useState(false)
   const [showNearby, setShowNearby] = useState(false)
+  const { slowTravel } = useSlowTravel()
+  const leadText = slowTravel && location.slowNote ? location.slowNote : location.wow
 
   // Toggle "Tell me more" — closes "What's nearby" if it was open
   const toggleMore = () => {
@@ -31,8 +42,8 @@ export default function LocationCard({ location, siblings = [] }) {
         <h3 className={styles.name}>{location.name}</h3>
       </header>
 
-      {/* The one-sentence wow fact — always visible, never hidden */}
-      <p className={styles.wow}>{location.wow}</p>
+      {/* Lead text — wow fact normally, slowNote when slow travel mode is active */}
+      <p className={styles.wow}>{leadText}</p>
 
       <div className={styles.actions}>
         <button
@@ -90,6 +101,18 @@ export default function LocationCard({ location, siblings = [] }) {
             ))}
           </div>
         </div>
+      )}
+
+      {/* Navigate here — opens Naver Maps from device GPS to this location */}
+      {location.coords && (
+        <a
+          href={buildNaverUrl(location.coords, location.name)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.navigate}
+        >
+          Navigate here ↗
+        </a>
       )}
 
     </article>

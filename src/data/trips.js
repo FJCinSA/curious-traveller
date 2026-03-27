@@ -6,6 +6,7 @@
 //     theme, flag, order, wide?, cardGradient, heroAccent
 //   }
 //   export const days = [{ id, date, label, theme, locations: [...] }]
+//   export const serendipity = ['...', '...', ...] (optional, 5 strings)
 //
 // TO ADD A NEW DESTINATION:
 //   1. Create src/data/newcity.js following the shape above.
@@ -20,5 +21,5 @@ export const trips = Object.values(modules)
   // Filter to only modules that export both `trip` and `days`.
   // This automatically excludes itinerary.js (no `trip` export) and this file itself.
   .filter(m => m.trip && m.days)
-  .map(m => ({ ...m.trip, days: m.days }))
+  .map(m => ({ ...m.trip, days: m.days, serendipity: m.serendipity || [] }))
   .sort((a, b) => a.order - b.order)

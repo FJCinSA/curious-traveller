@@ -132,3 +132,92 @@ export const days = [
     messageLine: 'CX749 lands in Johannesburg at 07:55. You left as two people and came back as something more. The companion remembers every day of it.',
   },
 ]
+
+// Dawn notes — one sentence per day, shown before 11am on the home screen.
+// Keyed by ISO date string.
+export const dawnNotes = {
+  '2026-03-31': 'You have just crossed eleven hours of sky. Yotelair is steps away. Sleep first. Singapore will still be extraordinary this afternoon.',
+  '2026-04-01': 'Today is yours completely. The Supertrees light up at 7:45pm. Be underneath them when they do.',
+  '2026-04-02': 'You land at dawn into a city built between mountains and sea. Check in. Sleep. Let Busan find you slowly.',
+  '2026-04-03': 'Today is the day. 350,000 cherry trees and the two of you. Leave by seven. The canal will be yours before the crowds arrive.',
+  '2026-04-04': 'Gamcheon Village was built by refugees who turned poverty into colour. Go in the morning when the alleys are quiet and the light falls sideways.',
+  '2026-04-05': 'The fish market at Jagalchi opens before dawn. Go early. Order whatever the woman in the blue apron is selling. It will be extraordinary.',
+  '2026-04-06': 'Gyeongju was the capital of the Silla Kingdom for a thousand years. Today you arrive. Start slowly. This city rewards patience.',
+  '2026-04-07': 'Bulguksa Temple at dawn, before the tour buses. The stone lanterns have stood there for 1,300 years. Put your hand on one.',
+  '2026-04-08': 'You leave the ancient capital today for the modern one. The KTX takes two hours. Watch Korea pass the window. It looks nothing like you expect.',
+  '2026-04-09': 'Grand Walkerhill sits above the Han River. Look at it from your window before you go anywhere. That river is the heartbeat of this city.',
+  '2026-04-10': 'Gyeongbokgung Palace. Arrive before the changing of the guard at ten. Wear the hanbok if you are willing. You will not regret it.',
+  '2026-04-11': 'The cherry blossoms along Yeouido are at their best this week. Take Line 5 direct. Go in the morning before the wind takes the petals.',
+  '2026-04-12': 'Changdeokgung Secret Garden only admits small groups and requires a reservation. If you have one — today is the day. If not — walk the palace walls instead.',
+  '2026-04-13': 'Dragon Hill Spa is open all night. Go in the afternoon, stay for dinner, watch Seoul glow from the rooftop at dusk.',
+  '2026-04-14': 'Namsan Tower at sunset. Take the cable car up. Find a padlock. Write your names. Lock it to the fence with ten million others.',
+  '2026-04-15': 'Today is your last day in Korea. Go somewhere you have already been and loved. See it once more. Then let it go.',
+}
+
+// Threshold moments — shown as full-screen overlays on the first app open of each transition day.
+// Keyed by ISO date string.
+export const thresholdMoments = {
+  '2026-04-02': {
+    title: 'Leaving Singapore',
+    lines: [
+      'One night and one magnificent day.',
+      'The Supertrees. The heat. The hawker centres.',
+      'Carry it with you.',
+      '',
+      'Busan is waiting —',
+      'a city built between mountains and sea,',
+      'rough and beautiful and completely itself.',
+    ],
+  },
+  '2026-04-06': {
+    title: 'Leaving Busan',
+    lines: [
+      'Four days. The sea. Jinhae.',
+      'The cherry petals on the canal water.',
+      'Carry it with you.',
+      '',
+      'Gyeongju is waiting —',
+      'the oldest city in Korea,',
+      'and for two days, yours.',
+    ],
+  },
+  '2026-04-08': {
+    title: 'Leaving Gyeongju',
+    lines: [
+      'Two days of silence and stone and',
+      'a thousand years of history under your feet.',
+      'Carry it with you.',
+      '',
+      'Seoul is waiting —',
+      'ten million people,',
+      'one extraordinary capital,',
+      'your final chapter.',
+    ],
+  },
+  '2026-04-15': {
+    title: 'Leaving Seoul',
+    lines: [
+      'Eight nights above the Han River.',
+      'The palace. The cherry blossoms.',
+      'The BBQ smoke and the subway and',
+      'the city that never stopped moving.',
+      'Carry all of it.',
+      '',
+      'You are going home.',
+      'But you will never be quite the same.',
+    ],
+  },
+  '2026-04-16': {
+    title: 'Almost home',
+    lines: [
+      'One last night sky.',
+      'Hong Kong below you, Johannesburg ahead.',
+      '',
+      'Twenty-six years together',
+      'and now this —',
+      'a honeymoon that will never end',
+      'because you will carry it',
+      'every day for the rest of your lives.',
+    ],
+  },
+}

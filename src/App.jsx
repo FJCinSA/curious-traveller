@@ -5,9 +5,13 @@
 import { useState, useEffect } from 'react'
 import Home from './components/Home'
 import TripPage from './components/TripPage'
+import Checklist from './components/Checklist'
+import MemoryJarView from './components/MemoryJarView'
+import ThresholdMoment from './components/ThresholdMoment'
 import InstallPrompt from './components/InstallPrompt'
 import UpdateManager from './components/UpdateManager'
 import ErrorBoundary from './components/ErrorBoundary'
+import { SlowTravelProvider } from './context/SlowTravelContext'
 import { trips } from './data/trips'
 import styles from './App.module.css'
 
@@ -34,23 +38,45 @@ export default function App() {
 
   const currentTrip = trips.find(t => t.id === screen)
 
+  function renderScreen() {
+    if (screen === 'checklist') {
+      return <Checklist onClose={() => navigate('home')} />
+    }
+    if (screen === 'memoryjar') {
+      return <MemoryJarView onClose={() => navigate('home')} />
+    }
+    if (screen === 'home' || !currentTrip) {
+      return (
+        <Home
+          trips={trips}
+          onSelect={navigate}
+          onOpenChecklist={() => navigate('checklist')}
+          onOpenMemoryJar={() => navigate('memoryjar')}
+        />
+      )
+    }
+    // key={currentTrip.id} forces TripPage to fully unmount and remount when
+    // the user navigates from one trip to another, resetting all local state
+    return (
+      <TripPage
+        key={currentTrip.id}
+        trip={currentTrip}
+        onBack={() => navigate('home')}
+      />
+    )
+  }
+
   return (
-    <div className={styles.app}>
-      <ErrorBoundary>
-        {screen === 'home' || !currentTrip ? (
-          <Home trips={trips} onSelect={navigate} />
-        ) : (
-          // key={currentTrip.id} forces TripPage to fully unmount and remount when
-          // the user navigates from one trip to another, resetting all local state
-          <TripPage
-            key={currentTrip.id}
-            trip={currentTrip}
-            onBack={() => navigate('home')}
-          />
-        )}
-      </ErrorBoundary>
-      <InstallPrompt />
-      <UpdateManager />
-    </div>
+    <SlowTravelProvider>
+      <div className={styles.app}>
+        <ErrorBoundary>
+          {renderScreen()}
+        </ErrorBoundary>
+        {/* ThresholdMoment — full-screen overlay on city transition days */}
+        <ThresholdMoment />
+        <InstallPrompt />
+        <UpdateManager />
+      </div>
+    </SlowTravelProvider>
   )
 }

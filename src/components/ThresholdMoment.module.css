@@ -1,0 +1,80 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 1s ease;
+  cursor: pointer;
+}
+
+.overlay.visible {
+  opacity: 1;
+}
+
+.inner {
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(201, 168, 76, 0.3);
+  margin: 0 auto 2rem;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 3rem;
+}
+
+.line {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.tap {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.35;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 0.65; }
+}
+
+@media (max-width: 580px) {
+  .line {
+    font-size: 1.05rem;
+  }
+}

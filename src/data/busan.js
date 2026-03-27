@@ -59,6 +59,14 @@ export const trip = {
   },
 }
 
+export const serendipity = [
+  'Oryukdo Skywalk hangs over the sea at the southern tip of the city — glass floor, 35 metres above the water. Almost no tourists. The view is better than anything in the guidebooks.',
+  'The Busan Cinema Centre at night is pure architecture — a single cantilevered roof 163 metres long, lit from below. Walk under it slowly. The engineering is as beautiful as anything in the city.',
+  'Choryang Ibagu-gil is a hillside village near the station where Korean War refugees built tin-roofed houses on the slope. It was preserved exactly as it was in the 1950s. Walk it early morning, before the visitors.',
+  'Taejongdae cliffs at the southern tip of Yeongdo Island: the rock face drops straight into the sea. Rent a bicycle from the entrance and take the coastal road. The lighthouse at the end has been here since 1906.',
+  'The pojangmacha tents along Gwangalli Beach after 10 PM serve gopchang (grilled intestines) and soju in the wind off the bay. The locals know every vendor by name. Sit at any tent and they will take care of you.',
+]
+
 export const days = [
   {
     id: 1,
@@ -72,6 +80,7 @@ export const days = [
         name: 'Gimhae International Airport — Welcome to Korea',
         neighbourhood: 'Gimhae-gu',
         wow: 'You have just crossed the Sea of Japan on a night flight from Singapore. The air outside is different. Cooler, cleaner, with the faint salt of the Korea Strait. Busan begins the moment you step out of arrivals.',
+        slowNote: 'Stand still for a moment outside arrivals. The air is cooler than Singapore. It smells of sea and morning. You have crossed eleven hours of sky to arrive here. Let that land before anything else does.',
         history: 'Busan\'s international airport handles 10 million passengers a year and sits between the mountains and the sea. The city — Korea\'s second largest, 3.5 million people — starts at the airport fence.',
         do: [
           'Airport Bus 307: look for the blue express bus signs outside arrivals. Direct to Haeundae in 60 minutes. ₩3,000. Simple.',
@@ -89,6 +98,7 @@ export const days = [
         name: 'Haeundae Beach',
         neighbourhood: 'Haeundae-gu',
         wow: 'On peak summer days, 1.5 million people share 1.8 kilometres of sand — 833,000 per kilometre. The world\'s most densely packed beach. In April you have it to yourself.',
+        slowNote: 'Come before the swimmers. The fishing boats return at first light. The sea here smells different from the Atlantic — heavier, older, full of the Pacific. Walk slowly west and let the beach come to you.',
         history: 'Named after the Silla scholar Choe Chi-won (pen name Haeun, 857 AD) who carved his name into a rock on the headland. That rock — Dongbaek Island — is still there. Haeundae has been a famous retreat since the 9th century.',
         do: [
           'Walk the full 1.8km east to west — take your time, almost no one is here in April',
@@ -106,6 +116,7 @@ export const days = [
         name: 'Gwangalli Beach — Night Show',
         neighbourhood: 'Suyeong-gu',
         wow: 'The Gwangan Bridge stretches 7.4 kilometres across the bay with 300,000 LED lights built into its structure. Every night it runs a different light show. The best seat is the sand directly below it.',
+        slowNote: 'Buy one thing from a convenience store and sit on the sand before the show begins. The bridge is dark at first. Then the lights come alive all at once. Watch what happens to the water underneath.',
         history: 'Completed 2003. At 7.4km it was the longest bridge in Korea when built. The LED system was added specifically to create a nightly spectacle visible from the beach — pure civic ambition.',
         do: [
           'Taxi from Haeundae — 15 minutes, less than ₩15,000',
@@ -131,6 +142,7 @@ export const days = [
         name: 'Jinhae Day Trip',
         neighbourhood: 'Changwon City — 70km west',
         wow: '350,000 cherry trees bloom simultaneously. When the petals fall on Yeojwacheon Stream, the water turns pink.',
+        slowNote: 'You are leaving at 7 AM to reach a city before it wakes up. The early start is the whole gift. The canal before the crowds is a completely different place from the canal at noon.',
         history: 'Full story in the Jinhae chapter.',
         do: [
           'The hotel has booked your taxi for 07:00 — walk out of the lobby at five to seven',
@@ -156,6 +168,7 @@ export const days = [
         name: 'Gamcheon Culture Village',
         neighbourhood: 'Saha-gu',
         wow: 'This village was built by a religious cult. In 1951, followers of the Taegeukdo faith fled south during the Korean War and built a shantytown on this hillside — on land nobody else wanted. They painted it and never left.',
+        slowNote: 'The village climbs the hillside in layers of colour. Sit on a step halfway up and watch the cats. They own this place, not the tourists. People still live here — the laundry on the lines is real.',
         history: 'The government tried to clear it twice. Artists moved in during a 2009 revitalisation project, covering the walls in murals. It is now Busan\'s most-visited neighbourhood. People still live here.',
         do: [
           'Walk up from the entrance — the village reveals itself in layers',
@@ -173,6 +186,7 @@ export const days = [
         name: 'Jagalchi Fish Market',
         neighbourhood: 'Jung-gu',
         wow: 'Korea\'s largest seafood market — and every single stall is run by a woman. The "Jagalchi Ajumma" have controlled this market for generations. The men fish. The women run everything else.',
+        slowNote: 'Walk the ground floor slowly before you buy anything. The women behind the tanks have done this every day for thirty, forty years. Watch their hands. The speed and certainty of it is its own kind of art.',
         history: 'Running since the Japanese colonial era. After independence, the market women were repeatedly displaced to make way for development. They rebuilt each time. The current building (2006) was built around them.',
         do: [
           'Buy raw seafood on the ground floor and take it upstairs to be cooked — small charge for cooking',
@@ -190,6 +204,7 @@ export const days = [
         name: 'BIFF Square & Gukje Market',
         neighbourhood: 'Jung-gu',
         wow: 'BIFF Square\'s pavement is set with the handprints of every director who has attended the Busan International Film Festival — Asia\'s largest. Quentin Tarantino, Park Chan-wook, Abbas Kiarostami. You can stand in their hands.',
+        slowNote: 'Find a handprint of someone whose work you love and press your palm into it. The concrete remembers everyone who came here to show their film. That is an extraordinary thing to think about while standing in the open air.',
         history: 'Gukje Market next door was founded by Korean War refugees in 1945 who had nothing but what they carried south. It has been selling everything from US military surplus to luxury goods ever since.',
         do: [
           'Walk the full length of BIFF Square and find your favourite filmmaker\'s handprint',
@@ -215,6 +230,7 @@ export const days = [
         name: 'Haedong Yonggungsa Temple',
         neighbourhood: 'Gijang-gun',
         wow: 'Almost every Buddhist temple in Korea is built in the mountains. This one was deliberately placed on the sea — the founding monk dreamed of a dragon rising from the ocean and built the temple where the dream told him.',
+        slowNote: 'Get here before 8 AM. The light comes low off the water and hits the rock face in a way that changes every few minutes. The monk who chose this site was choosing light, not just location. You can feel that.',
         history: 'Founded 1376 by the monk Naong in the Goryeo Dynasty. Destroyed in the Imjin War (1592) and rebuilt in 1930. The stone dragons at the entrance face outward, toward the sea — not inward, toward the temple.',
         do: [
           'Arrive by 8 AM — sunrise light on the coastal rocks is the whole point',
@@ -232,6 +248,7 @@ export const days = [
         name: 'Dongbaek Island',
         neighbourhood: 'Haeundae-gu',
         wow: 'Dongbaek Island is not actually an island. It became a peninsula when the sandbar connecting it to Haeundae silted up over centuries. The city has been debating whether to restore the channel since the 1980s.',
+        slowNote: 'The camellia trees flower in winter and drop their blooms whole, still perfect, onto the path. If you find one on the ground pick it up. Dongbaek means camellia. The island is named for a flower that refuses to wither before it falls.',
         history: 'The APEC Summit of 2005 was held here at the Nurimaru APEC House — a modernist pavilion designed to look like a traditional Korean crown from the air. Leaders of 21 economies sat inside with views over the bay.',
         do: [
           'Walk the 1.2km coastal path around the island — camellia trees (dongbaek) the entire way',
@@ -249,6 +266,7 @@ export const days = [
         name: 'Spa Land — Shinsegae Centum City',
         neighbourhood: 'Haeundae-gu',
         wow: 'Spa Land sits inside the world\'s largest department store by floor space — 293,905 m², a Guinness World Record since 2009. The spa alone has 22 themed rooms drawing on Roman, Finnish, Turkish, and Himalayan salt traditions.',
+        slowNote: 'Put your phone in the locker. There is nothing to photograph here. The whole point of a jjimjilbang is that you stop moving. Find the hottest room you can tolerate and lie on the warm stone floor. The city outside will still be there.',
         history: 'Shinsegae Centum City was built on reclaimed land that was once Suyeong Bay. Koreans treat the jjimjilbang as essential infrastructure — a place to sleep, socialise, and recover — not a luxury. This is the ultimate expression of that idea.',
         do: [
           'Book online in advance — fills up on weekends',

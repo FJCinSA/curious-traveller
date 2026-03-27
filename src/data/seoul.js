@@ -59,6 +59,14 @@ export const trip = {
   },
 }
 
+export const serendipity = [
+  'Naksan Park sits on the old city wall above Ihwa Village — a neighbourhood of painted murals and steep alley stairs. Go at dusk. The city wall is lit from below. The view over Dongdaemun from the rampart is better than anything the tower sells.',
+  'The Cheonggyecheon stream runs 5.8km through the centre of Seoul below street level. At night, after the crowds leave, walk it from end to end. The sound of water in the middle of ten million people is the strangest peace you will find here.',
+  'Noryangjin Fish Market at 4 AM is where Seoul\'s chefs come to buy. It\'s technically open to anyone. Watch the tuna auction. Eat raw sea urchin at a stall for ₩5,000. Almost nobody else from a hotel will ever do this.',
+  'Seochon Village, just west of Gyeongbokgung, is where artists and writers lived during the Japanese occupation. The houses are tiny, the alleys are tight, and almost every second building has been there for a hundred years. It has none of the tourist traffic of Bukchon.',
+  'The Han River at 6 AM, from any park, belongs entirely to the older Koreans doing tai chi and the fishermen. Rent a bicycle from the unmanned station and ride east until the city feels far away. It doesn\'t take long.',
+]
+
 export const days = [
   {
     id: 1,
@@ -72,6 +80,7 @@ export const days = [
         name: 'SRT to Seoul — Into the Capital',
         neighbourhood: 'Singyeongju → Seoul Suseo',
         wow: 'The SRT covers the 320km from Gyeongju to Seoul in two hours at 300km/h. You arrive in a city of ten million people — home to half of Korea\'s entire population within a 50km radius. The scale of it hits you from the train window.',
+        slowNote: 'Watch the landscape change from the train window. The rice paddies and burial mounds of Gyeongju become the outer sprawl of Seoul — and then the inner city arrives all at once, vast and vertical. Let the scale land before you reach for your phone.',
         history: 'Seoul has been Korea\'s capital since 1394, when the Joseon Dynasty chose this river valley between four mountains. The SRT high-speed line opened in 2016 and is slightly faster and cheaper than the KTX on this route.',
         do: [
           'SRT from Singyeongju to Suseo Station in Seoul: 2 hours, ₩41,000. Recommended — faster and cheaper.',
@@ -89,6 +98,7 @@ export const days = [
         name: 'Grand Walkerhill Seoul',
         neighbourhood: 'Gwangjin-gu (Achasan)',
         wow: 'Grand Walkerhill was built in 1963 on the direct orders of President Park Chung-hee — specifically to generate hard currency from US military personnel. It was the only hotel foreigners could use freely under the military dictatorship.',
+        slowNote: 'This hill has been here since before the city existed. Walk out onto the terrace before dinner and look at the Han River below. The city runs in every direction as far as you can see. You are going to spend a week inside all of that.',
         history: 'The hotel sits on Achasan mountain above the Han River, 8km from downtown. For decades it was Seoul\'s only true international-standard luxury property. The name "Walkerhill" honours General Walton Walker, the US general who died in Korea in 1950.',
         do: [
           'Check in, put the bags down, and go straight to the terrace for Han River views',
@@ -106,6 +116,7 @@ export const days = [
         name: 'Han River — First Night',
         neighbourhood: 'Gwangjin Riverside',
         wow: 'The Han River is 514km long and runs directly through the centre of Seoul. Eleven bridges cross it within the city limits. On warm evenings, half of Seoul comes to the riverbanks to eat, drink, and watch. It is one of the great urban rituals on Earth.',
+        slowNote: 'The river at night is a different city from the one you will see by day. Sit close enough to the water to hear it. The bridges lit above and their reflections below make the Han look like it goes on forever. It almost does.',
         history: 'The Han River was central to Korean civilisation for 2,000 years — Baekje Kingdom had its capital on its southern bank in the 1st century BC. The current riverside parks were developed in the 1980s as part of Seoul\'s preparation for the 1988 Olympics.',
         do: [
           'Walk down from the hotel to the Gwangjin riverbank (15 minutes)',
@@ -131,6 +142,7 @@ export const days = [
         name: 'Gyeongbokgung Palace',
         neighbourhood: 'Jongno-gu',
         wow: 'Gyeongbokgung originally had 7,225 rooms across 330 buildings. The Japanese colonial government demolished 96% of them between 1915 and 1939 — deliberately and systematically — and built their own Government General Building in front of it to block the view. Korea demolished that building in 1995. Reconstruction has been underway since 1990 and is maybe 40% complete.',
+        slowNote: 'Stand at the main gate and look north toward Bugaksan mountain directly behind the palace. That view — mountain behind, palace before you — was designed in 1395 and is unchanged. The axis the Joseon architects chose is still perfect after six hundred years.',
         history: 'Built 1395, the first year of the Joseon Dynasty. Burned by the Japanese in the Imjin War (1592). Abandoned for 270 years. Rebuilt 1867 under the regent Heungseon Daewongun. Destroyed again by Japan 50 years later.',
         do: [
           'Changing of the Royal Guard ceremony at 10 AM and 2 PM — free to watch at the main gate',
@@ -148,6 +160,7 @@ export const days = [
         name: 'Hanbok Experience',
         neighbourhood: 'Gyeongbokgung Area',
         wow: 'Hanbok is 1,600 years old and has not fundamentally changed since the Joseon Dynasty (1392–1897). Entry to Gyeongbokgung Palace is free when wearing one. The rental shops know this, and they are all within 100 metres of the gate.',
+        slowNote: 'This is a completely silly and completely wonderful thing to do. Let them dress you. Stand still while they adjust the jeogori ties. Then walk into the palace wearing something that has been worn in this exact place for five centuries.',
         history: 'During the Joseon Dynasty, the colour and pattern of your hanbok declared your social rank, marital status, and age at a glance. Commoners wore undyed white hemp. The aristocracy wore colour. The royal family wore specific ritual colours for ceremonies.',
         do: [
           'Rent from one of the Gyeongbokgung-area shops — 2-hour rental from ₩15,000',
@@ -165,6 +178,7 @@ export const days = [
         name: 'Bukchon Hanok Village',
         neighbourhood: 'Jongno-gu',
         wow: 'Bukchon\'s 900 traditional hanok houses are not a museum — they are privately owned and lived in. Residents have formally petitioned the city multiple times to reduce tourist access because strangers regularly walk into their courtyards.',
+        slowNote: 'Walk the lanes at the edges of the village, away from the view staircase. The houses here have geraniums in pots and laundry on the lines. People are cooking dinner. You are walking through someone\'s neighbourhood. Move quietly.',
         history: 'Bukchon ("North Village") has been a residential area for the aristocracy since the Joseon Dynasty. It survived Japanese colonial demolition because the residents were wealthy enough to resist. The "8 Scenic Views" officially designated by the city are now the most Instagrammed spots in Korea.',
         do: [
           'Bukchon-ro 11-gil: the staircase lane with tiled roofs cascading downhill — the photo everyone takes',
@@ -182,6 +196,7 @@ export const days = [
         name: 'Insadong',
         neighbourhood: 'Jongno-gu',
         wow: 'Insadong is the only street in Seoul where signage is required to be in Korean — not English, not Chinese. It was the last neighbourhood where traditional craft shops, antique dealers, and tea houses survived the 1970s and 80s development frenzy.',
+        slowNote: 'Go into one of the small antique shops and ask to see their Joseon-era ceramics. You don\'t have to buy anything. The shop owners know the history of every piece they carry. Ask them.',
         history: 'Home to Seoul\'s art and antique trade since the Joseon era. During the Japanese occupation, families sold heirlooms here to survive. After the Korean War, the dealers returned. The street was so consistently anti-development that the city eventually gave it heritage protection.',
         do: [
           'Ssamziegil courtyard — an open-air indie market inside a spiral building',
@@ -207,6 +222,7 @@ export const days = [
         name: 'Yeouido Spring Flower Festival',
         neighbourhood: 'Yeouido, Yeongdeungpo-gu',
         wow: '1,886 cherry trees line the 5.5km of Yunjungno boulevard on Yeouido island. During peak weekend, one million people walk beneath them in two days. The petals fall so thick on the pavement that the street turns white.',
+        slowNote: 'When a gust moves through the boulevard, stop walking. Stand still and let the petals fall around you. A million people came here today to see this. You are already inside it. Let yourself be fully present for thirty seconds.',
         history: 'The trees were planted in 1971 as part of Park Chung-hee\'s beautification of Seoul\'s financial district. They were not planted for aesthetics — they were planted as a political statement that Seoul was a prosperous, civilised capital. The festival started spontaneously.',
         do: [
           'Arrive before 9:30 AM — peak crowds arrive 11 AM onwards',
@@ -224,6 +240,7 @@ export const days = [
         name: 'Yeouido Han River Park',
         neighbourhood: 'Yeouido',
         wow: 'Yeouido island was a sandbar until 1968. The military government drained the surrounding wetlands, built an airstrip, and then covered that with a financial district and park. The Han River Park here is now the busiest in Seoul — 10 million visitors a year on 2km of waterfront.',
+        slowNote: 'Rent bicycles and ride east along the river path without a destination. The wind comes off the water and the cherry petals blow across the path. Seoul disappears behind you. This is what ten million people\'s city looks like from the inside of its own river.',
         history: 'The 1988 Seoul Olympics required the government to clean up the Han River after decades of industrial pollution. They succeeded. Today the river supports over 60 species of migratory birds and a resident otter population.',
         do: [
           'Rent bicycles from the park station and ride east along the river path',
@@ -249,6 +266,7 @@ export const days = [
         name: 'Changdeokgung & Huwon Secret Garden',
         neighbourhood: 'Jongno-gu',
         wow: 'The Huwon — Secret Garden — behind Changdeokgung Palace has been maintained continuously for 400 years. Entry is still controlled by guided tour only, with limited numbers per session. The Buyongjeong pavilion was built in 1792 and floats on a square lotus pond. It looks like it always has.',
+        slowNote: 'When you reach the Buyongjeong pavilion, stop moving. The lotus pond is perfectly still in the morning. The pavilion has been reflected in that water for 230 years. You are seeing exactly what the last queen saw from this path.',
         history: 'Changdeokgung was built in 1405 as an auxiliary palace. After Gyeongbokgung was burned in the Imjin War (1592), it became the primary royal residence for 270 years. The Secret Garden was the private retreat of Korean kings and queens — no commoner ever entered it.',
         do: [
           'Book the Huwon guided tour online in advance — tours sell out 2 weeks ahead in cherry blossom season',
@@ -266,6 +284,7 @@ export const days = [
         name: 'Jongmyo Royal Shrine',
         neighbourhood: 'Jongno-gu',
         wow: 'Jongmyo contains the spirit tablets of 19 Joseon kings and 30 queens. The main hall — Jeongjeon — is 109m long with no interior walls and no decorations of any kind. It is the longest wooden structure in Asia built for a single ritual purpose.',
+        slowNote: 'Walk the full approach path from the south gate without hurrying. The Joseon architects made it long deliberately — they wanted the solemnity to arrive in you gradually. By the time you reach Jeongjeon, the silence of the place has already done its work.',
         history: 'Built 1394, the first year of the Joseon Dynasty — before the palaces. The Joseon kings considered ancestor worship more important than their own comfort. UNESCO declared it a World Heritage Site in 1995. The ritual music performed here (Jongmyo Jeryeak) is also a UNESCO Intangible Cultural Heritage.',
         do: [
           'Free entry on Saturdays — public viewing day',
@@ -283,6 +302,7 @@ export const days = [
         name: 'Gwangjang Market',
         neighbourhood: 'Jongno-gu',
         wow: 'Gwangjang\'s bindaetteok (mung bean pancakes) and mayak gimbap are nicknamed "narcotic gimbap" — so addictive Koreans named them after drugs. The market has been open continuously since 1905. It has never once closed for renovation.',
+        slowNote: 'Sit at the stall with the longest queue and order whatever the woman in front of you ordered. Watch the hands of the woman making the bindaetteok. She has made the exact same movement ten thousand times. It is its own kind of mastery.',
         history: 'Korea\'s first permanent covered market, founded in 1905 during the last years of the Joseon Dynasty. Survived Japanese colonial rule, the Korean War, and five decades of rapid modernisation. The market women who ran stalls in the 1950s are now grandmothers running the same stalls.',
         do: [
           'Lunch at the pojangmacha (canvas tent stalls) in the covered market centre',
@@ -308,6 +328,7 @@ export const days = [
         name: 'Dragon Hill Spa',
         neighbourhood: 'Yongsan-gu',
         wow: 'Dragon Hill Spa is seven floors of jjimjilbang, pools, saunas, and a rooftop with Han River views — and it is open 24 hours. The rooftop outdoor pool on the 7th floor has an unobstructed view of Namsan and N Seoul Tower. Koreans sleep here overnight on long weekends.',
+        slowNote: 'Lock your phone in the locker with everything else. The jjimjilbang only works if you actually stop. Find the hottest room and lie on the floor for twenty minutes. The city is outside. You are not in it right now.',
         history: 'The jjimjilbang tradition — communal bathhouse and sleeping hall — is uniquely Korean. Dragon Hill is the most famous in Seoul: fully self-contained, with a restaurant, cinema room, themed sauna rooms (jade, gold, charcoal, ice), and a golf simulator on the 6th floor.',
         do: [
           'Arrive 10 AM before weekend crowds — lockers fill up by noon',
@@ -326,6 +347,7 @@ export const days = [
         name: 'Yongsan Electronics Market',
         neighbourhood: 'Yongsan-gu',
         wow: 'Yongsan is the largest electronics market in Asia — 21 buildings connected by corridors, with 5,000 shops selling everything from 1980s Famicom cartridges to the latest Samsung prototype. If it is electronic and it exists, it is here.',
+        slowNote: 'Go up to the older floors of the original buildings. The shops there sell things that haven\'t been made in thirty years. The owners have entire lives invested in knowing where every cable and cartridge in this building can be found.',
         history: 'Yongsan grew as an electronics district in the 1980s when the government tried to regulate street electronics vendors by concentrating them in one area. It worked too well. The district is now a city within a city.',
         do: [
           'Walk the main Seonin Building and the I\'Park Mall connection for an overview',
@@ -351,6 +373,7 @@ export const days = [
         name: 'Namsan Mountain',
         neighbourhood: 'Jung-gu / Yongsan-gu',
         wow: 'Namsan sits in the centre of Seoul at 265m above sea level. During the Joseon Dynasty, a fire beacon system on its summit could signal an invasion alert across the entire Korean peninsula within 12 hours using a chain of hilltop fires.',
+        slowNote: 'Take the path on the Itaewon side on foot. It is almost always quiet. The pine trees are original — not planted, just old. Listen to the city below you disappear as you climb. By the top, you are above almost all of it.',
         history: 'Namsan ("South Mountain") has been Seoul\'s sacred southern boundary since the Joseon capital was laid out in 1394 — positioned according to feng shui principles between four mountains. The pine forest on its slopes is one of the last intact original habitats in the city.',
         do: [
           'Cable car from the Myeongdong side for the ascent — ₩12,500 return',
@@ -368,6 +391,7 @@ export const days = [
         name: 'N Seoul Tower',
         neighbourhood: 'Namsan',
         wow: 'The love locks attached to the fence surrounding the tower weigh over one tonne in total — so many couples have added padlocks that the city has had to cut them off and melt them down three times. Couples still add more within weeks of each clearance.',
+        slowNote: 'Write something on your lock before you attach it. Not a date — something that means something. Then read a few of the ones already on the fence. Hundreds of thousands of people came up here for the same reason you did.',
         history: 'Opened 1980 as a broadcast antenna tower. The observation deck was added after the 1988 Olympics made Seoul a tourist destination. N Seoul Tower sits at 479m above sea level. The total height from the ground below Namsan to the antenna tip is 715m.',
         do: [
           'The view from the outdoor deck is worth the price — 360° across the entire city basin',
@@ -385,6 +409,7 @@ export const days = [
         name: 'Myeongdong',
         neighbourhood: 'Jung-gu',
         wow: 'Myeongdong has the most expensive commercial real estate in South Korea — ₩2.7 million per m² per year for prime street-level space. More expensive than the Champs-Élysées. Korean skincare brands pay it without hesitation.',
+        slowNote: 'Walk up to the cathedral at the top of the hill and sit on the steps for ten minutes. From there you can watch the street below without being inside it. Korea\'s oldest Gothic cathedral above the most commercial street in the country. The contrast is very Korean.',
         history: 'Seoul\'s main shopping and fashion district since the 1950s. During the Japanese colonial period it was called Honmachi — the Japanese commercial heart of the city. After 1945, Korean merchants took it back stall by stall.',
         do: [
           'Street food: hotteok, tteokbokki, lobster skewers, tornado potato — eat from every stall',
@@ -410,6 +435,7 @@ export const days = [
         name: 'Korean BBQ — Mapo',
         neighbourhood: 'Mapo-gu',
         wow: 'Korea has the highest density of restaurants per capita of any country on Earth. The galbi and samgyeopsal restaurants along Mapo-daero\'s "Meat Street" have been running the same charcoal grill format since the 1970s. The smoke, the scissors, the lettuce wrap — nothing has changed.',
+        slowNote: 'Don\'t rush this. Korean BBQ is not fast food — it is a ceremony. Let the server cut the meat. Order more than you think you need. The smoke gets in your clothes and you will still be smelling it in the taxi home. That is the whole point.',
         history: 'The charcoal table grill became the standard format in the 1960s when cheap cuts of pork were the only protein most Koreans could afford. Grilling at the table turned a cheap meal into a social event. It was genius. The format survived prosperity.',
         do: [
           'Samgyeopsal (thick pork belly): ₩12,000–16,000 per portion — order three per person',
@@ -428,6 +454,7 @@ export const days = [
         name: 'Hongdae',
         neighbourhood: 'Mapo-gu (Hongik University)',
         wow: 'Hongdae is named after Hongik University, whose fine arts department is ranked in the world\'s top 10. Every bar, club, and café in the neighbourhood was designed by someone who went there. The street art changes monthly. The energy runs until 5 AM.',
+        slowNote: 'Walk the pedestrian zone slowly before you commit to any venue. The buskers here auditioned to be here — the city issues permits. Stop at the one drawing the biggest crowd. Whatever they are doing, they earned that crowd.',
         history: 'Seoul\'s youth culture capital since the early 1990s, when art students began turning the streets around the university into an outdoor gallery and performance space. The neighbourhood resisted the Gangnam-style development that consumed most of Seoul and kept its irregular, organic street grid.',
         do: [
           'The pedestrian zone (Hongdae Street) for buskers and performance — something is always happening after 9 PM',
@@ -453,6 +480,7 @@ export const days = [
         name: 'Dongdaemun Design Plaza',
         neighbourhood: 'Jung-gu',
         wow: 'The DDP is made from 45,133 unique aluminium panels — not a single one is the same shape. Zaha Hadid designed it as a building with no straight lines and no corners. It sits on the site of a Joseon-era military training ground, a baseball stadium, and a flea market, simultaneously.',
+        slowNote: 'Walk the full exterior circuit slowly. Every curve is a different shape from the last angle. Then find the Joseon-era gate fragment incorporated into the plaza floor. Two things six centuries apart, sharing the same pavement. Seoul does not erase its layers — it builds on top of them.',
         history: 'Completed 2014. The construction excavated the site and found 1,700 Joseon-era artifacts, including the East Small Gate of Seoul\'s old city wall. The gate was preserved and incorporated into the plaza. You can see Joseon-era brickwork next to a Zaha Hadid curve.',
         do: [
           'Walk the full exterior circuit — the curves are different from every angle',
@@ -470,6 +498,7 @@ export const days = [
         name: 'Banpo Bridge — Moonlight Rainbow Fountain',
         neighbourhood: 'Seocho-gu / Yongsan-gu',
         wow: 'Banpo Bridge runs 1,140 nozzles along both sides and fires 190 tonnes of water per minute in choreographed arcs — illuminated by 10,000 LEDs. It holds the Guinness World Record for the world\'s longest bridge fountain. The show is free.',
+        slowNote: 'Be there before the fountain starts. Watch the bridge go dark and then — in a single moment — all 10,000 LEDs come on simultaneously and the water begins. The couples on the bank beside you have been coming here for years. You get to see it for the first time.',
         history: 'The fountain was added in 2009 as a Han River beautification project. The bridge itself (1976) was the first reinforced concrete bridge in Korea. The rainbow fountain idea came from a city competition. It ran at full power for the first time at the 2010 G20 Seoul Summit.',
         do: [
           'Reach Banpo Hangang Park (south bank) before 8 PM to get a good spot',
@@ -487,6 +516,7 @@ export const days = [
         name: 'Itaewon & Haebangchon',
         neighbourhood: 'Yongsan-gu',
         wow: 'Itaewon is the most internationally diverse neighbourhood in Korea — 100 nationalities live within 1km². It grew up around the US military base (Yongsan Garrison) and absorbed every cuisine, culture, and subculture that came with it. Haebangchon ("Liberation Village") above it is where Korean independence families settled after 1945.',
+        slowNote: 'Climb up to Haebangchon instead of staying on the main Itaewon strip. The view from the rooftop restaurants takes in Namsan and the old US base simultaneously. Order slowly. Stay for the light.',
         history: 'During the Korean War, Itaewon was a rest-and-recreation zone for UN forces. After the war it became Seoul\'s only place where foreigners could eat foreign food, buy foreign clothes, and feel at home. It never stopped being that — it just added Korean craft beer, vintage shops, and Michelin-starred restaurants.',
         do: [
           'Antique Furniture Street (Itaewon-ro 55-gil) for Joseon-era furniture and celadon',
@@ -512,6 +542,7 @@ export const days = [
         name: 'Incheon Airport — The Long Way Home',
         neighbourhood: 'Incheon International Airport',
         wow: 'Incheon has been voted the world\'s best airport eight times. It has an indoor skating rink, a cultural museum, a spa, and a golf course. It is the last thing Korea shows you — and Korea knows exactly what it is doing.',
+        slowNote: 'Before you go through security, stop and sit for five minutes. You are leaving. What stays with you from two weeks in Korea? Let the answer come. The airport is very beautiful and it will wait.',
         history: 'Incheon International Airport opened in 2001 on reclaimed tidal flats between two islands. Its transit experience is deliberately spectacular — the government understood that every traveller\'s first and last impression of Korea would be formed here.',
         do: [
           'Check out of the Grand Walkerhill by noon. Ask the concierge the night before to arrange the airport transfer.',
@@ -529,6 +560,7 @@ export const days = [
         name: 'Hong Kong International Airport — The Layover',
         neighbourhood: 'Lantau Island, Hong Kong',
         wow: 'HKIA handles 75 million passengers a year and sits on an artificial island built on reclaimed sea. It is immense, beautiful, and open all night. Two hours here is not a hardship.',
+        slowNote: 'The transfer is two hours. Find a quiet seat, not a café. Let the airport noise become background. Seventeen days happened. You are carrying all of it home.',
         history: 'Opened 1998, replacing the legendary Kai Tak Airport — where pilots had to bank hard at 47 degrees over the city skyline on final approach. HKIA was one of the largest construction projects in history: two runways built on an island that did not previously exist.',
         do: [
           'No immigration needed — follow the transfer signs directly to the departure gates.',

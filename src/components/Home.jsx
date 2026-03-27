@@ -3,6 +3,9 @@
 // Cards reflect the trip's status: past (dimmed), current (gold glow + pulsing dot), future (normal).
 import { skylineMap } from './Skylines'
 import Greeting from './Greeting'
+import DawnNote from './DawnNote'
+import SerendipityButton from './SerendipityButton'
+import { useSlowTravel } from '../context/SlowTravelContext'
 import { TRIP_START, TRIP_END } from '../data/itinerary'
 import styles from './Home.module.css'
 
@@ -51,12 +54,52 @@ function getTripStatus(trip, today) {
   return 'future'
 }
 
-export default function Home({ trips, onSelect }) {
+export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar }) {
   const today    = todayISO()
   const progress = getTripProgress(today)
+  const { slowTravel, setSlowTravel } = useSlowTravel()
+
+  // Serendipity: use the current destination's serendipity, fall back to first trip
+  const currentTrip = trips.find(t => {
+    const s = getTripStatus(t, today)
+    return s === 'current'
+  }) || trips[0]
+  const serendipity = currentTrip?.serendipity || []
 
   return (
     <div className={styles.home}>
+
+      {/* Top bar — checklist left, slow travel + memory jar right */}
+      <div className={styles.topBar}>
+        <div className={styles.topLeft}>
+          <button
+            className={styles.topBtn}
+            onClick={onOpenChecklist}
+            aria-label="Open pre-departure checklist"
+            title="Before you leave"
+          >
+            ✓ Before you leave
+          </button>
+        </div>
+        <div className={styles.topRight}>
+          <button
+            className={`${styles.topBtn} ${styles.slowToggle} ${slowTravel ? styles.slowOn : ''}`}
+            onClick={() => setSlowTravel(v => !v)}
+            aria-label={slowTravel ? 'Slow travel mode on' : 'Slow travel mode off'}
+            title="Slow Travel Mode"
+          >
+            🐢
+          </button>
+          <button
+            className={styles.topBtn}
+            onClick={onOpenMemoryJar}
+            aria-label="Open memory jar"
+            title="Memory Jar"
+          >
+            ◇ Memories
+          </button>
+        </div>
+      </div>
 
       <header className={styles.header}>
         <p className={styles.eyebrow}>For Francois &amp; James</p>
@@ -64,6 +107,9 @@ export default function Home({ trips, onSelect }) {
         <p className={styles.subtitle}>March – April 2026</p>
         <p className={styles.companionLine}>A wise and patient companion for the curious.</p>
       </header>
+
+      {/* Dawn note — shows a date-specific sentence before 11am */}
+      <DawnNote />
 
       {/* Daily greeting — reads device clock and itinerary to show a contextual message */}
       <Greeting />
@@ -154,6 +200,9 @@ export default function Home({ trips, onSelect }) {
         <p>The Curious Traveller · 2026</p>
         <p className={styles.footerCredit}>Built with care. 27 March 2026.</p>
       </footer>
+
+      {/* Serendipity button — fixed bottom-right, city-specific suggestions */}
+      <SerendipityButton serendipity={serendipity} />
 
     </div>
   )

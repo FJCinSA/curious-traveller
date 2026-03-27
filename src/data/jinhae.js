@@ -10,7 +10,7 @@ export const trip = {
   tagline: 'Leave at 7. The petals are already falling.',
   theme: 'jinhae',
   flag: '🇰🇷',
-  order: 3,   // Display position on the home screen grid
+  order: 3,
   cardGradient: 'linear-gradient(135deg, #12062a 0%, #240d45 50%, #1a0835 100%)',
   heroAccent: '#f9a8d4',
   transport: {
@@ -63,6 +63,14 @@ export const trip = {
   },
 }
 
+export const serendipity = [
+  'Walk away from Yeojwacheon Stream toward the naval base. The road there is lined with cherry trees and almost nobody takes it. Some of the best photographs of the day come from here.',
+  'Jinhae Tower at the top of the hill looks over the entire festival. Go up at midday when the light is overhead and the pink of 350,000 trees is at its most intense.',
+  'The naval museum near the base entrance is free and almost always empty. There is a destroyer you can walk through.',
+  'Find the small café on the canal bank — not the busy ones near the station, the quiet one further east with the wooden chairs. Sit there for an hour. Watch the petals fall into the water.',
+  'Admiral Yi Sun-sin, Korea\'s greatest hero, is everywhere in Jinhae — it was his base. Find the small statue near the canal and read the inscription. His story is worth knowing.',
+]
+
 export const days = [
   {
     id: 1,
@@ -76,6 +84,7 @@ export const days = [
         name: 'Yeojwacheon Stream',
         neighbourhood: 'Central Jinhae',
         wow: '350,000 cherry trees bloom across this one city. Along the 800m of Yeojwacheon canal, the branches meet overhead — and when the petals fall, they land so thick on the water that the stream turns pink.',
+        slowNote: 'Stop walking. Stand still in the middle of the petals. Let the people flow around you. The canal turns pink when enough petals have fallen. This is what you came for.',
         history: 'Jinhae\'s cherry trees were planted by the Japanese during colonial occupation (1910–1945). After independence, there were serious calls to tear them out. Koreans decided they were beautiful regardless of who planted them. The festival began in 1952 to honour Admiral Yi Sun-sin, not the trees.',
         do: [
           'Arrive before 9 AM — it is a different place before the crowds',
@@ -93,6 +102,7 @@ export const days = [
         name: 'Gyeonghwa Station',
         neighbourhood: 'Jinhae Station Area',
         wow: 'This tiny, no-longer-operational train station runs one train per day — exclusively for festival visitors — through a tunnel of 340 cherry trees planted along the tracks. The photos look like CGI. They are not.',
+        slowNote: 'The cherry trees along these tracks were planted by a colonial government and never removed. They outlasted the empire that planted them. Stand on the platform and think about that for a moment.',
         history: 'Gyeonghwa Station opened in 1926 under Japanese rule. The cherry trees along the tracks were planted then and never removed. When the station lost its regular service, the trees became the reason to keep it.',
         do: [
           'Arrive by 10 AM before the station platform crowds beyond comfortable',
@@ -110,6 +120,7 @@ export const days = [
         name: 'Jinhae Tower',
         neighbourhood: 'Jinhae Hill',
         wow: 'From the top of this observation tower, the whole city turns pink. Jinhae has more cherry trees per square kilometre than any other city in Korea — possibly in Asia. When you see it from above, you understand why people come from every province for this.',
+        slowNote: 'From here the city looks like a pink cloud settled over the hillsides. Watch it for a full minute before you reach for your camera. Let the scale arrive in you first.',
         history: 'Built to give festival visitors an aerial view of the blossom coverage. The tower sits on the hill above the naval base — Jinhae is primarily a South Korean Navy town, and the festival was always secondary to the military presence. The blossoms won.',
         do: [
           'Climb or take the cable car — the top is the best photo opportunity of the whole trip',
@@ -127,6 +138,7 @@ export const days = [
         name: 'Admiral Yi Sun-sin Square',
         neighbourhood: 'Jinhae Centre',
         wow: 'Yi Sun-sin defeated a Japanese fleet of 333 ships with 13. Thirteen. At the Battle of Myeongnyang in 1597, he lost no ships. The festival exists to honour him — the cherry blossoms came second.',
+        slowNote: 'Yi Sun-sin defeated 333 ships with 13. Read the inscription on the base of the statue. His story is one of the finest in any history, and almost no one outside Korea knows it.',
         history: 'Yi Sun-sin (1545–1598) is arguably the most revered military figure in Korean history. His turtle ships — the world\'s first armoured warships — kept Japan from conquering Korea. He died in his last battle. The Koreans still won. Every town with a naval connection puts up a statue.',
         do: [
           'The bronze statue is the best photograph before heading back',

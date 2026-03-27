@@ -4,6 +4,62 @@
   flex-direction: column;
 }
 
+/* ─── Top Bar ────────────────────────────────────────────── */
+
+.topBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(to bottom, rgba(8, 14, 26, 0.92) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.topLeft,
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  pointer-events: auto;
+}
+
+.topBtn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  color: var(--cream-dim);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.topBtn:hover {
+  color: var(--gold);
+  border-color: rgba(201, 168, 76, 0.35);
+}
+
+.slowToggle {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.6rem;
+  opacity: 0.5;
+}
+
+.slowOn {
+  opacity: 1;
+  border-color: rgba(201, 168, 76, 0.5);
+  color: var(--gold);
+}
+
 /* ─── Header ─────────────────────────────────────────────── */
 
 .header {

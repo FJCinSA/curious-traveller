@@ -7,6 +7,9 @@ import Hero from './Hero'
 import DayView from './DayView'
 import GettingAround from './GettingAround'
 import ArrivalNote from './ArrivalNote'
+import TransportAlert from './TransportAlert'
+import MemoryPrompt from './MemoryPrompt'
+import SerendipityButton from './SerendipityButton'
 import CustomPlaces from './CustomPlaces'
 import styles from './TripPage.module.css'
 
@@ -76,6 +79,9 @@ export default function TripPage({ trip, onBack }) {
           </div>
         </div>
 
+        {/* Transport intelligence alerts — context-sensitive reminders based on date and trip */}
+        <TransportAlert tripId={trip.id} />
+
         {/* Arrival note — companion voice, holds their hand on arrival. Rendered if trip.arrival is defined */}
         <ArrivalNote arrival={trip.arrival} />
 
@@ -92,7 +98,13 @@ export default function TripPage({ trip, onBack }) {
         {/* Custom places — Francois and James can add their own discoveries */}
         <CustomPlaces tripId={trip.id} />
 
+        {/* Memory prompt — after 6pm, asks for one moment to keep */}
+        <MemoryPrompt trip={trip} />
+
       </main>
+
+      {/* Serendipity button — fixed bottom-right, city-specific suggestions */}
+      <SerendipityButton serendipity={trip.serendipity || []} />
 
       <footer className={styles.footer}>
         <p>The Curious Traveller &nbsp;·&nbsp; {trip.city} 2026</p>

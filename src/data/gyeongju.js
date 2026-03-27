@@ -10,7 +10,7 @@ export const trip = {
   tagline: 'One night in the city that was a kingdom for 1,000 years.',
   theme: 'gyeongju',
   flag: '🇰🇷',
-  order: 4,   // Display position on the home screen grid
+  order: 4,
   cardGradient: 'linear-gradient(135deg, #0c0a1e 0%, #181535 50%, #100e28 100%)',
   heroAccent: '#fbbf24',
   arrival: 'Sono Calm Bomun Resort sits beside a lake. Taxi from Singyeongju Station, ₩18,000, about 20 minutes. You are leaving the city behind. Feel it.',
@@ -48,6 +48,14 @@ export const trip = {
   },
 }
 
+export const serendipity = [
+  'Hire a bicycle from the shop near Tumuli Park. Ride south along the river path at dusk. The burial mounds in the fading light look like the breathing of the earth.',
+  'Donggung Palace and Wolji Pond at night — the reflection of the reconstructed palace in the water is one of the most beautiful things in Korea. Almost no guidebook puts it on the first page. It should be.',
+  'The Gyeongju Traditional Market near the bus terminal sells ssambap — rice wrapped in leaves — from women who have been making it for forty years. Eat it standing up.',
+  'Seokguram Grotto is thirty minutes above Bulguksa by footpath. Most visitors take the bus and miss the walk. The walk is better than the grotto.',
+  'Anapji Pond at dawn before anyone arrives. The wild ducks own it completely at 6am. By 9am it belongs to the tour groups. You know which version to choose.',
+]
+
 export const days = [
   {
     id: 1,
@@ -61,6 +69,7 @@ export const days = [
         name: 'KTX to Singyeongju — The Kingdom Begins',
         neighbourhood: 'Busan Bujeon → Gyeongju',
         wow: 'The KTX covers the 70km from Busan to Gyeongju in 20 minutes at 300km/h. You leave a coastal city and arrive in the capital of a kingdom that lasted nearly 1,000 years, before the train has finished its first drink service.',
+        slowNote: 'Twenty minutes. You leave a coastal city and arrive in a kingdom. Watch Korea pass the window — the mountains, the rice paddies, the burial mounds visible from the track. The speed and the antiquity are happening at the same time.',
         history: 'Singyeongju Station sits outside the old city centre deliberately — Gyeongju protects its ancient skyline so strictly that no building in the heritage zone may be taller than the royal burial mounds. The KTX obeys the same rules.',
         do: [
           'Take the KTX from Bujeon Station in Busan (not the main KTX Busan Station — Bujeon). 20 minutes. ₩8,400.',
@@ -78,6 +87,7 @@ export const days = [
         name: 'Bulguksa Temple',
         neighbourhood: 'Toham Mountain',
         wow: 'Bulguksa has two stone staircases that have not been walked on since 751 AD. The Cheongungyo and Baegungyo bridges lead to the main hall — 33 steps each, for the 33 levels of Buddhist heaven. Only the eyes may climb them.',
+        slowNote: 'The stone lanterns have stood here for 1,300 years. Put your hand on one. Feel the weight of that number. Someone carved this stone when Paris was a small city and the Americas were unknown.',
         history: 'Built in 528 AD and expanded in 751 by the nobleman Kim Daeseong, who reportedly built it for his parents in this life and his parents from his previous life simultaneously. A UNESCO World Heritage Site since 1995. Three of its pagodas are National Treasures.',
         do: [
           'Arrive at 10 AM when it opens — later gets busy with school groups',
@@ -95,6 +105,7 @@ export const days = [
         name: 'Seokguram Grotto',
         neighbourhood: 'Toham Mountain (above Bulguksa)',
         wow: 'The stone Buddha inside is mathematically perfect — Silla craftsmen built the dome using geometric ratios so precise that dew condenses on the walls in a controlled pattern that has kept the interior moisture-balanced for 1,300 years without any mechanical system.',
+        slowNote: 'The Buddha inside has been looking at the same horizon for 1,250 years. Stand where you are permitted and look where it is looking. The sea is just visible on a clear day. The craftsmen who built this saw the same view.',
         history: 'Completed 774 AD. Hidden for centuries under a landslide, rediscovered by a postman in 1909 during a rainstorm. The Japanese colonial government moved it and reassembled it incorrectly, damaging the moisture-control system. Korea has been trying to fix it since 1963.',
         do: [
           'Short uphill walk from Bulguksa — 20 minutes or take the shuttle bus',
@@ -112,6 +123,7 @@ export const days = [
         name: 'Cheomseongdae Observatory',
         neighbourhood: 'Gyeongju City Centre',
         wow: 'The oldest surviving astronomical observatory in East Asia — built in 634 AD by Queen Seondeok, one of the first women to rule a kingdom in the ancient world. It has 362 stones, one for each day of the lunar year. Its 27 layers mark her as the 27th ruler of Silla.',
+        slowNote: 'Queen Seondeok built this in 634 AD to watch the stars. Walk around the full base slowly. Each stone was placed with a specific intention. 362 stones. One for each day of the lunar year. She counted every one.',
         history: 'Seondeok ruled 632–647 AD, a period of intense astronomical study used to predict harvests and wars. She also built the Nine-Story Wooden Pagoda at Hwangnyongsa Temple (since destroyed by the Mongols). The observatory survived everything.',
         do: [
           'Walk around the full base — the construction is breathtaking up close',
@@ -129,6 +141,7 @@ export const days = [
         name: 'Tumuli Park — Royal Tombs',
         neighbourhood: 'Gyeongju City Centre',
         wow: 'There are over 2,000 royal burial mounds in and around Gyeongju. The city cannot build a parking garage without hitting a Silla tomb. One mound opened in 1973 — Cheonmachong — contained 11,526 gold and jade artifacts and a solid gold crown.',
+        slowNote: 'The burial mounds breathe. That is how they look at dusk — like the earth is breathing slowly beneath you. Sit on the grass between two of them and do nothing for ten minutes. This is the oldest silence in Korea.',
         history: 'The Silla kings were buried in mounds of earth and stone rather than underground chambers — this made the tombs impossible to tunnel into without detection, and most were never looted. What archaeologists find inside remains intact after 1,500 years.',
         do: [
           'Walk between the 23 mounds at dusk — the scale only makes sense when you walk among them',
@@ -146,6 +159,7 @@ export const days = [
         name: 'Gyeongju National Museum',
         neighbourhood: 'Gyeongju City Centre',
         wow: 'The Seongdeok Bell in the museum courtyard is the largest bell in Korea — cast in 771 AD, 18.9 tonnes. Koreans have not rung it since the 1970s because each full strike causes microscopic fractures in the bronze. It is too precious to use.',
+        slowNote: 'The gold crown in the treasure room weighs 1.3 kilograms. Hold your hands out beside it and estimate the weight. The Silla kings wore this on their heads. The detail is extraordinary — every single leaf trembles on a wire.',
         history: 'The museum holds 200,000 artifacts from the Silla Kingdom. Most are from tombs that were never looted because the burial mound technique made them impenetrable. The gold crown of Cheonmachong is the most photographed object. It weighs 1.3kg of solid gold.',
         do: [
           'The Silla Gold Treasure Room alone is worth the entry',
@@ -163,6 +177,7 @@ export const days = [
         name: 'Banwolseong Fortress',
         neighbourhood: 'Gyeongju City Centre',
         wow: 'Banwolseong — "Half-Moon Fortress" — was the royal palace of the Silla kings for nearly 1,000 years. The entire earthwork fortress wall still exists. The palace buildings are gone. The trees growing inside are some of the oldest in Korea.',
+        slowNote: 'Walk the top of the earthwork wall at last light. The Silla kings stood here for seven hundred years. The view over the Gyeongju basin hasn\'t changed. The city is still contained by the same mountains.',
         history: 'Occupied continuously from the 5th century until Silla fell in 935 AD. The Silla kings ruled from this site for 700 years — longer than the Roman Empire lasted in the West. All that remains is the earth wall, a few ponds, and the ice storage house.',
         do: [
           'Walk the top of the earthwork wall at dusk — views over the Gyeongju basin',

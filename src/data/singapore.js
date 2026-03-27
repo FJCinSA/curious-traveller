@@ -10,8 +10,8 @@ export const trip = {
   tagline: 'Two days. One city. Go hard.',
   theme: 'singapore',
   flag: '🇸🇬',
-  order: 1,   // Display position on the home screen grid
-  wide: true, // Spans 2 columns on the home screen card grid
+  order: 1,
+  wide: true,
   cardGradient: 'linear-gradient(135deg, #061824 0%, #0d3352 50%, #0a2540 100%)',
   heroAccent: '#38bdf8',
   arrival: 'You have just landed after a long night. Yotelair is inside Terminal 3 — follow the hotel signs, no taxi needed. Check in, sleep, and let Singapore wait. It will still be magnificent this afternoon.',
@@ -37,6 +37,14 @@ export const trip = {
   },
 }
 
+export const serendipity = [
+  'Chinatown Complex Food Centre — rooftop hawker centre on the top floor of a car park on Smith Street. Stall 02-126 serves soy sauce chicken with a Michelin star for less than a coffee. Go at 11am before the queue.',
+  'The southern ridgeline trail connects Mount Faber to Labrador Park through old-growth forest. Nobody takes it. An hour of jungle inside a city of six million people.',
+  'Haji Lane at 8am before the shops open. The murals are better without the crowds. The coffee shop on the corner opens early.',
+  'Take the bumboat across the Singapore River to Boat Quay. It costs almost nothing. The view of the skyline from the water is the one the postcards never show.',
+  'The rooftop infinity pool at MBS is accessible to hotel guests only — but the bar at 1-Altitude on the 63rd floor of One Raffles Place is open to everyone. Same sky. Better cocktails.',
+]
+
 export const days = [
   {
     id: 1,
@@ -50,6 +58,7 @@ export const days = [
         name: 'Jewel Changi Airport',
         neighbourhood: 'Changi Airport, Terminal 3',
         wow: 'The centrepiece of Jewel is the HSBC Rain Vortex — the world\'s tallest indoor waterfall at 40 metres. It falls from a hole in the glass roof into a forest crater. Sixty thousand plants grow up the surrounding slopes. It is unlike anything built anywhere on Earth.',
+        slowNote: 'The Rain Vortex falls forty metres into a forest that shouldn\'t exist inside an airport. Find a bench below it. Close your eyes for a moment. The sound is everything.',
         history: 'Opened 2019. Moshe Safdie designed it — the same architect who built Marina Bay Sands. Singapore keeps calling him back. The structure contains 280 shops, a hotel, a 280-metre walking net suspended 25 metres above the forest, and a garden on top. It is an airport terminal.',
         do: [
           'Rain Vortex: walk directly to the centre of the building — it is unmissable',
@@ -67,6 +76,7 @@ export const days = [
         name: 'Gardens by the Bay',
         neighbourhood: 'Marina Bay',
         wow: 'The two glass Domes here are the largest climate-controlled greenhouses on Earth — 1.28 hectares sealed under a single curving shell of steel and glass.',
+        slowNote: 'The Supertrees are tallest at the edges. Stand at the base of one and look straight up. It goes on longer than you expect. The plants growing on the canopy are real — 162,900 of them.',
         history: 'Reclaimed from the sea in the 1970s, this land was ocean until Singapore literally made more Singapore.',
         do: [
           'Walk the Supertree skywalk at opening — before the crowds hit',
@@ -84,6 +94,7 @@ export const days = [
         name: 'Maxwell Food Centre',
         neighbourhood: 'Chinatown',
         wow: 'Stall #10 — Tian Tian Chicken Rice — has been Michelin-listed since 2016. It costs $5. Gordon Ramsay tried to replicate it and admitted he failed.',
+        slowNote: 'Find a table in the middle of the noise. Order slowly. Watch how Singaporeans eat — efficiently, joyfully, without ceremony. This is the real city. The hawker stall is the institution.',
         history: 'Built in 1928 as a wet market, now one of Singapore\'s most beloved hawker centres. The hawker system was engineered by the government in the 1970s to get street food off the streets — and accidentally created a culinary institution.',
         do: [
           'Tian Tian Chicken Rice (#10) — arrive before 12:30 or join a long queue',
@@ -101,6 +112,7 @@ export const days = [
         name: 'Chinatown & Sri Mariamman Temple',
         neighbourhood: 'Chinatown',
         wow: 'Singapore\'s oldest Hindu temple sits in the middle of Chinatown. It was built in 1827 by Tamil migrants who arrived with the British — and it is still a fully functioning place of worship.',
+        slowNote: 'Sri Mariamman Temple sits inside Chinatown like a secret kept for two hundred years. Go inside and stand in the cool air. The gods here have been watching this street since 1827.',
         history: 'Raffles divided Singapore into ethnic zones in 1822. The Chinese got Chinatown, but the Indians got there first — and nobody moved their temple.',
         do: [
           'Enter Sri Mariamman Temple — no entry fee, shoes off',
@@ -118,6 +130,7 @@ export const days = [
         name: 'Marina Bay Sands Sky Park',
         neighbourhood: 'Marina Bay',
         wow: 'The rooftop pool is 150 metres long — longer than the Eiffel Tower is wide at its base. It hangs cantilevered 57 floors above the city, over the edge of one of three towers.',
+        slowNote: 'The observation deck has a fence on one side and the whole city on the other. On a clear evening you can see into Malaysia. Stand at the edge and look. Take your time with it.',
         history: 'Opened 2010. Cost SGD $8 billion. The architect Moshe Safdie called it the hardest project of his career. The infinity pool only has a fence on one side — the city is the other barrier.',
         do: [
           'Sands SkyPark Observation Deck — best views at golden hour',
@@ -135,6 +148,7 @@ export const days = [
         name: 'Supertree Grove — Night Show',
         neighbourhood: 'Marina Bay',
         wow: 'The Supertrees harvest solar energy during the day and release it as light at night — they are functioning ecosystems, not sculptures. Over 162,900 plants grow on their canopies.',
+        slowNote: 'When the music starts, stand directly underneath the tallest Supertree and look up. The light comes down through the canopy from fifty metres above you. It feels like something sacred. Let it.',
         history: 'Designed by Grant Associates (Bath, UK). The tallest is 50 metres. Local critics called them ugly at opening in 2012. Now they are Singapore\'s most photographed structure.',
         do: [
           '7:45 PM show: Garden Rhapsody light and music',
@@ -160,6 +174,7 @@ export const days = [
         name: 'Singapore Botanic Gardens',
         neighbourhood: 'Tanglin',
         wow: 'Every foreign head of state who visits Singapore gets an orchid hybrid named after them. There are over 200 named cultivars — including ones for Barack Obama, Princess Diana, and Jackie Chan.',
+        slowNote: 'Find the Heritage Trees marked on the map. The oldest ones were here before Singapore was a country. Put your hand on the bark. Stand there and think about what has changed and what has not.',
         history: 'Founded 1859. The world\'s only tropical botanic garden with UNESCO World Heritage status. The rubber tree planted here in 1877 seeded the entire Malaysian rubber industry — one of the most consequential plants in economic history.',
         do: [
           'National Orchid Garden — the centrepiece, opens 8:30 AM',
@@ -177,6 +192,7 @@ export const days = [
         name: 'Little India & Sri Veeramakaliamman',
         neighbourhood: 'Little India',
         wow: 'The temple\'s 100+ sculpted deities were smashed by the Japanese in WWII. They were rebuilt from memory — no blueprints existed — by the same craftsmen who originally carved them.',
+        slowNote: 'Stand at the entrance to Sri Veeramakaliamman just before a puja begins. The drums start low. Then the incense rises. The gods here have been tended for 145 years without interruption.',
         history: 'Built 1881 by Bengali laborers working the nearby lime kilns. The goddess Kali inside is considered a fierce protector — her temple was here long before the neighborhood had a name.',
         do: [
           'Sri Veeramakaliamman Temple — most vivid gopuram (tower) in Singapore',
@@ -194,6 +210,7 @@ export const days = [
         name: 'Haji Lane & Arab Quarter',
         neighbourhood: 'Kampong Glam',
         wow: 'The Sultan Mosque\'s massive golden dome is inlaid with glass bottle bottoms donated by poor Muslims who could not afford gold. Look closely — you can see the circles.',
+        slowNote: 'Haji Lane is best before the shops open or just before they close. Walk it slowly and read every mural. Someone painted each one for exactly this moment — a stranger slowing down and looking properly.',
         history: 'Kampong Glam was the Malay royal district under Raffles\' 1822 ethnic plan. The sultan was given a formal palace and the area became the Muslim heartland. The shophouses on Haji Lane were built by Arab merchants in the 1840s.',
         do: [
           'Sultan Mosque — go inside, it is stunning and it is free',
@@ -211,6 +228,7 @@ export const days = [
         name: 'Singapore River & Clarke Quay',
         neighbourhood: 'Clarke Quay',
         wow: 'The Singapore River was so polluted by 1977 that it had zero marine life. Lee Kuan Yew ordered a 10-year cleanup — 26,000 workers relocated, 6,000 boats removed. By 1987 it was clean. Otters live here now.',
+        slowNote: 'Find the oldest section of the river wall — the colonial-era stone embankment near Cavenagh Bridge. The coolies unloaded cargo here for a century. Feel how worn the stone is. The otters live in this river now.',
         history: 'The quay was Singapore\'s commercial heart from 1819 — coolies unloaded cargo here until container shipping made it redundant in the 1960s. The colonial godowns (warehouses) became bars in the 1990s.',
         do: [
           'Walk from Robertson Quay to Boat Quay along the river',
@@ -228,6 +246,7 @@ export const days = [
         name: 'Singapore Airlines SQ616 — To Korea',
         neighbourhood: 'Changi Airport Terminal 3',
         wow: 'Your Yotelair room is in Terminal 3. Singapore Airlines departs from Terminal 3. Check in, have a final drink at the airport, and walk to the gate. The whole system is yours.',
+        slowNote: 'Walk through Changi slowly on your way to the gate. This airport is Singapore\'s final argument. It has never once made a careless decision. Look at everything. Korea is five hours ahead.',
         history: 'Changi has won the Skytrax World\'s Best Airport award 13 consecutive times. The Singapore Airlines flight to Busan is 5 hours 30 minutes — a night crossing over the South China Sea.',
         do: [
           'Return to Changi by 21:00 — two hours for check-in and security',

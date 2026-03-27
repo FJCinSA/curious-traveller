@@ -1,0 +1,48 @@
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.amber {
+  background: rgba(251, 191, 36, 0.07);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.blue {
+  background: rgba(56, 189, 248, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+}
+
+.alertIcon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.alertBody {
+  flex: 1;
+}
+
+.alertText {
+  font-family: var(--font-sans);
+  font-size: 0.87rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.amber .alertText {
+  color: #fbbf24;
+}
+
+.blue .alertText {
+  color: #7dd3fc;
+}
+
+.alertText em {
+  font-style: normal;
+  font-weight: 600;
+}

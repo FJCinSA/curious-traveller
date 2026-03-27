@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Home from './components/Home'
 import TripPage from './components/TripPage'
 import InstallPrompt from './components/InstallPrompt'
+import UpdateManager from './components/UpdateManager'
 import { trips } from './data/trips'
 import styles from './App.module.css'
 
@@ -37,6 +38,7 @@ export default function App() {
         />
       )}
       <InstallPrompt />
+      <UpdateManager />
     </div>
   )
 }

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#080e1a"/>
+  <!-- Outer gold ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#c9a84c" stroke-width="6" opacity="0.4"/>
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.2"/>
+  <!-- Compass rose / star -->
+  <polygon points="256,80 272,240 256,256 240,240" fill="#c9a84c" opacity="0.9"/>
+  <polygon points="256,432 272,272 256,256 240,272" fill="#c9a84c" opacity="0.5"/>
+  <polygon points="80,256 240,240 256,256 240,272" fill="#c9a84c" opacity="0.5"/>
+  <polygon points="432,256 272,240 256,256 272,272" fill="#c9a84c" opacity="0.9"/>
+  <!-- Diagonal points -->
+  <polygon points="148,148 246,246 256,256 246,266" fill="#c9a84c" opacity="0.3"/>
+  <polygon points="364,364 266,266 256,256 266,246" fill="#c9a84c" opacity="0.3"/>
+  <polygon points="364,148 266,246 256,256 246,246" fill="#c9a84c" opacity="0.3"/>
+  <polygon points="148,364 246,266 256,256 266,266" fill="#c9a84c" opacity="0.3"/>
+  <!-- Center dot -->
+  <circle cx="256" cy="256" r="18" fill="#c9a84c"/>
+  <circle cx="256" cy="256" r="10" fill="#080e1a"/>
+</svg>

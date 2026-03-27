@@ -1,72 +1,41 @@
-import { useState } from 'react'
-import Hero from './components/Hero'
-import DayView from './components/DayView'
+import { useState, useEffect } from 'react'
+import Home from './components/Home'
+import TripPage from './components/TripPage'
 import InstallPrompt from './components/InstallPrompt'
-import { trip, days } from './data/singapore'
+import { trips } from './data/trips'
 import styles from './App.module.css'
 
-export default function App() {
-  const [activeDay, setActiveDay] = useState(null)
+function getHash() {
+  return window.location.hash.slice(1) || 'home'
+}
 
-  const visibleDays = activeDay === null ? days : days.filter(d => d.id === activeDay)
+export default function App() {
+  const [screen, setScreen] = useState(getHash)
+
+  useEffect(() => {
+    const handler = () => setScreen(getHash())
+    window.addEventListener('hashchange', handler)
+    return () => window.removeEventListener('hashchange', handler)
+  }, [])
+
+  const navigate = (dest) => {
+    window.scrollTo(0, 0)
+    window.location.hash = dest
+  }
+
+  const currentTrip = trips.find(t => t.id === screen)
 
   return (
     <div className={styles.app}>
-      <Hero trip={trip} />
-
-      <main className={styles.main}>
-        {/* Day filter tabs */}
-        <nav className={styles.tabs}>
-          <button
-            className={`${styles.tab} ${activeDay === null ? styles.active : ''}`}
-            onClick={() => setActiveDay(null)}
-          >
-            All Days
-          </button>
-          {days.map(day => (
-            <button
-              key={day.id}
-              className={`${styles.tab} ${activeDay === day.id ? styles.active : ''}`}
-              onClick={() => setActiveDay(day.id)}
-            >
-              {day.label}
-            </button>
-          ))}
-        </nav>
-
-        {/* Summary bar */}
-        <div className={styles.summary}>
-          <div className={styles.summaryItem}>
-            <span className={styles.summaryNum}>
-              {visibleDays.reduce((n, d) => n + d.locations.length, 0)}
-            </span>
-            <span className={styles.summaryLabel}>stops</span>
-          </div>
-          <div className={styles.summaryDivider} />
-          <div className={styles.summaryItem}>
-            <span className={styles.summaryNum}>{visibleDays.length}</span>
-            <span className={styles.summaryLabel}>{visibleDays.length === 1 ? 'day' : 'days'}</span>
-          </div>
-          <div className={styles.summaryDivider} />
-          <div className={styles.summaryItem}>
-            <span className={styles.summaryNum}>∞</span>
-            <span className={styles.summaryLabel}>memories</span>
-          </div>
-        </div>
-
-        {/* Days */}
-        <div className={styles.days}>
-          {visibleDays.map(day => (
-            <DayView key={day.id} day={day} />
-          ))}
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <p>The Curious Traveller &nbsp;·&nbsp; Singapore 2026</p>
-        <p className={styles.footerSub}>For Francois &amp; James</p>
-      </footer>
-
+      {screen === 'home' || !currentTrip ? (
+        <Home trips={trips} onSelect={navigate} />
+      ) : (
+        <TripPage
+          key={currentTrip.id}
+          trip={currentTrip}
+          onBack={() => navigate('home')}
+        />
+      )}
       <InstallPrompt />
     </div>
   )

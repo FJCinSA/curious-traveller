@@ -1,7 +1,15 @@
 export const trip = {
+  id: 'singapore',
   city: 'Singapore',
+  country: 'Singapore',
   dates: '30–31 March 2026',
+  nights: 2,
+  hotel: null,
   tagline: 'Two days. One city. Go hard.',
+  theme: 'singapore',
+  flag: '🇸🇬',
+  cardGradient: 'linear-gradient(135deg, #061824 0%, #0d3352 50%, #0a2540 100%)',
+  heroAccent: '#38bdf8',
 }
 
 export const days = [

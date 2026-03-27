@@ -70,6 +70,16 @@
   margin-bottom: 0.75rem;
 }
 
+.hotel {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  opacity: 0.75;
+  margin-bottom: 0.4rem;
+}
+
 .tagline {
   font-family: var(--font-sans);
   font-size: 0.9rem;

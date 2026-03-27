@@ -87,7 +87,7 @@ export default function TripPage({ trip, onBack }) {
         <ArrivalNote arrival={trip.arrival} />
 
         {/* Collapsible transport tips — rendered if trip.transport is defined */}
-        <GettingAround transport={trip.transport} />
+        <GettingAround transport={trip.transport} tripId={trip.id} />
 
         {/* Day sections */}
         <div className={styles.days}>

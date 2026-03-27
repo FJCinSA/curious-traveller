@@ -16,6 +16,26 @@ function buildNaverUrl(coords, name) {
   return `https://map.naver.com/v5/directions/-/${lng},${lat},${encodeURIComponent(name)},-/walk`
 }
 
+// Builds a Kakao Taxi deep link. Falls back to kakaomobility.com if the app isn't installed.
+function buildKakaoUrl(coords, name) {
+  const { lat, lng } = coords
+  return `kakaot://taxi?dest_name=${encodeURIComponent(name)}&dest_lat=${lat}&dest_lng=${lng}`
+}
+
+function handleKakaoClick(e, coords, name) {
+  e.preventDefault()
+  const deep = buildKakaoUrl(coords, name)
+  const fallback = 'https://www.kakaomobility.com'
+  // Attempt to open the app; if it doesn't launch within 1.5s, open the web fallback
+  const start = Date.now()
+  window.location = deep
+  setTimeout(() => {
+    if (Date.now() - start < 2000) {
+      window.open(fallback, '_blank', 'noopener,noreferrer')
+    }
+  }, 1500)
+}
+
 export default function LocationCard({ location, siblings = [] }) {
   const [showMore, setShowMore]     = useState(false)
   const [showNearby, setShowNearby] = useState(false)
@@ -103,16 +123,25 @@ export default function LocationCard({ location, siblings = [] }) {
         </div>
       )}
 
-      {/* Navigate here — opens Naver Maps from device GPS to this location */}
+      {/* Navigation row — Naver Maps + Kakao Taxi, shown when coords are present */}
       {location.coords && (
-        <a
-          href={buildNaverUrl(location.coords, location.name)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.navigate}
-        >
-          Navigate here ↗
-        </a>
+        <div className={styles.navRow}>
+          <a
+            href={buildNaverUrl(location.coords, location.name)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.navigate}
+          >
+            Navigate here ↗
+          </a>
+          <a
+            href={buildKakaoUrl(location.coords, location.name)}
+            onClick={(e) => handleKakaoClick(e, location.coords, location.name)}
+            className={styles.kakaoTaxi}
+          >
+            🚕 Kakao Taxi
+          </a>
+        </div>
       )}
 
     </article>

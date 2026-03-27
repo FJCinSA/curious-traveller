@@ -178,7 +178,7 @@ export const days = [
         practical: '₩2,000 entry. Wear proper shoes — steep stairs everywhere. Opens 9 AM. Kakao Taxi back to centre.',
         gradient: 'linear-gradient(135deg, #1a0a08 0%, #3d2210 50%, #2a1508 100%)',
         accent: '#fb923c',
-        coords: { lat: 35.0979, lng: 128.9929 },
+        coords: { lat: 35.0975, lng: 129.0145 },
       },
       {
         id: 'jagalchi',
@@ -214,7 +214,7 @@ export const days = [
         practical: 'Free to walk. 10 minutes from Jagalchi. Budget ₩10,000–20,000 for street food.',
         gradient: 'linear-gradient(135deg, #0f0a1a 0%, #1e1232 50%, #160e28 100%)',
         accent: '#a78bfa',
-        coords: { lat: 35.0972, lng: 129.0279 },
+        coords: { lat: 35.1006, lng: 129.0261 },
       },
     ],
   },
@@ -258,7 +258,7 @@ export const days = [
         practical: 'Free. 15-minute walk from Shilla Stay Haeundae along the beach road.',
         gradient: 'linear-gradient(135deg, #0a1f2e 0%, #163352 50%, #0d2840 100%)',
         accent: '#34d399',
-        coords: { lat: 35.1588, lng: 129.1640 },
+        coords: { lat: 35.1542, lng: 129.1598 },
       },
       {
         id: 'spaland',

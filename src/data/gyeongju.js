@@ -115,7 +115,7 @@ export const days = [
         practical: 'Included in Bulguksa ticket. Shuttle from Bulguksa ₩1,200. Best before midday crowds.',
         gradient: 'linear-gradient(135deg, #1a1408 0%, #3a2e12 50%, #2a2010 100%)',
         accent: '#fbbf24',
-        coords: { lat: 35.7953, lng: 129.3487 },
+        coords: { lat: 35.7944, lng: 129.3469 },
       },
       {
         id: 'cheomseongdae',
@@ -169,7 +169,7 @@ export const days = [
         practical: 'Free entry. Closes 6 PM (last entry 5:30 PM). 15-minute walk from Tumuli.',
         gradient: 'linear-gradient(135deg, #1a1208 0%, #342614 50%, #261c0e 100%)',
         accent: '#f59e0b',
-        coords: { lat: 35.8353, lng: 129.2249 },
+        coords: { lat: 35.8341, lng: 129.2243 },
       },
       {
         id: 'banwolseong',
@@ -187,7 +187,7 @@ export const days = [
         practical: 'Free. Open until 10 PM. Floodlit at night. Taxi back to Sono Calm Bomun Resort: ₩8,000.',
         gradient: 'linear-gradient(135deg, #0e0c20 0%, #1c1a3a 50%, #141228 100%)',
         accent: '#c4b5fd',
-        coords: { lat: 35.8336, lng: 129.2227 },
+        coords: { lat: 35.8326, lng: 129.2247 },
       },
     ],
   },

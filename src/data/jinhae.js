@@ -94,7 +94,7 @@ export const days = [
         practical: 'The hotel booked your taxi for 07:00. Walk out of the lobby at five to seven — it will be waiting. 70km from Haeundae, 90 minutes with early traffic.',
         gradient: 'linear-gradient(135deg, #1a0826 0%, #2d1245 50%, #200a38 100%)',
         accent: '#f9a8d4',
-        coords: { lat: 35.1565, lng: 128.6676 },
+        coords: { lat: 35.1534, lng: 128.6665 },
       },
       {
         id: 'gyeonghwa-station',
@@ -112,7 +112,7 @@ export const days = [
         practical: '10-minute taxi from Yeojwacheon. Station platform free to enter. Kakao Taxi works here.',
         gradient: 'linear-gradient(135deg, #200a30 0%, #380f52 50%, #2a0c40 100%)',
         accent: '#e879f9',
-        coords: { lat: 35.1518, lng: 128.6573 },
+        coords: { lat: 35.1558, lng: 128.6789 },
       },
       {
         id: 'jinhae-tower',
@@ -130,7 +130,7 @@ export const days = [
         practical: 'Cable car: ₩5,000 return. Short walk to the summit. Views best before 2 PM light.',
         gradient: 'linear-gradient(135deg, #2a0818 0%, #4a1030 50%, #380c22 100%)',
         accent: '#fb7185',
-        coords: { lat: 35.1493, lng: 128.6625 },
+        coords: { lat: 35.1467, lng: 128.6658 },
       },
       {
         id: 'admiral-yi',
@@ -148,7 +148,7 @@ export const days = [
         practical: 'Free. Ask your driver to wait, or use Kakao Taxi for the return to Haeundae. If you get lost — show your phone to any Korean. They will help you find your way.',
         gradient: 'linear-gradient(135deg, #12081e 0%, #22103a 50%, #1a0c2e 100%)',
         accent: '#a78bfa',
-        coords: { lat: 35.1530, lng: 128.6644 },
+        coords: { lat: 35.1523, lng: 128.6701 },
       },
     ],
   },

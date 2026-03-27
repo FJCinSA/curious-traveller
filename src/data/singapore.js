@@ -104,7 +104,7 @@ export const days = [
         practical: 'Cash. Most dishes under SGD $6. Closes 3 PM.',
         gradient: 'linear-gradient(135deg, #3d1a0a 0%, #7a3510 50%, #5c2a0d 100%)',
         accent: '#fb923c',
-        coords: { lat: 1.2804, lng: 103.8448 },
+        coords: { lat: 1.2800, lng: 103.8456 },
       },
       {
         id: 'chinatown',
@@ -158,7 +158,7 @@ export const days = [
         practical: 'Free from outside the fence. SGD $5 entry to the grove itself.',
         gradient: 'linear-gradient(135deg, #1a0a3d 0%, #3d1a8b 50%, #26104a 100%)',
         accent: '#a78bfa',
-        coords: { lat: 1.2826, lng: 103.8637 },
+        coords: { lat: 1.2816, lng: 103.8636 },
       },
     ],
   },
@@ -184,7 +184,7 @@ export const days = [
         practical: 'Gardens free. Orchid Garden SGD $15. Arrive early to beat heat.',
         gradient: 'linear-gradient(135deg, #0a2d1a 0%, #1a5c35 50%, #0d3d22 100%)',
         accent: '#34d399',
-        coords: { lat: 1.3152, lng: 103.8152 },
+        coords: { lat: 1.3138, lng: 103.8159 },
       },
       {
         id: 'little-india',
@@ -220,7 +220,7 @@ export const days = [
         practical: 'All walkable from Bugis MRT. Mosque: cover up, scarves available at door.',
         gradient: 'linear-gradient(135deg, #1a1a0a 0%, #4a4a10 50%, #2d2d0d 100%)',
         accent: '#eab308',
-        coords: { lat: 1.3026, lng: 103.8609 },
+        coords: { lat: 1.3018, lng: 103.8590 },
       },
       {
         id: 'clarke-quay',
@@ -238,7 +238,7 @@ export const days = [
         practical: 'Free to walk. Grab dinner here or head back to Chinatown. Leave the city by 21:00 — see below.',
         gradient: 'linear-gradient(135deg, #0a1a2d 0%, #1a3d5c 50%, #0d2640 100%)',
         accent: '#38bdf8',
-        coords: { lat: 1.2904, lng: 103.8465 },
+        coords: { lat: 1.2877, lng: 103.8456 },
       },
       {
         id: 'sg-departure',

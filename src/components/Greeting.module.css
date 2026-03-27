@@ -1,0 +1,41 @@
+.greeting {
+  text-align: center;
+  padding: 0 1.5rem 3.5rem;
+  animation: arrive 0.8s ease both;
+}
+
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.salutation {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.dayLine {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.messageLine {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cream-dim);
+  line-height: 1.65;
+  max-width: 540px;
+  margin: 0 auto;
+}

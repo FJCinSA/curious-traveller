@@ -1,4 +1,5 @@
 import { SingaporeSkyline, BusanSkyline, JinhaeSkyline, GyeongjuSkyline, SeoulSkyline } from './Skylines'
+import Greeting from './Greeting'
 import styles from './Home.module.css'
 
 const skylineMap = {
@@ -18,6 +19,8 @@ export default function Home({ trips, onSelect }) {
         <p className={styles.subtitle}>March – April 2026</p>
         <p className={styles.companionLine}>A wise and patient companion for the curious.</p>
       </header>
+
+      <Greeting />
 
       <main className={styles.main}>
         <div className={styles.grid}>

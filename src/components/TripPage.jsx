@@ -6,6 +6,7 @@ import { useState } from 'react'
 import Hero from './Hero'
 import DayView from './DayView'
 import GettingAround from './GettingAround'
+import ArrivalNote from './ArrivalNote'
 import CustomPlaces from './CustomPlaces'
 import styles from './TripPage.module.css'
 
@@ -74,6 +75,9 @@ export default function TripPage({ trip, onBack }) {
             <span className={styles.summaryLabel}>{trip.country}</span>
           </div>
         </div>
+
+        {/* Arrival note — companion voice, holds their hand on arrival. Rendered if trip.arrival is defined */}
+        <ArrivalNote arrival={trip.arrival} />
 
         {/* Collapsible transport tips — rendered if trip.transport is defined */}
         <GettingAround transport={trip.transport} />

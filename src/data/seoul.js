@@ -14,6 +14,7 @@ export const trip = {
   wide: true, // Spans 2 columns on the home screen card grid
   cardGradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
   heroAccent: '#f59e0b',
+  arrival: 'Grand Walkerhill sits above the Han River. Take Line 5 to Gwangnaru Station then a short taxi. Eight nights in one of the great cities of the world. Take your time getting there.',
   transport: {
     headline: 'Getting Around Seoul',
     tips: [

@@ -14,6 +14,7 @@ export const trip = {
   wide: true, // Spans 2 columns on the home screen card grid
   cardGradient: 'linear-gradient(135deg, #061824 0%, #0d3352 50%, #0a2540 100%)',
   heroAccent: '#38bdf8',
+  arrival: 'You have just landed after a long night. Yotelair is inside Terminal 3 — follow the hotel signs, no taxi needed. Check in, sleep, and let Singapore wait. It will still be magnificent this afternoon.',
   transport: {
     headline: 'Getting Around Singapore',
     tips: [

@@ -13,6 +13,7 @@ export const trip = {
   order: 2,   // Display position on the home screen grid
   cardGradient: 'linear-gradient(135deg, #04121e 0%, #0a2438 50%, #0d2d4a 100%)',
   heroAccent: '#38bdf8',
+  arrival: 'You have been travelling since yesterday. Shilla Stay Haeundae is in the best neighbourhood in Busan. Take Airport Bus 307 — 60 minutes, ₩3,000 with your T-money card. Or taxi if you need the comfort — ₩45,000 to 55,000. Check in. Sleep. Tomorrow Jinhae is waiting.',
   transport: {
     headline: 'Getting Around Busan',
     tips: [

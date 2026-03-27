@@ -13,6 +13,7 @@ export const trip = {
   order: 4,   // Display position on the home screen grid
   cardGradient: 'linear-gradient(135deg, #0c0a1e 0%, #181535 50%, #100e28 100%)',
   heroAccent: '#fbbf24',
+  arrival: 'Sono Calm Bomun Resort sits beside a lake. Taxi from Singyeongju Station, ₩18,000, about 20 minutes. You are leaving the city behind. Feel it.',
   transport: {
     headline: 'Getting Around Gyeongju',
     tips: [

@@ -3,11 +3,8 @@
 // Fades in gently on load. Disappears after 11am.
 import { useState, useEffect } from 'react'
 import { dawnNotes } from '../data/itinerary'
+import { todayISO } from '../utils/dates'
 import styles from './DawnNote.module.css'
-
-function todayISO() {
-  return new Date().toISOString().slice(0, 10)
-}
 
 export default function DawnNote() {
   const [visible, setVisible] = useState(false)

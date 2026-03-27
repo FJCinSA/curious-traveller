@@ -35,11 +35,11 @@
 }
 
 .amber .alertText {
-  color: #fbbf24;
+  color: var(--amber);
 }
 
 .blue .alertText {
-  color: #7dd3fc;
+  color: var(--sky);
 }
 
 .alertText em {

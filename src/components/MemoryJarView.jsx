@@ -7,14 +7,11 @@
 import { useState, useRef } from 'react'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { shapeMemory } from '../lib/anthropic'
+import { todayISO } from '../utils/dates'
+import { TRIP_END } from '../data/itinerary'
 import styles from './MemoryJarView.module.css'
 
-const TRIP_END    = '2026-04-16'
 const LETTER_DATE = '2026-04-15'
-
-function todayISO() {
-  return new Date().toISOString().slice(0, 10)
-}
 
 function formatDate(iso) {
   try {

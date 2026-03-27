@@ -1,11 +1,8 @@
 // Smart transport reminders shown at the right moment in the right chapter.
 // Jinhae chapter on the evening of 2 April: book taxi for tomorrow.
 // Busan chapter on the morning of 3 April: departure reminder.
+import { todayISO } from '../utils/dates'
 import styles from './TransportAlert.module.css'
-
-function todayISO() {
-  return new Date().toISOString().slice(0, 10)
-}
 
 export default function TransportAlert({ tripId }) {
   const today = todayISO()

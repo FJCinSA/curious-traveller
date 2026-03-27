@@ -8,12 +8,8 @@ import DawnNote from './DawnNote'
 import SerendipityButton from './SerendipityButton'
 import { useSlowTravel } from '../context/SlowTravelContext'
 import { TRIP_START, TRIP_END, dailyWhispers } from '../data/itinerary'
+import { todayISO } from '../utils/dates'
 import styles from './Home.module.css'
-
-// Returns today as a YYYY-MM-DD string — matches ISO dates used throughout the app
-function todayISO() {
-  return new Date().toISOString().slice(0, 10)
-}
 
 // Returns a progress/countdown object for the bar below the greeting, or null after the trip.
 //   Before trip:      { label: 'Your adventure begins in X days', pct: null }

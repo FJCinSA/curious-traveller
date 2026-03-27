@@ -3,6 +3,7 @@
 // Gathers all saved memories, calls the Anthropic API, saves the result, and navigates.
 import { useState, useEffect } from 'react'
 import { writeLetter } from '../lib/anthropic'
+import { todayISO } from '../utils/dates'
 import styles from './LetterPrompt.module.css'
 
 // Pulsing compass rose SVG used as the loading indicator
@@ -25,10 +26,6 @@ function CompassRose({ className }) {
       <circle cx="16" cy="16" r="2" fill="currentColor" fillOpacity="0.7" />
     </svg>
   )
-}
-
-function todayISO() {
-  return new Date().toISOString().slice(0, 10)
 }
 
 export default function LetterPrompt() {

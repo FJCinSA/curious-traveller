@@ -6,6 +6,7 @@
 //   • A memory message (after the trip ends)
 import { useMemo } from 'react'
 import { days, TRIP_START } from '../data/itinerary'
+import { todayISO } from '../utils/dates'
 import styles from './Greeting.module.css'
 
 // Returns the appropriate time-of-day salutation for the current hour
@@ -13,11 +14,6 @@ function salutation(hour) {
   if (hour < 12) return 'Good morning'
   if (hour < 17) return 'Good afternoon'
   return 'Good evening'
-}
-
-// Returns today's date as a YYYY-MM-DD string — matches the format used in itinerary.js
-function todayISO() {
-  return new Date().toISOString().slice(0, 10)
 }
 
 export default function Greeting() {

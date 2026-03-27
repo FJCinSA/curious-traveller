@@ -5,11 +5,8 @@
 import { useState } from 'react'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { shapeMemory } from '../lib/anthropic'
+import { todayISO } from '../utils/dates'
 import styles from './MemoryPrompt.module.css'
-
-function todayISO() {
-  return new Date().toISOString().slice(0, 10)
-}
 
 export default function MemoryPrompt({ trip }) {
   const [text, setText]       = useState('')

@@ -28,7 +28,7 @@ export const skylineMap = {
 
 // ─── SINGAPORE ───────────────────────────────────────────────────────────────
 
-export function SingaporeSkyline() {
+function SingaporeSkyline() {
   return (
     <svg viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
       <defs>
@@ -136,7 +136,7 @@ export function SingaporeSkyline() {
 
 // ─── BUSAN ───────────────────────────────────────────────────────────────────
 
-export function BusanSkyline() {
+function BusanSkyline() {
   return (
     <svg viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
       <defs>
@@ -232,7 +232,7 @@ export function BusanSkyline() {
 
 // ─── JINHAE ──────────────────────────────────────────────────────────────────
 
-export function JinhaeSkyline() {
+function JinhaeSkyline() {
   // Deterministic petal positions
   const petals = [
     [120,180,14],[250,120,10],[380,200,16],[510,150,12],[640,180,14],
@@ -345,7 +345,7 @@ export function JinhaeSkyline() {
 
 // ─── GYEONGJU ────────────────────────────────────────────────────────────────
 
-export function GyeongjuSkyline() {
+function GyeongjuSkyline() {
   // Extra stars — ancient observatory city
   const extraStars = [
     [65,55],[145,40],[225,68],[285,35],[375,52],[455,28],[535,62],[595,38],
@@ -455,7 +455,7 @@ export function GyeongjuSkyline() {
 
 // ─── SEOUL ───────────────────────────────────────────────────────────────────
 
-export function SeoulSkyline() {
+function SeoulSkyline() {
   return (
     <svg viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
       <defs>

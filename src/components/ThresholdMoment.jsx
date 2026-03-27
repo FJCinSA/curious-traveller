@@ -4,11 +4,8 @@
 import { useState, useEffect } from 'react'
 import { thresholdMoments } from '../data/itinerary'
 import { useLocalStorage } from '../hooks/useLocalStorage'
+import { todayISO } from '../utils/dates'
 import styles from './ThresholdMoment.module.css'
-
-function todayISO() {
-  return new Date().toISOString().slice(0, 10)
-}
 
 export default function ThresholdMoment() {
   const today = todayISO()

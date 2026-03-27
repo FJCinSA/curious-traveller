@@ -1,0 +1,55 @@
+.fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background: var(--bg);
+  color: var(--cream);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.message {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--cream-dim);
+  max-width: 360px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.reload {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: none;
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  border-radius: 20px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reload:hover {
+  background: rgba(201, 168, 76, 0.08);
+  border-color: var(--gold);
+}

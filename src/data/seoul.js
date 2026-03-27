@@ -3,6 +3,8 @@ export const trip = {
   city: 'Seoul',
   country: 'South Korea',
   dates: '8–15 April 2026',
+  startDate: '2026-04-08',
+  endDate: '2026-04-16',
   nights: 7,
   hotel: 'Grand Walkerhill Seoul',
   tagline: 'Seven nights. Ten million people. One capital.',
@@ -12,6 +14,37 @@ export const trip = {
   wide: true, // Spans 2 columns on the home screen card grid
   cardGradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
   heroAccent: '#f59e0b',
+  transport: {
+    headline: 'Getting Around Seoul',
+    tips: [
+      {
+        icon: '💳',
+        title: 'T-money Card',
+        body: 'Your T-money card from Busan works everywhere in Seoul. The subway, all city buses, and most taxis. Top up at any convenience store. One card for the whole city.',
+      },
+      {
+        icon: '🚇',
+        title: 'Seoul Metro',
+        body: 'Nine lines, 300+ stations — Seoul\'s metro goes everywhere. Gyeongbokgung, Insadong, Hongdae, Itaewon, Myeongdong, Namsan, Han River parks. Everything on the map is on the metro.',
+      },
+      {
+        icon: '🗺️',
+        title: 'Naver Maps',
+        body: 'Still better than Google Maps in Korea. Use it for walking directions, transit routes, and finding restaurants by name. The English mode works well in Seoul.',
+      },
+      {
+        icon: '🚕',
+        title: 'Kakao Taxi',
+        body: 'Seoul has more taxis than any city you\'ve visited. Kakao Taxi finds one in under two minutes, almost anywhere, day or night. Essential for late evenings and anywhere the metro doesn\'t quite reach.',
+      },
+      {
+        icon: '🚄',
+        title: 'SRT from Gyeongju',
+        body: 'From Singyeongju Station — SRT to Seoul Suseo Station, about 2 hours, ₩41,000. Suseo is on the eastern edge of the city, well connected to the metro.',
+      },
+    ],
+    closing: 'If you get lost — show your phone to any Korean. They will help.',
+  },
 }
 
 export const days = [

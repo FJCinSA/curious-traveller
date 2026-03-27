@@ -137,6 +137,16 @@
   letter-spacing: 0.04em;
 }
 
+.footerCredit {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.4;
+  font-size: 0.72rem;
+  margin-top: 0.2rem;
+  letter-spacing: 0.03em;
+}
+
 @media (max-width: 600px) {
   .main {
     padding: 0 1rem 3rem;

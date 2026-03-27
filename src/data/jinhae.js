@@ -3,6 +3,8 @@ export const trip = {
   city: 'Jinhae',
   country: 'South Korea',
   dates: '3 April 2026',
+  startDate: '2026-04-03',
+  endDate: '2026-04-03',
   nights: 0,
   hotel: 'Day trip from Shilla Stay Haeundae',
   tagline: 'Leave at 7. The petals are already falling.',
@@ -11,6 +13,33 @@ export const trip = {
   order: 3,   // Display position on the home screen grid
   cardGradient: 'linear-gradient(135deg, #12062a 0%, #240d45 50%, #1a0835 100%)',
   heroAccent: '#f9a8d4',
+  transport: {
+    headline: 'Getting to Jinhae',
+    warning: 'Ask the hotel tonight to book your taxi for 07:00 tomorrow morning. Do not leave this until morning — the festival crowds move fast and you want to arrive before them.',
+    tips: [
+      {
+        icon: '🚖',
+        title: 'Hotel Taxi (07:00)',
+        body: 'Your hotel-booked taxi departs at 07:00. The drive is around 50–60 minutes. Get there before the crowds and you will have the canal almost to yourselves.',
+      },
+      {
+        icon: '💳',
+        title: 'T-money Card',
+        body: 'Bring your T-money card from Busan — it works in Jinhae too, on local buses if you need them during the day.',
+      },
+      {
+        icon: '🚕',
+        title: 'Kakao Taxi (Return)',
+        body: 'Use Kakao Taxi for the return journey. Set the destination to Shilla Stay Haeundae. Straightforward from the festival area.',
+      },
+      {
+        icon: '🚶',
+        title: 'On Foot',
+        body: 'The entire festival area — Yeojwacheon Stream, Jinhae Tower, the naval base entrance — is walkable. Follow the canal. The petals will guide you.',
+      },
+    ],
+    closing: 'If you get lost — show your phone to any Korean. They will help.',
+  },
 }
 
 export const days = [

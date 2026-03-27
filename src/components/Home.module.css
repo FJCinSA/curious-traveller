@@ -51,6 +51,43 @@
   letter-spacing: 0.01em;
 }
 
+/* ─── Progress Bar ───────────────────────────────────────── */
+
+.progressWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 1.5rem 3rem;
+}
+
+.progressLabel {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+.progressTrack {
+  width: 100%;
+  max-width: 260px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 1px;
+  transition: width 0.6s ease;
+  opacity: 0.7;
+}
+
 /* ─── Grid ───────────────────────────────────────────────── */
 
 .main {
@@ -97,6 +134,37 @@
 /* Singapore and Seoul are wider (span 2 columns when possible) */
 .wide {
   grid-column: span 2;
+}
+
+/* Past destination — slightly dimmed to show it's been visited */
+.past {
+  opacity: 0.55;
+}
+
+.past:hover {
+  opacity: 0.8;
+}
+
+/* Current destination — gold glow border to draw the eye */
+.current {
+  border-color: rgba(201, 168, 76, 0.5);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.12);
+}
+
+/* Pulsing dot — shown on the current destination card */
+.pulseDot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1;   transform: scale(1);    }
+  50%       { opacity: 0.4; transform: scale(0.75); }
 }
 
 /* ─── Card Skyline ───────────────────────────────────────── */
@@ -228,6 +296,15 @@
   color: var(--cream-dim);
   letter-spacing: 0.1em;
   opacity: 0.5;
+}
+
+.footerCredit {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.45;
+  font-size: 0.72rem;
+  margin-top: 0.3rem;
 }
 
 /* ─── Responsive ─────────────────────────────────────────── */

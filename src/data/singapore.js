@@ -3,6 +3,8 @@ export const trip = {
   city: 'Singapore',
   country: 'Singapore',
   dates: '31 March – 1 April 2026',
+  startDate: '2026-03-31',
+  endDate: '2026-04-01',
   nights: 1,
   hotel: 'Yotelair Singapore, Changi Terminal 3',
   tagline: 'Two days. One city. Go hard.',
@@ -12,6 +14,26 @@ export const trip = {
   wide: true, // Spans 2 columns on the home screen card grid
   cardGradient: 'linear-gradient(135deg, #061824 0%, #0d3352 50%, #0a2540 100%)',
   heroAccent: '#38bdf8',
+  transport: {
+    headline: 'Getting Around Singapore',
+    tips: [
+      {
+        icon: '🚇',
+        title: 'MRT',
+        body: 'The easiest way around the city. Tap your contactless bank card directly at any gate — no separate card needed. The MRT connects Changi Airport, the city centre, Gardens by the Bay, Chinatown, and Little India seamlessly.',
+      },
+      {
+        icon: '🚖',
+        title: 'Grab',
+        body: 'Singapore\'s ride-hailing app. Download it before you leave the airport. Works everywhere, price shown upfront, and drivers know every street. Much cheaper than metered taxis.',
+      },
+      {
+        icon: '🚶',
+        title: 'On Foot',
+        body: 'The city centre — Marina Bay, Gardens by the Bay, Chinatown, Little India — is entirely walkable. The covered walkways between MRT stations and malls mean you barely need to step outside even in the heat.',
+      },
+    ],
+  },
 }
 
 export const days = [

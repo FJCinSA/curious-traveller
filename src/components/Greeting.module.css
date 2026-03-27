@@ -19,6 +19,17 @@
   margin-bottom: 0.75rem;
 }
 
+.location {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.6;
+  margin-bottom: 0.35rem;
+}
+
 .dayLine {
   font-family: var(--font-sans);
   font-size: 0.72rem;

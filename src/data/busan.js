@@ -3,6 +3,8 @@ export const trip = {
   city: 'Busan',
   country: 'South Korea',
   dates: '2–5 April 2026',
+  startDate: '2026-04-02',
+  endDate: '2026-04-05',
   nights: 4,
   hotel: 'Shilla Stay Haeundae',
   tagline: 'Four nights. Sea, fire, and the end of the railway line.',
@@ -11,6 +13,32 @@ export const trip = {
   order: 2,   // Display position on the home screen grid
   cardGradient: 'linear-gradient(135deg, #04121e 0%, #0a2438 50%, #0d2d4a 100%)',
   heroAccent: '#38bdf8',
+  transport: {
+    headline: 'Getting Around Busan',
+    tips: [
+      {
+        icon: '💳',
+        title: 'T-money Card',
+        body: 'Korea\'s contactless transit card — buy one at the airport arrivals or any GS25/CU/7-Eleven. Works on every subway line, every city bus, and in taxis. Top up at any convenience store. One card covers your whole trip across Korea.',
+      },
+      {
+        icon: '🚇',
+        title: 'Busan Metro',
+        body: 'Four lines covering the whole city. Haeundae, Jagalchi, Gamcheon, and the city centre are all on the metro. Clean, frequent, and air-conditioned.',
+      },
+      {
+        icon: '🗺️',
+        title: 'Naver Maps',
+        body: 'Download Naver Maps — it is far better than Google Maps for Korea. Shows real-time transit, walking routes, and Korean addresses correctly. Use it for everything.',
+      },
+      {
+        icon: '🚕',
+        title: 'Kakao Taxi',
+        body: 'Korea\'s taxi app — like Grab but for Korea. Download it before you need it. Set your destination in English, price shown upfront. More reliable than hailing a cab on the street.',
+      },
+    ],
+    closing: 'If you get lost — show your phone to any Korean. They will help.',
+  },
 }
 
 export const days = [

@@ -31,14 +31,20 @@ export default function Greeting() {
     // Check if today matches a specific day in the itinerary
     const entry = days.find(d => d.date === today)
     if (entry) {
-      return { greeting, dayLine: entry.dayLine, messageLine: entry.messageLine }
+      return {
+        greeting,
+        location:    entry.location,
+        dayLine:     entry.dayLine,
+        messageLine: entry.messageLine,
+      }
     }
 
     // Before the trip — show a pre-departure message
     if (today < TRIP_START) {
       return {
         greeting,
-        dayLine: 'Your honeymoon begins on 30 March.',
+        location:    null,
+        dayLine:     'Your honeymoon begins on 30 March.',
         messageLine: 'Singapore and Korea are waiting. Something extraordinary is coming.',
       }
     }
@@ -46,7 +52,8 @@ export default function Greeting() {
     // After the trip — show a retrospective message
     return {
       greeting,
-      dayLine: 'The honeymoon.',
+      location:    null,
+      dayLine:     'The honeymoon.',
       messageLine: '18 days. Two countries. The companion remembers every one of them.',
     }
   }, [])
@@ -56,6 +63,10 @@ export default function Greeting() {
       <p className={styles.salutation}>
         {content.greeting}, Francois &amp; James.
       </p>
+      {/* Current location — shown during the trip, e.g. "Singapore", "Seoul → Hong Kong" */}
+      {content.location && (
+        <p className={styles.location}>{content.location}</p>
+      )}
       <p className={styles.dayLine}>{content.dayLine}</p>
       <p className={styles.messageLine}>{content.messageLine}</p>
     </div>

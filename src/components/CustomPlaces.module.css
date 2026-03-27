@@ -1,0 +1,189 @@
+.wrapper {
+  margin: 2rem 0;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(201, 168, 76, 0.03);
+}
+
+/* ─── Header row ─────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.addBtn {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: none;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 20px;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addBtn:hover {
+  background: rgba(201, 168, 76, 0.08);
+  border-color: var(--gold);
+}
+
+.addBtn.cancel {
+  color: var(--cream-dim);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ─── Add form ───────────────────────────────────────────── */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.input,
+.textarea {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--cream);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.65rem 0.9rem;
+  width: 100%;
+  transition: border-color 0.2s ease;
+  resize: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--cream-dim);
+  opacity: 0.5;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
+.saveBtn {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--gold);
+  border: none;
+  border-radius: 4px;
+  padding: 0.65rem 1.25rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity 0.2s ease;
+}
+
+.saveBtn:hover {
+  opacity: 0.85;
+}
+
+/* ─── Saved places ───────────────────────────────────────── */
+
+.places {
+  display: flex;
+  flex-direction: column;
+}
+
+.place {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.place:last-child {
+  border-bottom: none;
+}
+
+.placeBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.placeNeighbourhood {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+.placeName {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.placeNote {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--cream-dim);
+  line-height: 1.6;
+  margin-top: 0.15rem;
+}
+
+.removeBtn {
+  font-size: 1.25rem;
+  color: var(--cream-dim);
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+  padding: 0.1rem 0.3rem;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+  line-height: 1;
+}
+
+.removeBtn:hover {
+  opacity: 0.8;
+}
+
+/* ─── Empty state ────────────────────────────────────────── */
+
+.empty {
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream-dim);
+  opacity: 0.6;
+}

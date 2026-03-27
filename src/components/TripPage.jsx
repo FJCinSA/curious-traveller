@@ -1,9 +1,12 @@
 // Full trip chapter page — shown when a destination card is selected from the home screen.
-// Contains a hero header, a day-tab navigation bar, a summary strip, and the day sections.
+// Contains: hero header, day-tab navigation, summary strip, Getting Around transport panel,
+// day sections with location cards, Add Our Own Place section, and a footer.
 // Keyed on trip.id in App.jsx so state resets completely when navigating between trips.
 import { useState } from 'react'
 import Hero from './Hero'
 import DayView from './DayView'
+import GettingAround from './GettingAround'
+import CustomPlaces from './CustomPlaces'
 import styles from './TripPage.module.css'
 
 // Returns the correct label for the nights summary strip
@@ -72,6 +75,9 @@ export default function TripPage({ trip, onBack }) {
           </div>
         </div>
 
+        {/* Collapsible transport tips — rendered if trip.transport is defined */}
+        <GettingAround transport={trip.transport} />
+
         {/* Day sections */}
         <div className={styles.days}>
           {visibleDays.map(day => (
@@ -79,11 +85,15 @@ export default function TripPage({ trip, onBack }) {
           ))}
         </div>
 
+        {/* Custom places — Francois and James can add their own discoveries */}
+        <CustomPlaces tripId={trip.id} />
+
       </main>
 
       <footer className={styles.footer}>
         <p>The Curious Traveller &nbsp;·&nbsp; {trip.city} 2026</p>
         <p className={styles.footerSub}>For Francois &amp; James</p>
+        <p className={styles.footerCredit}>Built with care. 27 March 2026.</p>
       </footer>
 
     </div>

@@ -37,8 +37,8 @@ export const days = [
     date: '2026-04-03',
     day: 5,
     location: 'Jinhae',
-    dayLine: 'Day 5 of your honeymoon. Today is the one.',
-    messageLine: 'Jinhae. 350,000 cherry trees in full bloom. Your taxi is waiting at 07:00. Go before the crowds arrive and you will have the stream almost to yourselves.',
+    dayLine: 'Day 5 of your honeymoon. Today is the day.',
+    messageLine: 'The cherry trees are waiting. Leave by 07:00 — ask the front desk to book your taxi now if you have not already.',
   },
   {
     date: '2026-04-04',

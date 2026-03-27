@@ -7,6 +7,7 @@ import Home from './components/Home'
 import TripPage from './components/TripPage'
 import InstallPrompt from './components/InstallPrompt'
 import UpdateManager from './components/UpdateManager'
+import ErrorBoundary from './components/ErrorBoundary'
 import { trips } from './data/trips'
 import styles from './App.module.css'
 
@@ -35,17 +36,19 @@ export default function App() {
 
   return (
     <div className={styles.app}>
-      {screen === 'home' || !currentTrip ? (
-        <Home trips={trips} onSelect={navigate} />
-      ) : (
-        // key={currentTrip.id} forces TripPage to fully unmount and remount when
-        // the user navigates from one trip to another, resetting all local state
-        <TripPage
-          key={currentTrip.id}
-          trip={currentTrip}
-          onBack={() => navigate('home')}
-        />
-      )}
+      <ErrorBoundary>
+        {screen === 'home' || !currentTrip ? (
+          <Home trips={trips} onSelect={navigate} />
+        ) : (
+          // key={currentTrip.id} forces TripPage to fully unmount and remount when
+          // the user navigates from one trip to another, resetting all local state
+          <TripPage
+            key={currentTrip.id}
+            trip={currentTrip}
+            onBack={() => navigate('home')}
+          />
+        )}
+      </ErrorBoundary>
       <InstallPrompt />
       <UpdateManager />
     </div>

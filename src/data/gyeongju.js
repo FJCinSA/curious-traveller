@@ -3,6 +3,8 @@ export const trip = {
   city: 'Gyeongju',
   country: 'South Korea',
   dates: '6–7 April 2026',
+  startDate: '2026-04-06',
+  endDate: '2026-04-07',
   nights: 1,
   hotel: 'Sono Calm Bomun Resort',
   tagline: 'One night in the city that was a kingdom for 1,000 years.',
@@ -11,6 +13,32 @@ export const trip = {
   order: 4,   // Display position on the home screen grid
   cardGradient: 'linear-gradient(135deg, #0c0a1e 0%, #181535 50%, #100e28 100%)',
   heroAccent: '#fbbf24',
+  transport: {
+    headline: 'Getting Around Gyeongju',
+    tips: [
+      {
+        icon: '🚄',
+        title: 'KTX from Busan',
+        body: 'From Bujeon Station in Busan — KTX to Singyeongju, 20 minutes, ₩8,400. Then a taxi from Singyeongju Station to Sono Calm Bomun Resort (about 15 minutes, ₩10,000–13,000).',
+      },
+      {
+        icon: '💳',
+        title: 'T-money Card',
+        body: 'Your T-money card works here. Buses connect the main sites — Bulguksa, Tumuli Park, and the city centre — but the routes are infrequent. A taxi is often faster.',
+      },
+      {
+        icon: '🚕',
+        title: 'Kakao Taxi',
+        body: 'Gyeongju is spread out — the sites are too far apart to walk between comfortably. Use Kakao Taxi to move between Bulguksa, the tumuli, the observatory, and your hotel.',
+      },
+      {
+        icon: '🗺️',
+        title: 'Naver Maps',
+        body: 'Essential here. Gyeongju\'s sites don\'t always have obvious street addresses. Search by name in Korean (or copy from this app) and Naver will find them.',
+      },
+    ],
+    closing: 'If you get lost — show your phone to any Korean. They will help.',
+  },
 }
 
 export const days = [

@@ -1,12 +1,13 @@
 // Home screen — header, personalised greeting, trip progress bar, and destination card grid.
 // Each card is a button that navigates to that trip's chapter via onSelect.
 // Cards reflect the trip's status: past (dimmed), current (gold glow + pulsing dot), future (normal).
+import { useState, useEffect } from 'react'
 import { skylineMap } from './Skylines'
 import Greeting from './Greeting'
 import DawnNote from './DawnNote'
 import SerendipityButton from './SerendipityButton'
 import { useSlowTravel } from '../context/SlowTravelContext'
-import { TRIP_START, TRIP_END } from '../data/itinerary'
+import { TRIP_START, TRIP_END, dailyWhispers } from '../data/itinerary'
 import styles from './Home.module.css'
 
 // Returns today as a YYYY-MM-DD string — matches ISO dates used throughout the app
@@ -58,6 +59,16 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
   const today    = todayISO()
   const progress = getTripProgress(today)
   const { slowTravel, setSlowTravel } = useSlowTravel()
+  const whisper  = dailyWhispers[today] || null
+
+  // Fade-in state for the whisper — triggers once on mount
+  const [whisperVisible, setWhisperVisible] = useState(false)
+  useEffect(() => {
+    if (whisper) {
+      const t = setTimeout(() => setWhisperVisible(true), 80)
+      return () => clearTimeout(t)
+    }
+  }, [whisper])
 
   // Serendipity: use the current destination's serendipity, fall back to first trip
   const currentTrip = trips.find(t => {
@@ -105,6 +116,11 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
         <p className={styles.eyebrow}>For Francois &amp; James</p>
         <h1 className={styles.title}>The Curious<br />Traveller</h1>
         <p className={styles.subtitle}>March – April 2026</p>
+        {whisper && (
+          <p className={`${styles.whisper} ${whisperVisible ? styles.whisperVisible : ''}`}>
+            {whisper}
+          </p>
+        )}
         <p className={styles.companionLine}>A wise and patient companion for the curious.</p>
       </header>
 

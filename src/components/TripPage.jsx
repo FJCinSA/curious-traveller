@@ -9,6 +9,7 @@ import GettingAround from './GettingAround'
 import ArrivalNote from './ArrivalNote'
 import TransportAlert from './TransportAlert'
 import MemoryPrompt from './MemoryPrompt'
+import LetterPrompt from './LetterPrompt'
 import SerendipityButton from './SerendipityButton'
 import CustomPlaces from './CustomPlaces'
 import styles from './TripPage.module.css'
@@ -98,8 +99,11 @@ export default function TripPage({ trip, onBack }) {
         {/* Custom places — Francois and James can add their own discoveries */}
         <CustomPlaces tripId={trip.id} />
 
-        {/* Memory prompt — after 6pm, asks for one moment to keep */}
-        <MemoryPrompt trip={trip} />
+        {/* On 15 April after 6pm in Seoul: show the letter prompt instead */}
+        {trip.id === 'seoul'
+          ? <LetterPrompt />
+          : <MemoryPrompt trip={trip} />
+        }
 
       </main>
 

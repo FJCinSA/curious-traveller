@@ -3,6 +3,28 @@
   background: var(--bg);
 }
 
+/* ─── Letter button ──────────────────────────────────────── */
+
+.letterBtn {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 10;
+  background: none;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 3px;
+  color: var(--gold);
+  font-size: 1rem;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.15s ease;
+}
+
+.letterBtn:hover {
+  opacity: 1;
+}
+
 .back {
   position: fixed;
   top: 1.25rem;
@@ -127,11 +149,83 @@
 
 .memText {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  color: var(--cream);
-  line-height: 1.75;
+  font-style: italic;
+  color: var(--cream-dim);
+  line-height: 1.7;
   letter-spacing: 0.01em;
+  opacity: 0.75;
+}
+
+/* ─── Dual-layer display ─────────────────────────────────── */
+
+.poeticLayer {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.rawLayer {
+  position: relative;
+}
+
+.layerLabel {
+  font-family: var(--font-sans);
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
+.poeticText {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--gold);
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+/* ─── Regenerate button ──────────────────────────────────── */
+
+.regenBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  color: var(--gold);
+  opacity: 0.4;
+  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  padding: 0.2rem 0;
+  margin-top: 0.5rem;
+  transition: opacity 0.15s ease;
+  letter-spacing: 0.04em;
+}
+
+.regenBtn:hover {
+  opacity: 0.85;
+}
+
+.regenInline {
+  display: block;
+  font-size: 0.68rem;
+  opacity: 0.35;
+}
+
+.regenSpinning {
+  animation: spin 1s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* ─── Delete Confirmation ─────────────────────────────────── */

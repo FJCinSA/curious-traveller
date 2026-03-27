@@ -96,6 +96,23 @@
   color: var(--cream-dim);
 }
 
+.whisper {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+  opacity: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.01em;
+  transition: opacity 0.9s ease;
+}
+
+.whisperVisible {
+  opacity: 0.9;
+}
+
 .companionLine {
   font-family: var(--font-serif);
   font-size: 1rem;

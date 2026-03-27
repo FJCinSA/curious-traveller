@@ -154,6 +154,31 @@ export const dawnNotes = {
   '2026-04-15': 'Today is your last day in Korea. Go somewhere you have already been and loved. See it once more. Then let it go.',
 }
 
+// Daily whispers — one quiet line per day shown below the app title on the home screen.
+// The companion speaking directly to Francois and James about the fact that they are here.
+// Keyed by ISO date string.
+export const dailyWhispers = {
+  '2026-03-27': 'Something extraordinary is coming.',
+  '2026-03-28': 'Something extraordinary is coming.',
+  '2026-03-29': 'Something extraordinary is coming.',
+  '2026-03-31': 'The world is large and you are in it.',
+  '2026-04-01': 'A city built on water and will and wonder.',
+  '2026-04-02': 'The sea has been waiting for you.',
+  '2026-04-03': 'Some days are made of the kind of beauty that changes people.',
+  '2026-04-04': 'A city reveals itself slowly to those who let it.',
+  '2026-04-05': 'The best meals are eaten standing up in markets.',
+  '2026-04-06': 'Some places hold their history lightly. This one holds it deep.',
+  '2026-04-07': 'A thousand years of silence and you walked through it today.',
+  '2026-04-08': 'Every journey between cities is a small life of its own.',
+  '2026-04-09': 'Ten million people and somehow it feels intimate.',
+  '2026-04-10': 'The old and the new here do not fight. They negotiate.',
+  '2026-04-11': 'Cherry blossoms fall whether you watch them or not. Watch them.',
+  '2026-04-12': 'You are exactly where you are supposed to be.',
+  '2026-04-13': 'The city has given you everything. Give it one more day.',
+  '2026-04-14': 'Notice everything. You are nearly at the last page.',
+  '2026-04-15': 'This is not the end of anything.',
+}
+
 // Threshold moments — shown as full-screen overlays on the first app open of each transition day.
 // Keyed by ISO date string.
 export const thresholdMoments = {

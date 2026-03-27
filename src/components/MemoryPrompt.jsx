@@ -1,7 +1,10 @@
 // Memory Prompt — appears after 6pm at the bottom of the current destination chapter.
 // One question. A text area. A gold checkmark saves it to the Memory Jar.
+// After saving the raw text, the companion shapes it into a poetic version via the API.
+// Raw memory is always saved first — the API call never blocks preservation.
 import { useState } from 'react'
 import { useLocalStorage } from '../hooks/useLocalStorage'
+import { shapeMemory } from '../lib/anthropic'
 import styles from './MemoryPrompt.module.css'
 
 function todayISO() {
@@ -9,12 +12,13 @@ function todayISO() {
 }
 
 export default function MemoryPrompt({ trip }) {
-  const [text, setText] = useState('')
-  const [saved, setSaved] = useState(false)
+  const [text, setText]       = useState('')
+  const [saved, setSaved]     = useState(false)
+  const [shaping, setShaping] = useState(false)
   const [memories, setMemories] = useLocalStorage('ct_memories', [])
 
   const today = todayISO()
-  const hour = new Date().getHours()
+  const hour  = new Date().getHours()
 
   // Only show during this trip and after 6pm
   if (!trip.startDate || !trip.endDate) return null
@@ -31,6 +35,15 @@ export default function MemoryPrompt({ trip }) {
     )
   }
 
+  if (shaping) {
+    return (
+      <div className={styles.wrap}>
+        <span className={styles.icon} aria-hidden="true">✦</span>
+        <p className={styles.question}>Your companion is shaping this memory…</p>
+      </div>
+    )
+  }
+
   if (saved) {
     return (
       <div className={styles.wrap}>
@@ -39,17 +52,29 @@ export default function MemoryPrompt({ trip }) {
     )
   }
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!text.trim()) return
-    const memory = {
-      id: Date.now(),
-      date: today,
-      city: trip.city,
-      text: text.trim(),
-    }
+    const rawText = text.trim()
+    const id = Date.now()
+
+    // Save raw immediately — nothing is ever lost
+    const memory = { id, date: today, city: trip.city, text: rawText, poeticText: null }
     setMemories(prev => [...prev, memory])
     setSaved(true)
     setText('')
+
+    // Try to shape it — silently ignore any failure
+    setShaping(true)
+    try {
+      const poetic = await shapeMemory(rawText, today, trip.city)
+      setMemories(prev =>
+        prev.map(m => m.id === id ? { ...m, poeticText: poetic } : m)
+      )
+    } catch {
+      // API unavailable or key not set — raw memory is safe, no error shown
+    } finally {
+      setShaping(false)
+    }
   }
 
   const handleKey = (e) => {

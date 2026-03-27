@@ -40,6 +40,17 @@
   color: var(--cream-dim);
 }
 
+.companionLine {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cream-dim);
+  opacity: 0.5;
+  margin-top: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
 /* ─── Grid ───────────────────────────────────────────────── */
 
 .main {

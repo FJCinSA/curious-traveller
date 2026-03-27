@@ -16,6 +16,7 @@ export default function Home({ trips, onSelect }) {
         <p className={styles.eyebrow}>For Francois &amp; James</p>
         <h1 className={styles.title}>The Curious<br />Traveller</h1>
         <p className={styles.subtitle}>March – April 2026</p>
+        <p className={styles.companionLine}>A wise and patient companion for the curious.</p>
       </header>
 
       <main className={styles.main}>

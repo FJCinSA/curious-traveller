@@ -14,8 +14,12 @@ export default function DayView({ day }) {
       </div>
 
       <div className={styles.locations}>
-        {day.locations.map((location, index) => (
-          <LocationCard key={location.id} location={location} index={index} />
+        {day.locations.map(location => (
+          <LocationCard
+            key={location.id}
+            location={location}
+            siblings={day.locations.filter(l => l.id !== location.id)}
+          />
         ))}
       </div>
     </section>

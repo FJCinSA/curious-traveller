@@ -1,254 +1,203 @@
 .card {
-  position: relative;
+  border-top: 2px solid var(--accent);
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
-  border-radius: 4px;
-  overflow: hidden;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  border-radius: 0 0 4px 4px;
+  padding: 1.75rem 2rem 1.5rem;
+  transition: background 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  border-left-color: var(--accent);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(var(--accent-rgb), 0.1);
+  background: var(--surface-2);
 }
 
-.cardInner {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 0;
-}
-
-.meta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 1.75rem 0.75rem 1.75rem 1rem;
-  background: var(--grad);
-  border-right: 1px solid rgba(255,255,255,0.05);
-  gap: 0.75rem;
-}
-
-.time {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-}
-
-.index {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
-  color: rgba(255,255,255,0.1);
-  font-weight: 700;
-  line-height: 1;
-}
-
-.body {
-  padding: 1.75rem 1.75rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+/* ─── Header ─────────────────────────────────────────────── */
 
 .neighbourhood {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 500;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 0.3rem;
-  opacity: 0.8;
+  opacity: 0.75;
+  margin-bottom: 0.4rem;
 }
 
 .name {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   font-weight: 400;
   color: var(--cream);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.1rem;
 }
 
-.accentBar {
-  width: 2px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--accent), transparent);
-  opacity: 0.3;
-  flex-shrink: 0;
-  margin-left: 1rem;
-}
+/* ─── Wow ─────────────────────────────────────────────────── */
 
 .wow {
-  background: rgba(201, 168, 76, 0.06);
-  border: 1px solid rgba(201, 168, 76, 0.15);
-  border-radius: 3px;
-  padding: 1rem 1.25rem;
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.wowLabel {
   font-family: var(--font-sans);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  background: rgba(201, 168, 76, 0.15);
-  padding: 0.2rem 0.4rem;
-  border-radius: 2px;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-}
-
-.wowText {
-  font-family: var(--font-sans);
-  font-size: 0.92rem;
-  font-weight: 400;
-  color: var(--cream);
-  line-height: 1.55;
-}
-
-.history {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.97rem;
   font-weight: 300;
-  color: var(--cream-dim);
-  line-height: 1.6;
-  font-style: italic;
-  padding-left: 0.75rem;
-  border-left: 1px solid rgba(255,255,255,0.08);
+  color: var(--cream);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
-.toggle {
+/* ─── Actions ─────────────────────────────────────────────── */
+
+.actions {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: none;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 3px;
-  color: var(--cream-dim);
+}
+
+.action {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.5rem 0.9rem;
+  color: var(--cream-dim);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  padding: 0.4rem 0.85rem;
   cursor: pointer;
-  transition: all 0.2s ease;
-  align-self: flex-start;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.toggle:hover {
-  border-color: var(--accent);
+.action:hover {
   color: var(--accent);
+  border-color: var(--accent);
 }
 
-.toggleIcon {
+.action.open {
+  color: var(--accent);
+  border-color: var(--accent);
+  opacity: 0.7;
+}
+
+.actionSep {
   display: inline-block;
-  transition: transform 0.25s ease;
-  font-size: 0.7rem;
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0 0.15rem;
 }
 
-.details {
+/* ─── Expanded Panel ──────────────────────────────────────── */
+
+.panel {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.1rem;
   animation: fadeIn 0.2s ease;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-3px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.doList {
-  list-style: none;
+/* ─── Tell me more ────────────────────────────────────────── */
+
+.history {
+  font-family: var(--font-sans);
+  font-size: 0.87rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream-dim);
+  line-height: 1.7;
+}
+
+.suggestions {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.55rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.doList li {
+.suggestion {
   font-family: var(--font-sans);
-  font-size: 0.88rem;
-  font-weight: 400;
+  font-size: 0.87rem;
+  font-weight: 300;
   color: var(--cream);
-  line-height: 1.5;
-  padding-left: 1.25rem;
-  position: relative;
-}
-
-.doList li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-size: 0.75rem;
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
 .practical {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 300;
   color: var(--cream-dim);
+  opacity: 0.5;
   line-height: 1.5;
-  background: rgba(255,255,255,0.03);
-  border-radius: 3px;
-  padding: 0.75rem 1rem;
+  letter-spacing: 0.02em;
 }
 
-.practicalLabel {
-  font-weight: 600;
-  letter-spacing: 0.08em;
+/* ─── What's nearby ───────────────────────────────────────── */
+
+.nearbyLabel {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-size: 0.65rem;
   color: var(--gold);
-  margin-right: 0.6rem;
+  opacity: 0.6;
+  margin-bottom: 0.15rem;
 }
 
-.gradientStrip {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3px;
-  height: 100%;
-  background: var(--grad);
-  opacity: 0.4;
+.nearbyList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
 }
+
+.nearbyItem {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+}
+
+.nearbyName {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.nearbyDot {
+  color: var(--accent);
+  opacity: 0.5;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.nearbyNeighbourhood {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--cream-dim);
+  opacity: 0.6;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
 
 @media (max-width: 600px) {
-  .cardInner {
-    grid-template-columns: 60px 1fr;
-  }
-
-  .meta {
-    padding: 1.25rem 0.5rem 1.25rem 0.75rem;
-  }
-
-  .body {
-    padding: 1.25rem 1.25rem 1rem;
+  .card {
+    padding: 1.4rem 1.25rem 1.25rem;
   }
 
   .name {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
 
   .wow {
-    flex-direction: column;
-    gap: 0.5rem;
+    font-size: 0.92rem;
   }
 }

@@ -1,70 +1,82 @@
 import { useState } from 'react'
 import styles from './LocationCard.module.css'
 
-export default function LocationCard({ location, index }) {
-  const [expanded, setExpanded] = useState(false)
+export default function LocationCard({ location, siblings = [] }) {
+  const [showMore, setShowMore] = useState(false)
+  const [showNearby, setShowNearby] = useState(false)
+
+  const toggleMore = () => {
+    setShowMore(v => !v)
+    if (!showMore) setShowNearby(false)
+  }
+
+  const toggleNearby = () => {
+    setShowNearby(v => !v)
+    if (!showNearby) setShowMore(false)
+  }
 
   return (
-    <article
-      className={styles.card}
-      style={{ '--accent': location.accent, '--grad': location.gradient }}
-    >
-      <div className={styles.cardInner}>
-        {/* Left: time + number */}
-        <div className={styles.meta}>
-          <span className={styles.time}>{location.time}</span>
-          <span className={styles.index}>{String(index + 1).padStart(2, '0')}</span>
-        </div>
+    <article className={styles.card} style={{ '--accent': location.accent }}>
+      <header className={styles.header}>
+        <p className={styles.neighbourhood}>{location.neighbourhood}</p>
+        <h3 className={styles.name}>{location.name}</h3>
+      </header>
 
-        {/* Right: content */}
-        <div className={styles.body}>
-          <div className={styles.header}>
-            <div>
-              <p className={styles.neighbourhood}>{location.neighbourhood}</p>
-              <h3 className={styles.name}>{location.name}</h3>
-            </div>
-            <div className={styles.accentBar} />
-          </div>
+      <p className={styles.wow}>{location.wow}</p>
 
-          {/* WOW FACT — always visible */}
-          <div className={styles.wow}>
-            <span className={styles.wowLabel}>WOW</span>
-            <p className={styles.wowText}>{location.wow}</p>
-          </div>
+      <div className={styles.actions}>
+        <button
+          className={`${styles.action} ${showMore ? styles.open : ''}`}
+          onClick={toggleMore}
+          aria-expanded={showMore}
+        >
+          {showMore ? 'Close' : 'Tell me more'}
+        </button>
 
-          {/* History — always visible, subtle */}
-          <p className={styles.history}>{location.history}</p>
-
-          {/* Expandable: what to do + practical */}
-          <button
-            className={styles.toggle}
-            onClick={() => setExpanded(e => !e)}
-            aria-expanded={expanded}
-          >
-            <span>{expanded ? 'Less' : 'What to do'}</span>
-            <span className={styles.toggleIcon} style={{ transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-              ↓
-            </span>
-          </button>
-
-          {expanded && (
-            <div className={styles.details}>
-              <ul className={styles.doList}>
-                {location.do.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-              <p className={styles.practical}>
-                <span className={styles.practicalLabel}>Practical</span>
-                {location.practical}
-              </p>
-            </div>
-          )}
-        </div>
+        {siblings.length > 0 && (
+          <>
+            <span className={styles.actionSep} />
+            <button
+              className={`${styles.action} ${showNearby ? styles.open : ''}`}
+              onClick={toggleNearby}
+              aria-expanded={showNearby}
+            >
+              {showNearby ? 'Close' : "What's nearby"}
+            </button>
+          </>
+        )}
       </div>
 
-      {/* Background gradient strip */}
-      <div className={styles.gradientStrip} />
+      {showMore && (
+        <div className={styles.panel}>
+          <p className={styles.history}>{location.history}</p>
+          {location.do && location.do.length > 0 && (
+            <div className={styles.suggestions}>
+              {location.do.map((item, i) => (
+                <p key={i} className={styles.suggestion}>{item}</p>
+              ))}
+            </div>
+          )}
+          {location.practical && (
+            <p className={styles.practical}>{location.practical}</p>
+          )}
+        </div>
+      )}
+
+      {showNearby && siblings.length > 0 && (
+        <div className={styles.panel}>
+          <p className={styles.nearbyLabel}>Also in this area</p>
+          <div className={styles.nearbyList}>
+            {siblings.map(s => (
+              <div key={s.id} className={styles.nearbyItem}>
+                <span className={styles.nearbyName}>{s.name}</span>
+                <span className={styles.nearbyDot}>·</span>
+                <span className={styles.nearbyNeighbourhood}>{s.neighbourhood}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </article>
   )
 }

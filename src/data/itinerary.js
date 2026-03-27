@@ -1,5 +1,5 @@
 // Day-by-day honeymoon itinerary for the morning greeting.
-// Trip starts 30 March 2026 (Day 1). Day number derived from calendar date.
+// Trip starts 30 March 2026 (Day 1 — departure from Johannesburg). Day number derived from calendar date.
 
 export const TRIP_START = '2026-03-30'
 export const TRIP_END   = '2026-04-16'
@@ -8,72 +8,72 @@ export const days = [
   {
     date: '2026-03-30',
     day: 1,
-    location: 'Singapore',
+    location: 'Johannesburg → Singapore',
     dayLine: 'Day 1 of your honeymoon.',
-    messageLine: 'Singapore. The beginning of everything. Let this city set the tone for all that follows.',
+    messageLine: 'SQ479 lifts off this afternoon at 13:45. Eleven hours over the Indian Ocean. When you land, it will be morning, and everything will look completely different.',
   },
   {
     date: '2026-03-31',
     day: 2,
     location: 'Singapore',
     dayLine: 'Day 2 of your honeymoon.',
-    messageLine: 'One more morning in this extraordinary city. Tomorrow, Korea. Make today count.',
+    messageLine: 'Singapore at 06:10. Changi will welcome you gently. Yotelair is in Terminal 3 — bags down, shower, then Jewel, then the city. The honeymoon has arrived.',
   },
   {
     date: '2026-04-01',
     day: 3,
-    location: 'En route to Korea',
+    location: 'Singapore',
     dayLine: 'Day 3 of your honeymoon.',
-    messageLine: 'Today the sky takes you somewhere new. Korea is waiting below the clouds.',
+    messageLine: 'Full day in Singapore. Make it count. Tonight at 23:05 — SQ616 takes you to Korea. Leave the city by 21:00 and let Changi send you off properly.',
   },
   {
     date: '2026-04-02',
     day: 4,
     location: 'Busan',
     dayLine: 'Day 4 of your honeymoon.',
-    messageLine: 'You are in Busan. The sea is right there — let the city find you.',
+    messageLine: 'Busan at 06:35. The sea is right outside the Shilla Stay. Tonight — ask the hotel to book your taxi for 07:00 tomorrow morning. Tomorrow is the cherry blossom day.',
   },
   {
     date: '2026-04-03',
     day: 5,
     location: 'Jinhae',
-    dayLine: 'Day 5 of your honeymoon.',
-    messageLine: 'Today is the day the whole map was built around. Jinhae. 350,000 cherry trees in bloom. Go.',
+    dayLine: 'Day 5 of your honeymoon. Today is the one.',
+    messageLine: 'Jinhae. 350,000 cherry trees in full bloom. Your taxi is waiting at 07:00. Go before the crowds arrive and you will have the stream almost to yourselves.',
   },
   {
     date: '2026-04-04',
     day: 6,
     location: 'Busan',
     dayLine: 'Day 6 of your honeymoon.',
-    messageLine: 'Back in Busan. The painted village, the fish market, the bridge lit up at night — all yours today.',
+    messageLine: 'Back in Busan. Gamcheon this morning, Jagalchi at lunch, the bridge lit at night. The sea is still there.',
   },
   {
     date: '2026-04-05',
     day: 7,
     location: 'Busan',
     dayLine: 'Day 7 of your honeymoon.',
-    messageLine: 'Last full day in the city by the sea. Haedong Temple at dawn, then let the day be slow.',
+    messageLine: 'Last morning by the sea. Haedong Temple at dawn if you can manage it. Then take the day at whatever pace you need. Tomorrow the train takes you inland.',
   },
   {
     date: '2026-04-06',
     day: 8,
     location: 'Gyeongju',
     dayLine: 'Day 8 of your honeymoon.',
-    messageLine: 'Gyeongju today. A kingdom that lasted a thousand years — you have one afternoon. It is enough.',
+    messageLine: 'Checkout, then Bujeon Station — KTX to Singyeongju, 20 minutes, ₩8,400. Taxi to Sono Calm Bomun Resort. Tonight you sleep beside a lake that has been here for a thousand years.',
   },
   {
     date: '2026-04-07',
     day: 9,
-    location: 'Seoul',
+    location: 'Gyeongju',
     dayLine: 'Day 9 of your honeymoon.',
-    messageLine: 'Seoul. Eight nights ahead. Ten million people, and the city is entirely yours.',
+    messageLine: 'Gyeongju. A kingdom that lasted 1,000 years — you have one full day. Bulguksa, the tombs, the observatory. It is more than enough.',
   },
   {
     date: '2026-04-08',
     day: 10,
     location: 'Seoul',
     dayLine: 'Day 10 of your honeymoon.',
-    messageLine: 'Palaces, hanbok, and the oldest quarter in the city — today Seoul shows you its deepest self.',
+    messageLine: 'Seoul today. SRT from Singyeongju to Suseo — 2 hours, ₩41,000. Seven nights at the Grand Walkerhill, above the Han River, above the whole city.',
   },
   {
     date: '2026-04-09',
@@ -94,7 +94,7 @@ export const days = [
     day: 13,
     location: 'Seoul',
     dayLine: 'Day 13 of your honeymoon.',
-    messageLine: 'A slower day. Dragon Hill Spa is yours for as long as you want it. Seoul will still be here.',
+    messageLine: 'A slower day. Dragon Hill Spa is yours for as long as you want it. Seoul will still be here when you emerge.',
   },
   {
     date: '2026-04-12',
@@ -108,7 +108,7 @@ export const days = [
     day: 15,
     location: 'Seoul',
     dayLine: 'Day 15 of your honeymoon.',
-    messageLine: 'Mapo at night and Hongdae until late. Tonight Seoul shows you its other side.',
+    messageLine: 'Mapo at dinner and Hongdae until late. Tonight Seoul shows you its other side.',
   },
   {
     date: '2026-04-14',
@@ -120,15 +120,15 @@ export const days = [
   {
     date: '2026-04-15',
     day: 17,
-    location: 'Seoul → Singapore',
+    location: 'Seoul → Hong Kong',
     dayLine: 'Day 17 of your honeymoon.',
-    messageLine: 'The sky takes you home today. Everything you carry now is different from what you packed.',
+    messageLine: 'Check out of the Walkerhill and head for Incheon. CX419 departs at 20:05. Two hours to Hong Kong — find the gate, find the noodle bar, then CX749 takes you home.',
   },
   {
     date: '2026-04-16',
     day: 18,
-    location: 'Singapore',
+    location: 'Johannesburg',
     dayLine: 'Day 18 of your honeymoon.',
-    messageLine: 'Singapore again. The same city, different eyes. The circle is complete.',
+    messageLine: 'CX749 lands in Johannesburg at 07:55. You left as two people and came back as something more. The companion remembers every day of it.',
   },
 ]

@@ -2,10 +2,10 @@ export const trip = {
   id: 'seoul',
   city: 'Seoul',
   country: 'South Korea',
-  dates: '7–15 April 2026',
-  nights: 8,
+  dates: '8–15 April 2026',
+  nights: 7,
   hotel: 'Grand Walkerhill Seoul',
-  tagline: 'Eight nights. Ten million people. One capital.',
+  tagline: 'Seven nights. Ten million people. One capital.',
   theme: 'seoul',
   flag: '🇰🇷',
   cardGradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
@@ -15,13 +15,29 @@ export const trip = {
 export const days = [
   {
     id: 1,
-    date: 'Tuesday 7 April',
+    date: 'Wednesday 8 April — Arrive from Gyeongju',
     label: 'Day 1',
     theme: 'Arrival — The Hotel on the Hill',
     locations: [
       {
+        id: 'srt-arrival',
+        time: 'Morning — arriving from Gyeongju',
+        name: 'SRT to Seoul — Into the Capital',
+        neighbourhood: 'Singyeongju → Seoul Suseo',
+        wow: 'The SRT covers the 320km from Gyeongju to Seoul in two hours at 300km/h. You arrive in a city of ten million people — home to half of Korea\'s entire population within a 50km radius. The scale of it hits you from the train window.',
+        history: 'Seoul has been Korea\'s capital since 1394, when the Joseon Dynasty chose this river valley between four mountains. The SRT high-speed line opened in 2016 and is slightly faster and cheaper than the KTX on this route.',
+        do: [
+          'SRT from Singyeongju to Suseo Station in Seoul: 2 hours, ₩41,000. Recommended — faster and cheaper.',
+          'Or KTX to Seoul Station: 2h10min, ₩52,000. From Seoul Station take Line 5 to Gwangnaru, then a taxi up the hill.',
+          'From Suseo: subway Line 3 to Oksu, transfer to Line 5, exit at Gwangnaru, then Kakao Taxi to the Walkerhill (10 min, ₩10,000).',
+        ],
+        practical: 'Book SRT at the korail.go.kr website or the Let\'s Korail app. T-money card for all subway transfers. Show the driver "그랜드 워커힐 서울" if needed. If you get lost — show your phone to any Korean. They will help you find your way.',
+        gradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
+        accent: '#f59e0b',
+      },
+      {
         id: 'walkerhill',
-        time: 'Check-in',
+        time: 'Afternoon — check in',
         name: 'Grand Walkerhill Seoul',
         neighbourhood: 'Gwangjin-gu (Achasan)',
         wow: 'Grand Walkerhill was built in 1963 on the direct orders of President Park Chung-hee — specifically to generate hard currency from US military personnel. It was the only hotel foreigners could use freely under the military dictatorship.',
@@ -31,7 +47,7 @@ export const days = [
           'The Sheraton Grand (adjacent property) shares the same hilltop and has the better pool',
           'Walk the hotel\'s forest trail behind the property before dinner — 20 minutes, pine trees, city below',
         ],
-        practical: 'The hotel shuttle runs to Gangbyeon Station (Line 2) every 20 minutes. Keep the schedule.',
+        practical: 'The hotel shuttle runs to Gangbyeon Station (Line 2) every 20 minutes. Keep the schedule. Seven nights here — this hill is home.',
         gradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
         accent: '#f59e0b',
       },
@@ -55,7 +71,7 @@ export const days = [
   },
   {
     id: 2,
-    date: 'Wednesday 8 April',
+    date: 'Thursday 9 April',
     label: 'Day 2',
     theme: 'The Royal Quarter & the Hanbok',
     locations: [
@@ -127,7 +143,7 @@ export const days = [
   },
   {
     id: 3,
-    date: 'Thursday 9 April',
+    date: 'Friday 10 April',
     label: 'Day 3',
     theme: 'Yeouido — A Million Petals',
     locations: [
@@ -167,7 +183,7 @@ export const days = [
   },
   {
     id: 4,
-    date: 'Friday 10 April',
+    date: 'Saturday 11 April',
     label: 'Day 4',
     theme: 'Secret Gardens & Ancient Markets',
     locations: [
@@ -223,7 +239,7 @@ export const days = [
   },
   {
     id: 5,
-    date: 'Saturday 11 April',
+    date: 'Sunday 12 April',
     label: 'Day 5',
     theme: 'Dragon Hill — The Full Day',
     locations: [
@@ -264,7 +280,7 @@ export const days = [
   },
   {
     id: 6,
-    date: 'Sunday 12 April',
+    date: 'Monday 13 April',
     label: 'Day 6',
     theme: 'Namsan Mountain & the Tower',
     locations: [
@@ -277,7 +293,7 @@ export const days = [
         history: 'Namsan ("South Mountain") has been Seoul\'s sacred southern boundary since the Joseon capital was laid out in 1394 — positioned according to feng shui principles between four mountains. The pine forest on its slopes is one of the last intact original habitats in the city.',
         do: [
           'Cable car from the Myeongdong side for the ascent — ₩12,500 return',
-          'Walk the Namsan둘레길 (circumference trail) around the mountain base: 7.4km, mostly flat',
+          'Walk the Namsan 둘레길 (circumference trail) around the mountain base: 7.4km, mostly flat',
           'The path from Itaewon side on foot takes 40 minutes and is almost always quiet',
         ],
         practical: 'Mountain free. Cable car ₩12,500 return. N Seoul Tower entry ₩21,000 (observation deck).',
@@ -320,7 +336,7 @@ export const days = [
   },
   {
     id: 7,
-    date: 'Monday 13 April',
+    date: 'Tuesday 14 April',
     label: 'Day 7',
     theme: 'Korean BBQ & Hongdae',
     locations: [
@@ -353,7 +369,7 @@ export const days = [
           'Club FF or Soap for electronic music — Korea\'s DJ scene is serious',
           'The "club street" (Club-ro) has 15 venues in 400 metres — walk it first, then choose',
         ],
-        practical: '15-minute walk from Mapo. Cover charge ₩10,000–20,000. Last subway 00:30 — or taxi home.',
+        practical: '15-minute walk from Mapo. Cover charge ₩10,000–20,000. Last subway 00:30 — or Kakao Taxi home.',
         gradient: 'linear-gradient(135deg, #0e081e 0%, #1a1038 50%, #14102c 100%)',
         accent: '#a78bfa',
       },
@@ -361,7 +377,7 @@ export const days = [
   },
   {
     id: 8,
-    date: 'Tuesday 14 April',
+    date: 'Wednesday 15 April',
     label: 'Day 8',
     theme: 'The Last Full Day',
     locations: [
@@ -412,6 +428,48 @@ export const days = [
         practical: 'Free to walk. Budget ₩30,000–50,000 for lunch. Subway: Itaewon Station (Line 6).',
         gradient: 'linear-gradient(135deg, #100c08 0%, #201810 50%, #18120c 100%)',
         accent: '#fcd34d',
+      },
+    ],
+  },
+  {
+    id: 9,
+    date: 'Thursday 16 April — Departure Day',
+    label: 'Day 9',
+    theme: 'Seoul Says Goodbye',
+    locations: [
+      {
+        id: 'incheon-departure',
+        time: 'Afternoon — CX419 departs 20:05',
+        name: 'Incheon Airport — The Long Way Home',
+        neighbourhood: 'Incheon International Airport',
+        wow: 'Incheon has been voted the world\'s best airport eight times. It has an indoor skating rink, a cultural museum, a spa, and a golf course. It is the last thing Korea shows you — and Korea knows exactly what it is doing.',
+        history: 'Incheon International Airport opened in 2001 on reclaimed tidal flats between two islands. Its transit experience is deliberately spectacular — the government understood that every traveller\'s first and last impression of Korea would be formed here.',
+        do: [
+          'Check out of the Grand Walkerhill by noon. Ask the concierge the night before to arrange the airport transfer.',
+          'Allow 3 hours before departure. CX419 departs 20:05 — arrive at Incheon by 17:30.',
+          'AREX express train from Seoul Station to Incheon: 43 minutes, ₩9,500. Or taxi from the hotel: about ₩80,000, 1 hour.',
+        ],
+        practical: 'CX419 — Cathay Pacific to Hong Kong. Flight time: 3 hours. Arrives Hong Kong 23:00. Your boarding pass covers both CX419 and the onward CX749.',
+        gradient: 'linear-gradient(135deg, #06101e 0%, #0d1e38 50%, #0a1828 100%)',
+        accent: '#f59e0b',
+      },
+      {
+        id: 'hk-transit',
+        time: 'Arrive Hong Kong 23:00 — depart 01:05',
+        name: 'Hong Kong International Airport — The Layover',
+        neighbourhood: 'Lantau Island, Hong Kong',
+        wow: 'HKIA handles 75 million passengers a year and sits on an artificial island built on reclaimed sea. It is immense, beautiful, and open all night. Two hours here is not a hardship.',
+        history: 'Opened 1998, replacing the legendary Kai Tak Airport — where pilots had to bank hard at 47 degrees over the city skyline on final approach. HKIA was one of the largest construction projects in history: two runways built on an island that did not previously exist.',
+        do: [
+          'No immigration needed — follow the transfer signs directly to the departure gates.',
+          'Find your gate for CX749 first. Then have two hours.',
+          'Café Deco is open 24 hours — the congee is excellent at midnight.',
+          'Level 7 Rooftop Garden: quiet, cool, and beautiful at this hour. Worth the walk.',
+          'Allow 30 minutes to reach your gate before the 01:05 boarding call.',
+        ],
+        practical: 'CX749 departs 01:05. Arrives Johannesburg OR Tambo 07:55. Your boarding pass was issued in Seoul. Just follow the signs.',
+        gradient: 'linear-gradient(135deg, #08081e 0%, #10103a 50%, #0c0c28 100%)',
+        accent: '#a78bfa',
       },
     ],
   },

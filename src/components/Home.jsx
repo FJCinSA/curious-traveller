@@ -11,20 +11,42 @@ function todayISO() {
   return new Date().toISOString().slice(0, 10)
 }
 
-// Returns progress info if today is within the trip window, otherwise null
+// Returns a progress/countdown object for the bar below the greeting, or null after the trip.
+//   Before trip:      { label: 'Your adventure begins in X days', pct: null }
+//   Departure day:    { label: 'Today you begin.', pct: null }
+//   During trip:      { label: 'Day X of 18', pct: 0–100 }
+//   After trip ends:  null (bar hidden)
 function getTripProgress(today) {
-  if (today < TRIP_START || today > TRIP_END) return null
-  const start  = new Date(TRIP_START + 'T00:00:00Z')
-  const now    = new Date(today     + 'T00:00:00Z')
-  const totalDays  = 18
-  const currentDay = Math.round((now - start) / 86_400_000) + 1
-  return { currentDay, totalDays }
+  // Pre-departure countdown
+  if (today < TRIP_START) {
+    const daysLeft = Math.round(
+      (new Date(TRIP_START + 'T00:00:00Z') - new Date(today + 'T00:00:00Z')) / 86_400_000
+    )
+    return {
+      label: `Your adventure begins in ${daysLeft} day${daysLeft === 1 ? '' : 's'}`,
+      pct: null,
+    }
+  }
+  // After the trip is fully over — hide the bar
+  if (today > TRIP_END) return null
+  // Departure day — first day of the trip
+  if (today === TRIP_START) {
+    return { label: 'Today you begin.', pct: null }
+  }
+  // In-trip progress
+  const currentDay = Math.round(
+    (new Date(today + 'T00:00:00Z') - new Date(TRIP_START + 'T00:00:00Z')) / 86_400_000
+  ) + 1
+  return { label: `Day ${currentDay} of 18`, pct: (currentDay / 18) * 100 }
 }
 
-// Determines whether a trip is in the past, current, or upcoming relative to today
+// Determines whether a trip is in the past, current, or upcoming relative to today.
+// 'current' applies the gold glow border and pulsing dot to the card.
+// Before 31 March all cards show as 'future' — this is correct and intentional.
+// The gold glow activates automatically on 31 March when Singapore's window opens.
 function getTripStatus(trip, today) {
   if (!trip.startDate || !trip.endDate) return 'future'
-  if (today > trip.endDate)  return 'past'
+  if (today > trip.endDate)    return 'past'
   if (today >= trip.startDate) return 'current'
   return 'future'
 }
@@ -46,18 +68,19 @@ export default function Home({ trips, onSelect }) {
       {/* Daily greeting — reads device clock and itinerary to show a contextual message */}
       <Greeting />
 
-      {/* Progress bar — only shown while the trip is active (30 March – 16 April) */}
+      {/* Countdown before trip / progress during trip — hidden after 16 April */}
       {progress && (
         <div className={styles.progressWrap}>
-          <div className={styles.progressLabel}>
-            Day {progress.currentDay} of {progress.totalDays}
-          </div>
-          <div className={styles.progressTrack}>
-            <div
-              className={styles.progressFill}
-              style={{ width: `${(progress.currentDay / progress.totalDays) * 100}%` }}
-            />
-          </div>
+          <div className={styles.progressLabel}>{progress.label}</div>
+          {/* Track only shown during the trip once underway — not for countdown or departure day */}
+          {progress.pct !== null && (
+            <div className={styles.progressTrack}>
+              <div
+                className={styles.progressFill}
+                style={{ width: `${progress.pct}%` }}
+              />
+            </div>
+          )}
         </div>
       )}
 

@@ -2,7 +2,7 @@
 
 .btn {
   position: fixed;
-  bottom: 1.75rem;
+  bottom: calc(1.75rem + env(safe-area-inset-bottom, 0px));
   right: 1.75rem;
   z-index: 50;
   width: 52px;
@@ -16,6 +16,7 @@
   justify-content: center;
   box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
 }
 
 .btn:hover {

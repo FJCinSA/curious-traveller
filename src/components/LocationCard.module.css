@@ -99,6 +99,18 @@
   flex-direction: column;
   gap: 1.1rem;
   animation: fadeIn 0.2s ease;
+  position: relative;
+}
+
+.panel::after {
+  content: '';
+  position: sticky;
+  bottom: 0;
+  display: block;
+  height: 2.5rem;
+  margin-top: -2.5rem;
+  background: linear-gradient(to bottom, transparent, rgba(15, 27, 45, 0.85));
+  pointer-events: none;
 }
 
 @keyframes fadeIn {

@@ -6,6 +6,7 @@
   z-index: 150;
   background: rgba(8, 14, 26, 0.6);
   animation: ovFadeIn 0.2s ease;
+  will-change: transform;
 }
 
 @keyframes ovFadeIn {
@@ -29,6 +30,7 @@
   flex-direction: column;
   overflow-y: auto;
   animation: drawerSlideIn 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
 @keyframes drawerSlideIn {

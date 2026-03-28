@@ -21,7 +21,8 @@
 }
 
 .dayInfo {
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .dayDate {
@@ -40,6 +41,10 @@
   font-weight: 400;
   color: var(--cream);
   font-style: italic;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  padding-right: 1rem;
 }
 
 .dayLine {

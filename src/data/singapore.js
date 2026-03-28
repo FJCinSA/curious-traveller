@@ -48,6 +48,11 @@ export const serendipity = [
   'Lau Pa Sat hawker centre at midnight. The satay stalls set up on Boon Tat Street outside and grill on the pavement. This has been happening every night for thirty years.',
   'Take the cable car from Mount Faber to Sentosa at sunset. The view of the port — one of the busiest in the world — is something no postcard shows.',
   'The old Ford Factory in Bukit Timah is where the British surrendered Singapore in 1942. Small museum. Almost no visitors. The weight of that room is unforgettable.',
+  'Tiong Bahru is Singapore\'s oldest public housing estate — 1930s art deco blocks with curved facades and spiral staircases. Walk Eng Hoon Street at 7am. Independent bookshops, excellent coffee, almost no tourists. It feels like a different city.',
+  'MacRitchie Reservoir has a 250-metre suspension bridge through the rainforest canopy — the TreeTop Walk. Forty minutes from the city. Wild monkeys, hornbills, a monitor lizard on every path. Nothing else in Southeast Asia looks like this.',
+  'The Long Bar at Raffles Hotel has been serving the Singapore Sling since 1915 — the same recipe, peanuts thrown on the floor by tradition, ceiling fans turning overhead. Absurdly colonial. Completely worth it. Go at 6pm before the evening crowd.',
+  'Joo Chiat Road and Katong: Peranakan shophouses in turquoise, yellow and coral that have been the same colour for eighty years. The best katong laksa in Singapore is at 328 Katong — a bowl of coconut-rich noodles that has never once been ordinary.',
+  'Labrador Nature Reserve at the southwestern tip of the island contains the last stretch of natural rocky coastline in Singapore. WWII artillery tunnels are cut into the cliff face, still open. Walk the coastal path at dusk when the tankers on the strait turn orange.',
 ]
 
 export const days = [

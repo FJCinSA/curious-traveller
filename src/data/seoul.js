@@ -70,6 +70,12 @@ export const serendipity = [
   'Noryangjin Fish Market at 4am. The wholesale auction starts before dawn. Tuna the size of a man sold in seconds. The market café opens at 3am and serves the freshest sashimi you will ever eat.',
   'The War Memorial of Korea in Yongsan is free and almost always quiet on weekday mornings. The outdoor exhibition of aircraft and artillery takes an hour to walk. The indoor memorial takes longer and asks more of you.',
   'Han River at 5am on a clear morning. Rent a bicycle from the riverside station — they open at 05:00. Ride east as the sun rises over the city. Seoul from the river at dawn is a completely different city from the one ten million people will wake up to in two hours.',
+  'Gwangjang Market has been open since 1905 — the oldest covered market in Korea. The bindaetteok (mung bean pancakes) are pan-fried in front of you. The yukhoe (raw beef with egg yolk and sesame) stalls open at 7am. Eat something you cannot name. You will want it again.',
+  'Changdeokgung\'s Secret Garden — Huwon — requires a separate ticket and can only be entered on a guided tour. 78 acres of royal pavilions, lotus ponds, and 300-year-old trees that have been the private retreat of Korean royalty since 1623. Book online the day before.',
+  'Jogyesa Temple in the centre of Seoul is the head temple of Korean Buddhism — free entry, open at any hour. In April the courtyard is hung with thousands of paper lanterns for Buddha\'s birthday. Monks cross the stone path without looking up. The city outside disappears completely.',
+  'Bukchon Hanok Village at 5:30am before anyone arrives. The alley on Gahoe-ro 11-gil is the most photographed street in Korea — 600 hanok houses on a hillside above the city. At that hour, in total silence, the tiled roofs carry the cold and the whole neighbourhood breathes.',
+  'Dongmyo Flea Market every Sunday in Jongno — the largest flea market in Seoul. Vintage cameras, colonial-era ceramics, old military surplus, used books in Korean and Japanese. The stallholders have been setting up in that same spot for thirty years. Nothing is priced until you ask.',
+  'Ihwa Mural Village on the slopes of Naksan: steep alleyways painted by local artists, a neighbourhood that refused to be demolished. The fish mural at the top of the staircase has been there since 2006. The café at the summit looks directly over the old city wall and down into Dongdaemun.',
 ]
 
 export const days = [

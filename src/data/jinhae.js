@@ -74,6 +74,10 @@ export const serendipity = [
   'The road along the naval base perimeter is lined with cherry trees for two kilometres. Nobody walks it because nobody knows it. The blossoms here are as good as the canal and you will have them entirely to yourselves.',
   'Find the small green tea café on the hill above Yeojwacheon Stream. Local only. No sign in English. Green tea with rice cake. Sit at the window and watch the petals fall.',
   'Jinhae has the highest concentration of cherry trees per square kilometre of any city on Earth. 360,000 trees in a city of 180,000 people. Two trees for every person who lives here. Stand still and let that number settle.',
+  'The Jinhae Rotary roundabout: eight roads lined with cherry trees converge in a single circle. Stand in the centre at first light. 360 degrees of pink and white. No other place in Korea looks like this, and almost no tourist finds it.',
+  'Gyeonghwa Station has a steam locomotive parked on the platform that has not moved since the 1970s. The station building behind it was built in 1926. The cherry trees here are among the oldest in the city, and the platform is almost always quiet.',
+  'The cherry trees bloom for seven days. In the other 51 weeks of the year, Jinhae belongs entirely to the navy and the locals. Walk three streets away from the festival crowds and you will find a Korea that feels fifty years older and completely unhurried.',
+  'Walk south from Yeojwacheon Stream until the cherry trees thin out and the town becomes itself again. Fish restaurants, small street markets, older women selling vegetables from wooden crates. The contrast with the festival crowds two blocks back makes both places more vivid.',
 ]
 
 export const days = [

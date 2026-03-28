@@ -70,6 +70,11 @@ export const serendipity = [
   'Songdo Beach has a cable car that goes over the sea. It is not famous. It is not crowded. The view of the coastline from the gondola is one of the best in Busan.',
   'The Bosu Book Street near Nampo Station has been selling second-hand books since the Korean War, when refugees sold their possessions to survive. The street has not changed since 1953.',
   'Igidae Coastal Walk — 4.7km along cliffs above the sea between Oryukdo and Gwangalli. Almost no tourists. Local joggers and couples. The sea is directly below you the entire way.',
+  'Gamcheon Culture Village is a hillside of pastel-painted houses built by refugees during the Korean War. The alleys are too narrow for cars. Every wall has a mural. Go before 9am when the tour buses arrive and it belongs entirely to the people who live there.',
+  'Haedong Yonggungsa is the only Buddhist temple in Korea built directly above the sea. Stone lanterns line the path down to the shore. At sunrise, the light comes over the water and hits the prayer flags. It is unlike any temple you have seen before.',
+  'Jagalchi Fish Market at 6am when the boats come in. The largest fish market in Korea. Women in rubber aprons sell live creatures from red plastic tubs on the dock. The raw fish breakfast at the upstairs restaurant — caught an hour ago — costs almost nothing.',
+  'Huinnyeoul Culture Village on the cliff edge of Yeongdo Island: narrow alleys built by Manchurian refugees after the war, some houses so close to the edge that the back window looks directly over the sea. The walk along the cliff path takes twenty minutes and feels completely forgotten.',
+  'Yeongdo Island, connected to central Busan by bridge, was where refugees came in 1950 and never left. Walk the northern coastline road — sea to your right, old dry docks and warehouses to your left. The tourist buses have never found it.',
 ]
 
 export const days = [

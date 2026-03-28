@@ -59,6 +59,11 @@ export const serendipity = [
   'Namsan Mountain behind the city has 122 Buddhist sites carved into the rock — temples, statues, carvings — scattered across the mountain over two kilometres. Pick any path and walk upward. You will find something extraordinary within 15 minutes.',
   'The Gyeongju traditional market sells Ssambap — rice in leaf wraps — from women who have been making it since before the tourist buses came. Eat it standing at the stall. Pay what they ask without negotiating.',
   'Sit at the edge of any tumuli mound at exactly dusk. The grass turns gold. The city disappears behind you. For one minute Gyeongju feels exactly as it did 1,500 years ago.',
+  'Cheonmachong is the only royal burial mound in Gyeongju you can enter. Inside: a chamber of gold crowns and jade ornaments excavated in 1973, displayed exactly as found. The flying horse painting on birchbark that gave the tomb its name hangs on the wall.',
+  'Bulguksa Temple at 6am, thirty minutes before the gates open to visitors. Walk the stone path up to the entrance. The two staircases — Cheongunggyo and Baegungyo — were built in 751 AD. In the morning mist, with no one else there, this is what 1,300 years of stillness feels like.',
+  'The Emille Bell at Gyeongju National Museum was cast in 771 AD and weighs 18.9 tonnes. The legend says a child was cast into the molten bronze, and when it rang, Koreans heard a child crying. It has not been struck since 1975. Stand beside it and consider what that silence means.',
+  'The Baeridaeul valley on the eastern flank of Namsan holds 30 rock-carved Buddhas in a ravine — 7th century figures worn by weather but still recognisable. A two-hour walk end to end. You will pass three other people at most. Nothing is signposted. That is the point.',
+  'Otjeong Lake just north of the city: rowboats for hire, weeping willows on the bank, the reflection of the water tower at dusk. Korean couples have been coming here on Sundays for generations. Order coffee from the lakeside stall and take a boat out slowly.',
 ]
 
 export const days = [

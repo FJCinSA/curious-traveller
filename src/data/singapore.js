@@ -53,6 +53,11 @@ export const serendipity = [
   'The Long Bar at Raffles Hotel has been serving the Singapore Sling since 1915 — the same recipe, peanuts thrown on the floor by tradition, ceiling fans turning overhead. Absurdly colonial. Completely worth it. Go at 6pm before the evening crowd.',
   'Joo Chiat Road and Katong: Peranakan shophouses in turquoise, yellow and coral that have been the same colour for eighty years. The best katong laksa in Singapore is at 328 Katong — a bowl of coconut-rich noodles that has never once been ordinary.',
   'Labrador Nature Reserve at the southwestern tip of the island contains the last stretch of natural rocky coastline in Singapore. WWII artillery tunnels are cut into the cliff face, still open. Walk the coastal path at dusk when the tankers on the strait turn orange.',
+  'The Baba House on Neil Road is a Peranakan townhouse preserved exactly as it was in 1895 — guided tours run by the National University of Singapore. Three floors of hand-painted tiles, carved blackwood furniture, and silk embroidery. The most beautiful interior in Singapore that most visitors never find.',
+  'Clarke Quay at 6am when the bars have been closed for two hours. The colonial warehouses along the river in the morning light are what this neighbourhood looked like for 150 years before the nightclubs arrived. The kopitiam on the corner opens at 5am. Sit outside with kopi and watch the river go still.',
+  'The Singapore Botanic Gardens has been open since 1859 and is a UNESCO World Heritage site. The National Orchid Garden holds 1,000 species. Go at 7am before the heat arrives — the old rain trees on the central lawn have been growing for a hundred years and the canopy in the morning is extraordinary.',
+  'Kranji War Memorial in the north of the island: 4,461 graves of Commonwealth soldiers who died in the fall of Singapore in 1942. The wall behind lists 24,000 names of those with no known grave. Immaculate grass, complete silence, almost never visited. MRT to Kranji station.',
+  'Sri Mariamman Temple on South Bridge Road is the oldest Hindu temple in Singapore, built in 1827. The tower above the entrance is covered in 72 sculpted figures. Free entry. Go in the early morning when the flowers for puja are being laid on banana leaves on the steps outside.',
 ]
 
 export const days = [

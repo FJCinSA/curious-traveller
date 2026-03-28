@@ -76,6 +76,10 @@ export const serendipity = [
   'Bukchon Hanok Village at 5:30am before anyone arrives. The alley on Gahoe-ro 11-gil is the most photographed street in Korea — 600 hanok houses on a hillside above the city. At that hour, in total silence, the tiled roofs carry the cold and the whole neighbourhood breathes.',
   'Dongmyo Flea Market every Sunday in Jongno — the largest flea market in Seoul. Vintage cameras, colonial-era ceramics, old military surplus, used books in Korean and Japanese. The stallholders have been setting up in that same spot for thirty years. Nothing is priced until you ask.',
   'Ihwa Mural Village on the slopes of Naksan: steep alleyways painted by local artists, a neighbourhood that refused to be demolished. The fish mural at the top of the staircase has been there since 2006. The café at the summit looks directly over the old city wall and down into Dongdaemun.',
+  'Gyeongbokgung Palace at 9am when the gates open. 330 buildings across 410,000 square metres — the largest palace complex in Korea. Walk through four successive ceremonial gates to the throne hall at the far end. It is bigger than you imagine from the entrance. Free on the first Sunday of each month.',
+  'Namdaemun Market opens for wholesale traders before 3am. Walk through before 6am and it belongs to old women pulling metal carts. The dried fish section, the bolts of fabric stacked four metres high, the ginseng root piled like firewood — all sold before the retail city wakes.',
+  'Mangwon Market on Saturdays in Mapo district: a neighbourhood food and craft market where local farmers and small designers sell alongside tteokbokki and hotteok stalls. No tour groups. Koreans bring dogs and reusable bags. Queue at the stall near the entrance. It is always worth it.',
+  'Gyeonghuigung Palace in the centre of the city was almost completely destroyed during the Japanese occupation — only three buildings survive. The foundations of 100 vanished halls are marked in the grass. It is the most honest monument in Seoul about what was taken. Almost nobody visits it.',
 ]
 
 export const days = [

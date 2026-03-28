@@ -64,6 +64,11 @@ export const serendipity = [
   'The Emille Bell at Gyeongju National Museum was cast in 771 AD and weighs 18.9 tonnes. The legend says a child was cast into the molten bronze, and when it rang, Koreans heard a child crying. It has not been struck since 1975. Stand beside it and consider what that silence means.',
   'The Baeridaeul valley on the eastern flank of Namsan holds 30 rock-carved Buddhas in a ravine — 7th century figures worn by weather but still recognisable. A two-hour walk end to end. You will pass three other people at most. Nothing is signposted. That is the point.',
   'Otjeong Lake just north of the city: rowboats for hire, weeping willows on the bank, the reflection of the water tower at dusk. Korean couples have been coming here on Sundays for generations. Order coffee from the lakeside stall and take a boat out slowly.',
+  'Cheomseongdae Observatory was built in 634 AD during the reign of Queen Seondeok — the oldest surviving astronomical observatory in East Asia. It stands in a field, smaller than you expect. People walk past it toward the larger monuments. Stop. Think about 634 AD.',
+  'Gyerim Forest inside the old Silla palace grounds: an ancient grove of gnarled trees where, according to legend, the founding ancestor of the Kim royal clan was found in a golden chest hung from a white rooster\'s cry. Walk it at dawn. The trees are very old. The story is very strange.',
+  'The Gyeongju bicycle path follows the river for 12km through the city, passing burial mounds, rice paddies, and a 7th century stone pagoda standing alone in a field with no fence or sign. Rent a bicycle near Tumuli Park. The middle section has no gift shops, no tours, no crowds.',
+  'Golgulsa Temple north of the city is carved directly into a cliff face — 12 Buddhist cave chapels cut into the rock in the 6th century. Sunmudo warrior monks practise in the courtyard before 9am. Free entry. The path up to the highest cave takes 15 minutes.',
+  'The National Museum outdoor garden holds stone lanterns, pagodas, and a seated Buddha too large to bring inside — all excavated from sites around the city. Walk it in the late afternoon after the building closes. The 9th century figures in low light are something the indoor galleries cannot give you.',
 ]
 
 export const days = [

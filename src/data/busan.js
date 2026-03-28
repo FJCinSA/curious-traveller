@@ -75,6 +75,11 @@ export const serendipity = [
   'Jagalchi Fish Market at 6am when the boats come in. The largest fish market in Korea. Women in rubber aprons sell live creatures from red plastic tubs on the dock. The raw fish breakfast at the upstairs restaurant — caught an hour ago — costs almost nothing.',
   'Huinnyeoul Culture Village on the cliff edge of Yeongdo Island: narrow alleys built by Manchurian refugees after the war, some houses so close to the edge that the back window looks directly over the sea. The walk along the cliff path takes twenty minutes and feels completely forgotten.',
   'Yeongdo Island, connected to central Busan by bridge, was where refugees came in 1950 and never left. Walk the northern coastline road — sea to your right, old dry docks and warehouses to your left. The tourist buses have never found it.',
+  'Gwangalli Beach at 5am before a single person arrives. The Gwangan Bridge lights are still on. The reflection in the flat water is better than any official night photograph. Walk the 1.5km of sand end to end in complete silence. By 6am the runners start.',
+  'Beomeosa Temple was founded in 678 AD in the mountains north of the city. The walk up through pine forest from Beomeosa station takes 45 minutes. The painted eaves of the main hall have been repainted in the same four colours — blue, green, red, white — for more than a thousand years.',
+  'Haeundae Beach at 5:30am, perfectly raked by the city every morning before the first person arrives. Walk it end to end — 1.5km — before the heat starts. The apartment towers behind the sand light up as the sun rises. By 8am it is a completely different place.',
+  'Geumjeong Fortress on the ridge above the city stretches 18km across four mountain peaks — the largest fortress in Korea. Take the cable car from Oncheoncheon then walk east along the wall. The views over Busan last for an hour without repeating themselves.',
+  'Small ferries depart from Oryukdo Dock several times daily to the Oryukdo Islands themselves — not just the Skywalk above. The crossing takes minutes. These six rocks have been a navigation marker for Korean and Chinese sailors for two thousand years. Standing on one is oddly moving.',
 ]
 
 export const days = [

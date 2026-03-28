@@ -78,6 +78,12 @@ export const serendipity = [
   'Gyeonghwa Station has a steam locomotive parked on the platform that has not moved since the 1970s. The station building behind it was built in 1926. The cherry trees here are among the oldest in the city, and the platform is almost always quiet.',
   'The cherry trees bloom for seven days. In the other 51 weeks of the year, Jinhae belongs entirely to the navy and the locals. Walk three streets away from the festival crowds and you will find a Korea that feels fifty years older and completely unhurried.',
   'Walk south from Yeojwacheon Stream until the cherry trees thin out and the town becomes itself again. Fish restaurants, small street markets, older women selling vegetables from wooden crates. The contrast with the festival crowds two blocks back makes both places more vivid.',
+  'Jinhae\'s cherry trees were planted by the Japanese colonial administration in the 1920s, intended as a symbol of military sacrifice. Korea kept the trees and changed the meaning entirely. Every blossom now belongs to Korea. That history makes them more beautiful, not less.',
+  'Yeojwacheon Stream after 9pm when the afternoon crowds have gone home. The lanterns along the canal are reflected in the water and the petals drift in the light. The festival is loudest between noon and 6pm. At night it becomes something quieter and stranger.',
+  'The morning fog in Jinhae sits low over the canal before 8am in April. When the mist and the blossoms are both at their peak — a window of perhaps two hours — you are standing in one of the most beautiful places on Earth. Set an alarm.',
+  'Haemul pajeon (seafood pancake) and makgeolli rice wine at a restaurant by Junghang Port at lunch. The fishermen who sold the morning catch at the dock are often at the next table. Order by pointing. Nothing on the menu is wrong.',
+  'The hills above Jinhae on a clear day: the harbour, the naval base, the mountains of the peninsula, and 360,000 cherry trees below you all at once. Twenty minutes to walk up from the town centre. Almost nobody does.',
+  'The sound of 360,000 trees releasing their petals at the same time in a light breeze is not quite silence. Find a quiet street very early morning, before the crowd noise starts, and stand still. You can almost hear it.',
 ]
 
 export const days = [

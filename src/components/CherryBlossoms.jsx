@@ -5,7 +5,7 @@
 import { useMemo } from 'react'
 import styles from './CherryBlossoms.module.css'
 
-const PETAL_COUNT = 6
+const PETAL_COUNT = 16
 
 // Deterministic PRNG — same seed → same petals every render
 function makeRand(seed) {
@@ -21,14 +21,14 @@ export default function CherryBlossoms() {
     const r = makeRand(42)
     return Array.from({ length: PETAL_COUNT }, (_, i) => ({
       id: i,
-      left:     r() * 100,               // % across viewport
-      delay:    r() * 18,                // 0–18 s — spread far apart
-      duration: 10 + r() * 8,           // 10–18 s to fall — very slow
-      size:     4 + r() * 5,            // 4–9 px wide — smaller
-      drift:    (r() - 0.5) * 80,       // gentle horizontal drift
-      rotate:   180 + r() * 180,         // half rotation — subtle
-      opacity:  0.15 + r() * 0.2,       // 0.15–0.35 — barely there
-      pink:     r() > 0.45,             // pink vs soft white
+      left:     r() * 100,             // % across viewport
+      delay:    r() * 12,              // 0–12 s — continuous but never crowded
+      duration: 7 + r() * 7,          // 7–14 s — slow and beautiful
+      size:     5 + r() * 7,          // 5–12 px
+      drift:    (r() - 0.5) * 120,    // gentle lateral drift
+      rotate:   270 + r() * 270,      // 270–540 deg
+      opacity:  0.45 + r() * 0.40,    // 0.45–0.85 — visible, present
+      pink:     r() > 0.38,           // mostly pink, some white
     }))
   }, [])
 

@@ -65,9 +65,15 @@
   line-height: 1;
   cursor: pointer;
   opacity: 0.45;
-  padding: 0.1rem 0.25rem;
+  padding: 0;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.15s ease;
   font-weight: 300;
+  flex-shrink: 0;
 }
 
 .closeBtn:hover { opacity: 0.9; }

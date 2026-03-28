@@ -64,8 +64,8 @@
 }
 
 .save {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--gold);
   border: none;
@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.25rem;
+  margin-top: 0.1rem;
 }
 
 .save:disabled {

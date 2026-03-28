@@ -784,6 +784,27 @@
   .familyCity { font-size: 3rem; }
 }
 
+@media (max-width: 480px) {
+  /* Share card: tighter padding so it fits a 390px screen comfortably */
+  .shareCard {
+    padding: 2rem 1.25rem;
+  }
+
+  .shareCardDots {
+    gap: 0.25rem;
+  }
+
+  .shareCardDotLabel {
+    font-size: 0.42rem;
+    max-width: 36px;
+  }
+
+  /* Family wrap: reduce horizontal padding */
+  .familyWrap {
+    padding: 1rem 1.25rem 3rem;
+  }
+}
+
 /* ─── Reduced motion ─────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {

@@ -186,3 +186,29 @@
     font-size: 0.88rem;
   }
 }
+
+/* On narrow phones, hide city labels so the dot track never overflows.
+   Dot colours (filled/bright/outlined) still communicate the journey status. */
+@media (max-width: 480px) {
+  .section {
+    padding: 0 0.75rem 3rem;
+  }
+
+  .inner {
+    padding: 1.25rem 0.75rem 1rem;
+  }
+
+  .stopLabel {
+    display: none;
+  }
+
+  /* Remove the margin that was offsetting the connector to align with label height */
+  .connector {
+    margin-bottom: 0;
+  }
+
+  .statusLine,
+  .afterTrip {
+    font-size: 0.82rem;
+  }
+}

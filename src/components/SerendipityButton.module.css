@@ -173,6 +173,18 @@
   border-color: rgba(201, 168, 76, 0.4);
 }
 
+/* ─── Mobile ─────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .overlay {
+    padding: 0 0.75rem 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+
 /* ─── Reduced motion ─────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {

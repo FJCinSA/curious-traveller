@@ -60,7 +60,7 @@ export default function NavDrawer({
 
           {/* Slow travel toggle — inline, no navigation */}
           <div className={styles.toggleRow}>
-            <span className={styles.menuIcon} aria-hidden="true">✦</span>
+            <span className={`${styles.menuIcon} ${slowTravel ? styles.menuIconGlow : ''}`} aria-hidden="true">✦</span>
             <span className={styles.toggleLabel}>Slow Travel Mode</span>
             <label className={styles.toggle} aria-label={slowTravel ? 'Slow travel on' : 'Slow travel off'}>
               <input

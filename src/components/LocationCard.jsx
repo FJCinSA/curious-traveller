@@ -72,7 +72,7 @@ export default function LocationCard({ location, siblings = [], isKorean = false
       </header>
 
       {/* Lead text — wow fact normally, slowNote when slow travel mode is active */}
-      <p className={styles.wow}>{leadText}</p>
+      <p className={`${styles.wow} ${slowTravel && location.slowNote ? styles.wowSlow : ''}`}>{leadText}</p>
 
       <div className={styles.actions}>
         <button

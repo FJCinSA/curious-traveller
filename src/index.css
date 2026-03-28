@@ -32,6 +32,15 @@ html {
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
   max-width: 100vw;
+  transition: background-color 0.8s ease;
+}
+
+[data-slow-travel="true"] {
+  --bg: #0d0a14;
+  --surface: #140f1e;
+  --surface-2: #1a1428;
+  --gold: #d4a853;
+  --border: #2d1f3d;
 }
 
 body {

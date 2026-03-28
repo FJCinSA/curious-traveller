@@ -178,20 +178,20 @@
   pointer-events: none;
 }
 
-/* Ripple that radiates outward every 3 s */
+/* Ripple that radiates outward every 8 s — almost imperceptible */
 .rippleRing {
   position: absolute;
   inset: -6px;
   border-radius: 50%;
-  border: 1px solid rgba(201, 168, 76, 0.65);
-  animation: rippleOut 3s ease-out infinite;
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  animation: rippleOut 8s ease-out infinite;
   pointer-events: none;
 }
 
 @keyframes rippleOut {
-  0%   { transform: scale(1);   opacity: 0.7; }
-  50%  { transform: scale(2.4); opacity: 0;   }
-  100% { transform: scale(2.4); opacity: 0;   }
+  0%   { transform: scale(1);   opacity: 0.5; }
+  25%  { transform: scale(2.2); opacity: 0;   }
+  100% { transform: scale(2.2); opacity: 0;   }
 }
 
 /* ─── Stop Content ───────────────────────────────────────── */
@@ -523,8 +523,8 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  border: 1px solid rgba(201, 168, 76, 0.65);
-  animation: rippleOut 3s ease-out infinite;
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  animation: rippleOut 8s ease-out infinite;
 }
 
 .familyDistance {

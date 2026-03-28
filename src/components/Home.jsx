@@ -61,10 +61,11 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
   // Drawer
   const [drawerOpen, setDrawerOpen] = useState(false)
 
-  // Feature 3 — "Kept forever." whisper when a memory is saved
+  // Feature 3 — one pulse on the menu button + "Kept forever." whisper
   const [memories]                  = useLocalStorage('ct_memories', [])
   const prevMemoryCountRef          = useRef(memories.length)
-  const [keptMsg, setKeptMsg]       = useState(false)
+  const [keptMsg,   setKeptMsg]     = useState(false)
+  const [memGlow,   setMemGlow]     = useState(false)
 
   // Feature 6 — slow travel tortoise
   const prevSlowTravelRef             = useRef(slowTravel)
@@ -79,13 +80,15 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
     }
   }, [whisper])
 
-  // Feature 3 — detect new memory saved → "Kept forever." toast
+  // Feature 3 — one gentle pulse on the hamburger + "Kept forever." toast
   useEffect(() => {
     if (memories.length > prevMemoryCountRef.current) {
       setKeptMsg(true)
-      const t = setTimeout(() => setKeptMsg(false), 3000)
+      setMemGlow(true)
+      const t1 = setTimeout(() => setKeptMsg(false), 3000)
+      const t2 = setTimeout(() => setMemGlow(false), 1400)
       prevMemoryCountRef.current = memories.length
-      return () => clearTimeout(t)
+      return () => { clearTimeout(t1); clearTimeout(t2) }
     }
     prevMemoryCountRef.current = memories.length
   }, [memories.length])
@@ -122,7 +125,7 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
 
       {/* Hamburger — the only persistent UI chrome */}
       <button
-        className={styles.menuBtn}
+        className={`${styles.menuBtn} ${memGlow ? styles.memGlow : ''}`}
         onClick={() => setDrawerOpen(true)}
         aria-label="Open menu"
         aria-expanded={drawerOpen}

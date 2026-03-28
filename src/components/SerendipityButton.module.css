@@ -27,16 +27,16 @@
   transform: scale(0.96);
 }
 
-/* Spin animation triggered on tap */
+/* Spin animation triggered on tap — half rotation, like it is thinking */
 .spinning {
-  animation: compassSpin 0.38s ease-in-out;
+  animation: compassSpin 0.5s ease-in-out;
   pointer-events: none;
 }
 
 @keyframes compassSpin {
   0%   { transform: rotate(0deg)   scale(1);    }
-  40%  { transform: rotate(200deg) scale(1.12); }
-  100% { transform: rotate(360deg) scale(1);    }
+  50%  { transform: rotate(100deg) scale(1.06); }
+  100% { transform: rotate(180deg) scale(1);    }
 }
 
 .rose {

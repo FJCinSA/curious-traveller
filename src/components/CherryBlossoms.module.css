@@ -27,11 +27,11 @@
     transform: translateY(-18px) translateX(0) rotate(0deg);
     opacity: 0;
   }
-  6% {
-    opacity: 1;
+  12% {
+    opacity: 1;   /* slow fade-in — you notice them after a moment */
   }
-  92% {
-    opacity: 0.5;
+  88% {
+    opacity: 0.6;
   }
   100% {
     transform: translateY(110vh) translateX(var(--drift)) rotate(var(--rotate));

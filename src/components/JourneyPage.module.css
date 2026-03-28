@@ -1,0 +1,433 @@
+/* ─── Page Container ─────────────────────────────────────── */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 4rem;
+  background: var(--bg);
+}
+
+/* ─── Back Button ────────────────────────────────────────── */
+
+.back {
+  align-self: flex-start;
+  margin: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  color: var(--cream-dim);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+  padding: 0;
+}
+
+.back:hover { opacity: 1; }
+
+/* ─── Header ─────────────────────────────────────────────── */
+
+.header {
+  text-align: center;
+  padding: 1rem 1.5rem 3rem;
+  max-width: 480px;
+  width: 100%;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  opacity: 0.75;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+}
+
+.subtitle {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold-light);
+  opacity: 0.8;
+}
+
+/* ─── Timeline ───────────────────────────────────────────── */
+
+.timeline {
+  width: 100%;
+  max-width: 560px;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* A single stop row */
+.stop {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  min-height: 80px;
+}
+
+/* Highlight background for the current stop */
+.stopCurrent {
+  background: rgba(201, 168, 76, 0.04);
+  border-radius: 6px;
+  border-left: none; /* dot column handles the left side */
+}
+
+/* ─── Dot Column ─────────────────────────────────────────── */
+
+.dotCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lineUp,
+.lineDown {
+  flex: 1;
+  width: 1.5px;
+}
+
+.lineGold { background: rgba(201, 168, 76, 0.5); }
+.lineDim  { background: rgba(255, 255, 255, 0.07); }
+
+/* Dots */
+.dot {
+  position: relative;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin: 4px 0;
+}
+
+.dot_past {
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  opacity: 0.45;
+}
+
+.dot_current {
+  width: 16px;
+  height: 16px;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(201, 168, 76, 0.6);
+}
+
+.dot_future {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 1.5px solid rgba(201, 168, 76, 0.3);
+}
+
+/* Pulsing ring around current dot */
+.pulseRing {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(201, 168, 76, 0.45);
+  animation: ringPulse 2s ease-in-out infinite;
+}
+
+@keyframes ringPulse {
+  0%, 100% { opacity: 0.8; transform: scale(1);   }
+  50%       { opacity: 0;   transform: scale(1.6); }
+}
+
+/* ─── Stop Content ───────────────────────────────────────── */
+
+.content {
+  padding: 1rem 0.75rem 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contentCurrent {
+  border-left: 2px solid rgba(201, 168, 76, 0.4);
+  padding-left: 1rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.stopTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.flag {
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.stopTitleGroup {
+  flex: 1;
+}
+
+.stopCity {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.1;
+}
+
+.stopCountry {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.65;
+  margin-top: 0.1rem;
+}
+
+/* Status badge */
+.badge {
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: 2px;
+  margin-top: 0.2rem;
+}
+
+.badge_past {
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  color: var(--gold);
+  opacity: 0.55;
+}
+
+.badge_current {
+  background: rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  color: var(--gold-light);
+}
+
+.badge_future {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--cream-dim);
+  opacity: 0.5;
+}
+
+/* Stop detail lines */
+.stopDates {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--gold-light);
+  opacity: 0.8;
+}
+
+.stopHotel {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--cream-dim);
+  opacity: 0.65;
+}
+
+.stopNote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+  opacity: 0.5;
+  margin-top: 0.1rem;
+}
+
+/* ─── Stats ──────────────────────────────────────────────── */
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 2.5rem auto 0;
+  max-width: 400px;
+  width: 100%;
+  padding: 1.75rem 2rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: rgba(15, 27, 45, 0.6);
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.statNumber {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  opacity: 0.55;
+  text-align: center;
+}
+
+.statDivider {
+  width: 1px;
+  height: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* ─── Next Up ────────────────────────────────────────────── */
+
+.nextUp {
+  margin: 2rem auto 0;
+  max-width: 400px;
+  width: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.nextLabel {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+.nextCity {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.nextDates {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  opacity: 0.7;
+}
+
+.nextHotel {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 300;
+  color: var(--cream-dim);
+  opacity: 0.55;
+}
+
+/* ─── Returned Home ──────────────────────────────────────── */
+
+.returnedMsg {
+  margin: 2rem auto 0;
+  max-width: 360px;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--cream-dim);
+  line-height: 1.8;
+  opacity: 0.75;
+  padding: 0 1.5rem;
+}
+
+/* ─── Share ──────────────────────────────────────────────── */
+
+.shareWrap {
+  margin-top: 2.5rem;
+}
+
+.shareBtn {
+  background: none;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 3px;
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  padding: 0.7rem 1.75rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.shareBtn:hover {
+  border-color: rgba(201, 168, 76, 0.7);
+  background: rgba(201, 168, 76, 0.06);
+}
+
+/* ─── Footer ─────────────────────────────────────────────── */
+
+.footer {
+  margin-top: 2.5rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+  opacity: 0.35;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 580px) {
+  .timeline {
+    padding: 0 1rem;
+  }
+
+  .stats {
+    margin: 2rem 1rem 0;
+    width: auto;
+  }
+
+  .stopCity {
+    font-size: 1.1rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+}

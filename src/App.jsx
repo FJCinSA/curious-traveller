@@ -8,6 +8,7 @@ import TripPage from './components/TripPage'
 import Checklist from './components/Checklist'
 import MemoryJarView from './components/MemoryJarView'
 import TheLetter from './components/TheLetter'
+import JourneyPage from './components/JourneyPage'
 import ThresholdMoment from './components/ThresholdMoment'
 import InstallPrompt from './components/InstallPrompt'
 import UpdateManager from './components/UpdateManager'
@@ -49,6 +50,9 @@ export default function App() {
     if (screen === 'letter') {
       return <TheLetter onClose={() => navigate('memoryjar')} />
     }
+    if (screen === 'journey') {
+      return <JourneyPage onClose={() => navigate('home')} />
+    }
     if (screen === 'home' || !currentTrip) {
       return (
         <Home
@@ -56,6 +60,7 @@ export default function App() {
           onSelect={navigate}
           onOpenChecklist={() => navigate('checklist')}
           onOpenMemoryJar={() => navigate('memoryjar')}
+          onOpenJourney={() => navigate('journey')}
         />
       )
     }

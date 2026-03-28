@@ -1,0 +1,188 @@
+/* ─── Section ────────────────────────────────────────────── */
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.5rem 4rem;
+}
+
+.inner {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem 2rem 1.75rem;
+  background: rgba(15, 27, 45, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* ─── Section Label ──────────────────────────────────────── */
+
+.sectionLabel {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.65;
+}
+
+/* ─── Track (horizontal dots + lines) ───────────────────── */
+
+.track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 640px;
+  /* The dots sit at top; labels hang below — center on dot row */
+}
+
+/* Each element in the track is either a stopCol or a connector */
+.trackRow {
+  display: contents; /* lets stopCol and connector sit directly in .track flex */
+}
+
+.stopCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+/* ─── Dots ───────────────────────────────────────────────── */
+
+.dot {
+  position: relative;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot_past {
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+.dot_current {
+  width: 14px;
+  height: 14px;
+  background: var(--gold);
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.6);
+}
+
+.dot_future {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 1.5px solid rgba(201, 168, 76, 0.35);
+}
+
+/* Pulsing ring around current dot */
+.pulseRing {
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(201, 168, 76, 0.5);
+  animation: ringPulse 2s ease-in-out infinite;
+}
+
+@keyframes ringPulse {
+  0%, 100% { opacity: 0.7; transform: scale(1);    }
+  50%       { opacity: 0;   transform: scale(1.5);  }
+}
+
+/* ─── Stop Labels ────────────────────────────────────────── */
+
+.stopLabel {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.label_past    { color: var(--gold); opacity: 0.45; }
+.label_current { color: var(--gold); opacity: 1; }
+.label_future  { color: var(--cream-dim); opacity: 0.4; }
+
+/* ─── Connecting Lines ───────────────────────────────────── */
+
+.connector {
+  flex: 1;
+  height: 1.5px;
+  background: rgba(201, 168, 76, 0.1);
+  /* Shift up to align with the dots (dot centre), accounting for label below */
+  margin-bottom: 1.35rem;
+  min-width: 8px;
+}
+
+.connectorGold {
+  background: rgba(201, 168, 76, 0.45);
+}
+
+/* ─── Status Line ────────────────────────────────────────── */
+
+.statusLine {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--cream-dim);
+  text-align: center;
+  line-height: 1.55;
+  max-width: 480px;
+  opacity: 0.8;
+}
+
+.afterTrip {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--cream-dim);
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* ─── View Button ────────────────────────────────────────── */
+
+.viewBtn {
+  background: none;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 3px;
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+  opacity: 0.75;
+}
+
+.viewBtn:hover {
+  border-color: rgba(201, 168, 76, 0.6);
+  opacity: 1;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 580px) {
+  .inner {
+    padding: 1.5rem 1rem 1.25rem;
+  }
+
+  .stopLabel {
+    font-size: 0.52rem;
+  }
+
+  .statusLine,
+  .afterTrip {
+    font-size: 0.88rem;
+  }
+}

@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { skylineMap } from './Skylines'
 import Greeting from './Greeting'
 import DawnNote from './DawnNote'
+import JourneyMap from './JourneyMap'
 import SerendipityButton from './SerendipityButton'
 import { useSlowTravel } from '../context/SlowTravelContext'
 import { TRIP_START, TRIP_END, dailyWhispers } from '../data/itinerary'
@@ -51,7 +52,7 @@ function getTripStatus(trip, today) {
   return 'future'
 }
 
-export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar }) {
+export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar, onOpenJourney }) {
   const today    = todayISO()
   const progress = getTripProgress(today)
   const { slowTravel, setSlowTravel } = useSlowTravel()
@@ -86,6 +87,14 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
             title="Before you leave"
           >
             ✓ Before you leave
+          </button>
+          <button
+            className={styles.topBtn}
+            onClick={onOpenJourney}
+            aria-label="Open journey tracker"
+            title="Journey"
+          >
+            ◎ Journey
           </button>
         </div>
         <div className={styles.topRight}>
@@ -207,6 +216,9 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
           })}
         </div>
       </main>
+
+      {/* Journey Map — live route tracker for family and friends */}
+      <JourneyMap onOpenJourney={onOpenJourney} />
 
       <footer className={styles.footer}>
         <p>The Curious Traveller · 2026</p>

@@ -43,6 +43,11 @@ export const serendipity = [
   'Haji Lane at 8am before the shops open. The murals are better without the crowds. The coffee shop on the corner opens early.',
   'Take the bumboat across the Singapore River to Boat Quay. It costs almost nothing. The view of the skyline from the water is the one the postcards never show.',
   'The rooftop infinity pool at MBS is accessible to hotel guests only — but the bar at 1-Altitude on the 63rd floor of One Raffles Place is open to everyone. Same sky. Better cocktails.',
+  'Ann Siang Hill at 7am before anyone arrives. The shophouses on that street have been painted the same colours since 1900. The cats own the street at that hour.',
+  'The Peranakan Museum on Armenian Street is free on Friday evenings after 6pm. The beaded shoes alone are worth an hour.',
+  'Lau Pa Sat hawker centre at midnight. The satay stalls set up on Boon Tat Street outside and grill on the pavement. This has been happening every night for thirty years.',
+  'Take the cable car from Mount Faber to Sentosa at sunset. The view of the port — one of the busiest in the world — is something no postcard shows.',
+  'The old Ford Factory in Bukit Timah is where the British surrendered Singapore in 1942. Small museum. Almost no visitors. The weight of that room is unforgettable.',
 ]
 
 export const days = [

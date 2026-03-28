@@ -65,6 +65,11 @@ export const serendipity = [
   'Noryangjin Fish Market at 4 AM is where Seoul\'s chefs come to buy. It\'s technically open to anyone. Watch the tuna auction. Eat raw sea urchin at a stall for ₩5,000. Almost nobody else from a hotel will ever do this.',
   'Seochon Village, just west of Gyeongbokgung, is where artists and writers lived during the Japanese occupation. The houses are tiny, the alleys are tight, and almost every second building has been there for a hundred years. It has none of the tourist traffic of Bukchon.',
   'The Han River at 6 AM, from any park, belongs entirely to the older Koreans doing tai chi and the fishermen. Rent a bicycle from the unmanned station and ride east until the city feels far away. It doesn\'t take long.',
+  'Seochon Village west of Gyeongbokgung is where artists and writers lived for 600 years. The alleys are narrow and the cafés are in converted hanok houses. This is the Seoul that Hongdae used to be before it became famous.',
+  'The path along Cheonggyecheon Stream at 6am before the city wakes. 8.4km of restored waterway through the centre of Seoul. At that hour it belongs only to you and the herons.',
+  'Noryangjin Fish Market at 4am. The wholesale auction starts before dawn. Tuna the size of a man sold in seconds. The market café opens at 3am and serves the freshest sashimi you will ever eat.',
+  'The War Memorial of Korea in Yongsan is free and almost always quiet on weekday mornings. The outdoor exhibition of aircraft and artillery takes an hour to walk. The indoor memorial takes longer and asks more of you.',
+  'Han River at 5am on a clear morning. Rent a bicycle from the riverside station — they open at 05:00. Ride east as the sun rises over the city. Seoul from the river at dawn is a completely different city from the one ten million people will wake up to in two hours.',
 ]
 
 export const days = [

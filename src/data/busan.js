@@ -65,6 +65,11 @@ export const serendipity = [
   'Choryang Ibagu-gil is a hillside village near the station where Korean War refugees built tin-roofed houses on the slope. It was preserved exactly as it was in the 1950s. Walk it early morning, before the visitors.',
   'Taejongdae cliffs at the southern tip of Yeongdo Island: the rock face drops straight into the sea. Rent a bicycle from the entrance and take the coastal road. The lighthouse at the end has been here since 1906.',
   'The pojangmacha tents along Gwangalli Beach after 10 PM serve gopchang (grilled intestines) and soju in the wind off the bay. The locals know every vendor by name. Sit at any tent and they will take care of you.',
+  'Choryang Ibagu-gil — the Talking Street — is a 168-step staircase painted with murals telling the stories of Korean War refugees. Go at dusk when the light falls sideways on the paintings.',
+  'The UN Memorial Cemetery in Tanggok is the only UN cemetery in the world. 2,300 soldiers from 11 countries. Perfectly maintained. Almost always empty. Walk it slowly.',
+  'Songdo Beach has a cable car that goes over the sea. It is not famous. It is not crowded. The view of the coastline from the gondola is one of the best in Busan.',
+  'The Bosu Book Street near Nampo Station has been selling second-hand books since the Korean War, when refugees sold their possessions to survive. The street has not changed since 1953.',
+  'Igidae Coastal Walk — 4.7km along cliffs above the sea between Oryukdo and Gwangalli. Almost no tourists. Local joggers and couples. The sea is directly below you the entire way.',
 ]
 
 export const days = [

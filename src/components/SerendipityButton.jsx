@@ -1,9 +1,8 @@
 // Serendipity Button — fixed gold compass, bottom right.
-// Tap: suggestion slides up immediately in a beautiful card.
-// Card background has a city-appropriate colour wash.
-// "Surprise me again" cycles to a new suggestion without closing.
-// theme prop: 'singapore' | 'busan' | 'jinhae' | 'gyeongju' | 'seoul' | ''
-import { useState, useCallback } from 'react'
+// Tracks every shown suggestion per city in localStorage.
+// Never repeats. When all suggestions exhausted, acknowledges honestly.
+// theme/cityId: 'singapore' | 'busan' | 'jinhae' | 'gyeongju' | 'seoul' | ''
+import { useState } from 'react'
 import styles from './SerendipityButton.module.css'
 
 const THEME_WASH = {
@@ -14,34 +13,69 @@ const THEME_WASH = {
   seoul:     styles.washAmber,
 }
 
+function getShown(cityId) {
+  try {
+    const raw = localStorage.getItem(`serendipity_shown_${cityId}`)
+    return raw ? JSON.parse(raw) : []
+  } catch { return [] }
+}
+
+function markShown(cityId, idx) {
+  try {
+    const shown = getShown(cityId)
+    if (!shown.includes(idx)) {
+      localStorage.setItem(
+        `serendipity_shown_${cityId}`,
+        JSON.stringify([...shown, idx])
+      )
+    }
+  } catch {}
+}
+
+function pickUnshown(total, cityId) {
+  const shown    = getShown(cityId)
+  const available = Array.from({ length: total }, (_, i) => i)
+    .filter(i => !shown.includes(i))
+  if (available.length === 0) return null
+  return available[Math.floor(Math.random() * available.length)]
+}
+
 export default function SerendipityButton({ serendipity = [], theme = '' }) {
-  const [open,  setOpen]  = useState(false)
-  const [index, setIndex] = useState(() =>
-    Math.floor(Math.random() * Math.max(serendipity.length, 1))
-  )
+  const [open,      setOpen]      = useState(false)
+  const [index,     setIndex]     = useState(null)
+  const [exhausted, setExhausted] = useState(false)
 
-  const pickNext = useCallback((current) => {
-    if (serendipity.length <= 1) return current
-    let next
-    do { next = Math.floor(Math.random() * serendipity.length) } while (next === current)
-    return next
-  }, [serendipity])
+  const cityId    = theme
+  const washClass = THEME_WASH[cityId] || ''
 
-  const handleOpen = useCallback(() => {
+  function pick() {
+    const next = pickUnshown(serendipity.length, cityId)
+    if (next === null) {
+      setExhausted(true)
+    } else {
+      markShown(cityId, next)
+      setIndex(next)
+      setExhausted(false)
+    }
+  }
+
+  const handleOpen = () => {
     if (serendipity.length === 0) return
-    setIndex(prev => pickNext(prev))
+    if (getShown(cityId).length >= serendipity.length) {
+      setExhausted(true)
+    } else {
+      pick()
+    }
     setOpen(true)
-  }, [serendipity, pickNext])
+  }
 
-  const handleSurprise = useCallback(() => {
-    setIndex(prev => pickNext(prev))
-  }, [pickNext])
-
-  const handleClose = () => setOpen(false)
+  const handleSurprise = () => pick()
+  const handleClose    = () => setOpen(false)
 
   if (serendipity.length === 0) return null
 
-  const washClass = THEME_WASH[theme] || ''
+  // Fresh check each render — getShown reads from localStorage
+  const hasMore = !exhausted && getShown(cityId).length < serendipity.length
 
   return (
     <>
@@ -70,17 +104,33 @@ export default function SerendipityButton({ serendipity = [], theme = '' }) {
               <span className={styles.cardIcon}>✦</span>
               <span className={styles.cardLabel}>Serendipity</span>
             </div>
-            <p className={styles.cardText}>{serendipity[index] || ''}</p>
-            <div className={styles.cardFooter}>
-              {serendipity.length > 1 && (
-                <button className={styles.surpriseBtn} onClick={handleSurprise}>
-                  Surprise me again
-                </button>
-              )}
-              <button className={styles.cardClose} onClick={handleClose}>
-                Close
-              </button>
-            </div>
+
+            {exhausted ? (
+              <>
+                <p className={`${styles.cardText} ${styles.exhaustedText}`}>
+                  You have found everything we know about this city's hidden corners.
+                  The rest you will discover yourself.
+                  That is the best kind of serendipity.
+                </p>
+                <div className={styles.cardFooter}>
+                  <button className={styles.cardClose} onClick={handleClose}>Close</button>
+                </div>
+              </>
+            ) : (
+              <>
+                <p className={styles.cardText}>
+                  {index !== null ? serendipity[index] : ''}
+                </p>
+                <div className={styles.cardFooter}>
+                  {hasMore && (
+                    <button className={styles.surpriseBtn} onClick={handleSurprise}>
+                      Surprise me again
+                    </button>
+                  )}
+                  <button className={styles.cardClose} onClick={handleClose}>Close</button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}

@@ -69,6 +69,11 @@ export const serendipity = [
   'The naval museum near the base entrance is free and almost always empty. There is a destroyer you can walk through.',
   'Find the small café on the canal bank — not the busy ones near the station, the quiet one further east with the wooden chairs. Sit there for an hour. Watch the petals fall into the water.',
   'Admiral Yi Sun-sin, Korea\'s greatest hero, is everywhere in Jinhae — it was his base. Find the small statue near the canal and read the inscription. His story is worth knowing.',
+  'The submarine at the naval museum is a real decommissioned Korean Navy vessel. You can walk through it completely. Free entry. Almost always empty.',
+  'Jinhae Junghang Port at dawn. The fishing boats return before 6am. The catch is sold directly on the dock. This has nothing to do with cherry blossoms and everything to do with real Korea.',
+  'The road along the naval base perimeter is lined with cherry trees for two kilometres. Nobody walks it because nobody knows it. The blossoms here are as good as the canal and you will have them entirely to yourselves.',
+  'Find the small green tea café on the hill above Yeojwacheon Stream. Local only. No sign in English. Green tea with rice cake. Sit at the window and watch the petals fall.',
+  'Jinhae has the highest concentration of cherry trees per square kilometre of any city on Earth. 360,000 trees in a city of 180,000 people. Two trees for every person who lives here. Stand still and let that number settle.',
 ]
 
 export const days = [

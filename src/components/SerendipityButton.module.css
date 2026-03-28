@@ -126,6 +126,11 @@
   margin-bottom: 1.75rem;
 }
 
+.exhaustedText {
+  color: var(--cream-dim);
+  opacity: 0.75;
+}
+
 /* ─── Footer row ─────────────────────────────────────────── */
 
 .cardFooter {

@@ -54,6 +54,11 @@ export const serendipity = [
   'The Gyeongju Traditional Market near the bus terminal sells ssambap — rice wrapped in leaves — from women who have been making it for forty years. Eat it standing up.',
   'Seokguram Grotto is thirty minutes above Bulguksa by footpath. Most visitors take the bus and miss the walk. The walk is better than the grotto.',
   'Anapji Pond at dawn before anyone arrives. The wild ducks own it completely at 6am. By 9am it belongs to the tour groups. You know which version to choose.',
+  'Yangdong Folk Village, 10km north of Gyeongju — a UNESCO listed village of 500-year-old Joseon dynasty houses still lived in today. The families who built them still live there. Almost no tourists make the trip.',
+  'The Gyeongju World Culture Expo Park at night is completely empty. The illuminated pagoda reflected in the pond is one of the most beautiful things in South Korea that nobody photographs.',
+  'Namsan Mountain behind the city has 122 Buddhist sites carved into the rock — temples, statues, carvings — scattered across the mountain over two kilometres. Pick any path and walk upward. You will find something extraordinary within 15 minutes.',
+  'The Gyeongju traditional market sells Ssambap — rice in leaf wraps — from women who have been making it since before the tourist buses came. Eat it standing at the stall. Pay what they ask without negotiating.',
+  'Sit at the edge of any tumuli mound at exactly dusk. The grass turns gold. The city disappears behind you. For one minute Gyeongju feels exactly as it did 1,500 years ago.',
 ]
 
 export const days = [

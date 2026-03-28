@@ -43,7 +43,7 @@ export default function NavigateButton({
           rel="noopener noreferrer"
           className={`${styles.navBtn} ${isFar ? styles.navBtnDim : ''}`}
         >
-          {isWalk ? '🚶 Walk' : '↗ Navigate'}
+          {isWalk ? 'Walk' : 'Navigate'}
         </a>
 
         {/* Kakao Taxi — Korean chapters, not walk distance.
@@ -55,7 +55,7 @@ export default function NavigateButton({
             rel="noopener noreferrer"
             className={`${styles.navBtn} ${isFar ? styles.navBtnProminent : ''}`}
           >
-            🚕 Kakao Taxi
+            Kakao Taxi
           </a>
         )}
 
@@ -67,7 +67,7 @@ export default function NavigateButton({
             rel="noopener noreferrer"
             className={`${styles.navBtn} ${isFar ? styles.navBtnProminent : ''}`}
           >
-            🚖 KRide
+            KRide
           </a>
         )}
 

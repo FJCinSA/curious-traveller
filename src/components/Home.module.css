@@ -413,23 +413,6 @@
   100% { opacity: 0; }
 }
 
-/* ─── Feature 6 — Tortoise ───────────────────────────────── */
-
-.tortoise {
-  position: fixed;
-  bottom: 5rem;
-  left: -2.5rem;
-  font-size: 2rem;
-  z-index: 100;
-  pointer-events: none;
-  animation: tortoiseWalk 3s linear forwards;
-}
-
-@keyframes tortoiseWalk {
-  from { transform: translateX(0); }
-  to   { transform: translateX(110vw); }
-}
-
 .almostHome {
   font-family: var(--font-serif);
   font-style: italic;
@@ -492,5 +475,4 @@
 @media (prefers-reduced-motion: reduce) {
   .memGlow  { animation: none; }
   .keptMsg  { animation: none; opacity: 0.9; }
-  .tortoise { animation: none; display: none; }
 }

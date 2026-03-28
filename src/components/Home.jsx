@@ -10,7 +10,6 @@ import CherryBlossoms from './CherryBlossoms'
 import JinhaeWarning from './JinhaeWarning'
 import NavDrawer from './NavDrawer'
 import SerendipityButton from './SerendipityButton'
-import { useSlowTravel } from '../context/SlowTravelContext'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { TRIP_START, TRIP_END, dailyWhispers } from '../data/itinerary'
 import { getHoneymoonDay } from '../data/journey'
@@ -54,7 +53,6 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
   const today        = todayISO()
   const progress     = getTripProgress(today)
   const honeymoonDay = getHoneymoonDay(today)
-  const { slowTravel } = useSlowTravel()
   const whisper      = dailyWhispers[today] || null
   const letterHint   = getLetterAnticipation(today)
   const isCherryDay  = today === '2026-04-03'
@@ -67,10 +65,6 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
   const prevMemoryCountRef          = useRef(memories.length)
   const [keptMsg,   setKeptMsg]     = useState(false)
   const [memGlow,   setMemGlow]     = useState(false)
-
-  // Feature 6 — slow travel tortoise
-  const prevSlowTravelRef             = useRef(slowTravel)
-  const [showTortoise, setShowTortoise] = useState(false)
 
   // Whisper fade-in
   const [whisperVisible, setWhisperVisible] = useState(false)
@@ -94,22 +88,6 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
     prevMemoryCountRef.current = memories.length
   }, [memories.length])
 
-  // Feature 6 — tortoise walks across once, the very first time slow travel is ever enabled
-  useEffect(() => {
-    if (slowTravel && !prevSlowTravelRef.current) {
-      try {
-        if (!localStorage.getItem('ct_tortoise_shown')) {
-          localStorage.setItem('ct_tortoise_shown', '1')
-          setShowTortoise(true)
-          const t = setTimeout(() => setShowTortoise(false), 3200)
-          prevSlowTravelRef.current = slowTravel
-          return () => clearTimeout(t)
-        }
-      } catch { /* storage unavailable */ }
-    }
-    prevSlowTravelRef.current = slowTravel
-  }, [slowTravel])
-
   const currentTrip = trips.find(t => getTripStatus(t, today) === 'current') || trips[0]
   const serendipity = currentTrip?.serendipity || []
 
@@ -121,11 +99,6 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
 
       {/* Jinhae amber warning — once at 18:00 on 2 April */}
       <JinhaeWarning />
-
-      {/* Feature 6 — tortoise walks across on slow travel toggle */}
-      {showTortoise && (
-        <span className={styles.tortoise} aria-hidden="true">🐢</span>
-      )}
 
       {/* Feature 3 — "Kept forever." toast */}
       {keptMsg && (

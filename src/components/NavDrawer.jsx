@@ -1,7 +1,6 @@
 // NavDrawer — slide-in menu from the right.
 // Accessed via the hamburger icon (top right of home screen).
 // Houses all navigation and settings that were previously cluttering the top bar.
-import { useSlowTravel } from '../context/SlowTravelContext'
 import styles from './NavDrawer.module.css'
 
 export default function NavDrawer({
@@ -12,8 +11,6 @@ export default function NavDrawer({
   onOpenMemoryJar,
   memoriesCount,
 }) {
-  const { slowTravel, setSlowTravel } = useSlowTravel()
-
   if (!open) return null
 
   // Close the drawer first, then open the feature
@@ -56,24 +53,6 @@ export default function NavDrawer({
             )}
           </button>
 
-          <div className={styles.divider} />
-
-          {/* Slow travel toggle — inline, no navigation */}
-          <div className={styles.toggleRow}>
-            <span className={`${styles.menuIcon} ${slowTravel ? styles.menuIconGlow : ''}`} aria-hidden="true">✦</span>
-            <span className={styles.toggleLabel}>Slow Travel Mode</span>
-            <label className={styles.toggle} aria-label={slowTravel ? 'Slow travel on' : 'Slow travel off'}>
-              <input
-                type="checkbox"
-                className={styles.toggleInput}
-                checked={slowTravel}
-                onChange={e => setSlowTravel(e.target.checked)}
-              />
-              <span className={styles.toggleSlider} />
-            </label>
-          </div>
-
-          <div className={styles.divider} />
 
         </nav>
 

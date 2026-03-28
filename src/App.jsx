@@ -11,6 +11,7 @@ import TheLetter from './components/TheLetter'
 import JourneyPage from './components/JourneyPage'
 import ThresholdMoment from './components/ThresholdMoment'
 import ArrivalMoment from './components/ArrivalMoment'
+import SlowTravelToggle from './components/SlowTravelToggle'
 import InstallPrompt from './components/InstallPrompt'
 import UpdateManager from './components/UpdateManager'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -86,6 +87,8 @@ export default function App() {
         <ThresholdMoment />
         {/* ArrivalMoment — city name fades in on first open in each new destination */}
         <ArrivalMoment />
+        {/* SlowTravelToggle — floating pill, bottom left, always one tap away */}
+        <SlowTravelToggle />
         <InstallPrompt />
         <UpdateManager />
       </div>

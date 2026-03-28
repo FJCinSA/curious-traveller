@@ -186,57 +186,71 @@
   opacity: 0.6;
 }
 
-/* ─── Navigate Here + Kakao Taxi ──────────────────────────── */
+/* ─── Navigation Row ──────────────────────────────────────── */
 
 .navRow {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.6rem;
   margin-top: 1.25rem;
   flex-wrap: wrap;
 }
 
-.navigate {
+/* Base style shared by Navigate, Kakao Taxi, and KRide */
+.navBtn {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.25rem;
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.67rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-  opacity: 0.65;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: opacity 0.15s ease, border-color 0.15s ease;
-}
-
-.navigate:hover {
-  opacity: 1;
-  border-bottom-color: var(--accent);
-}
-
-.kakaoTaxi {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--gold);
   opacity: 0.6;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 2px;
+  padding: 0.35rem 0.7rem;
   transition: opacity 0.15s ease, border-color 0.15s ease;
   cursor: pointer;
+  background: none;
+  white-space: nowrap;
 }
 
-.kakaoTaxi:hover {
+.navBtn:hover {
   opacity: 1;
-  border-bottom-color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* distance > 5 km — taxi buttons boosted to guide the right choice */
+.navBtnProminent {
+  opacity: 0.9;
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
+.navBtnProminent:hover {
+  opacity: 1;
+  border-color: var(--gold);
+}
+
+/* distance > 5 km — Navigate is visually secondary */
+.navBtnDim {
+  opacity: 0.25;
+  border-color: rgba(201, 168, 76, 0.1);
+}
+
+.navBtnDim:hover {
+  opacity: 0.5;
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+/* Stack vertically on very small screens */
+@media (max-width: 360px) {
+  .navRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* ─── Responsive ──────────────────────────────────────────── */

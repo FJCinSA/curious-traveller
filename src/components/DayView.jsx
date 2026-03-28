@@ -7,7 +7,7 @@
 import LocationCard from './LocationCard'
 import styles from './DayView.module.css'
 
-export default function DayView({ day }) {
+export default function DayView({ day, isKorean = false }) {
   return (
     <section className={styles.day}>
 
@@ -25,6 +25,7 @@ export default function DayView({ day }) {
           <LocationCard
             key={location.id}
             location={location}
+            isKorean={isKorean}
             // All other locations on this day — shown in the "What's nearby" panel
             siblings={day.locations.filter(l => l.id !== location.id)}
           />

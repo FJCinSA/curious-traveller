@@ -49,6 +49,28 @@ export default function GettingAround({ transport, tripId }) {
 
           <h3 className={styles.headline}>{transport.headline}</h3>
 
+          {/* Transport apps overview — Korean chapters only */}
+          {isKorean && (
+            <div className={styles.transportApps}>
+              <p className={styles.transportAppsIntro}>Three apps will get you anywhere in Korea.</p>
+              <div className={styles.transportAppsList}>
+                <div className={styles.transportApp}>
+                  <span className={styles.transportAppName}>Naver Maps</span>
+                  <span className={styles.transportAppDesc}>Better than Google Maps here — works offline, shows every bus and subway route, walking directions are exact.</span>
+                </div>
+                <div className={styles.transportApp}>
+                  <span className={styles.transportAppName}>Kakao Taxi</span>
+                  <span className={styles.transportAppDesc}>What every Korean uses — fastest pickup times, works everywhere in the country, metered and safe.</span>
+                </div>
+                <div className={styles.transportApp}>
+                  <span className={styles.transportAppName}>KRide</span>
+                  <span className={styles.transportAppDesc}>Built for foreign visitors — full English interface, drivers expect international passengers. Use this first, fall back to Kakao Taxi if no drivers are available.</span>
+                </div>
+              </div>
+              <p className={styles.transportAppsFootnote}>Download all three before you leave Singapore.</p>
+            </div>
+          )}
+
           {/* One-time Kakao T setup reminder — Korean chapters only, first visit */}
           {showKakaoReminder && (
             <div className={styles.kakaoReminder}>

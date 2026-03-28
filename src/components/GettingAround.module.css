@@ -68,6 +68,65 @@
   letter-spacing: -0.01em;
 }
 
+/* ─── Transport Apps Overview ────────────────────────────── */
+
+.transportApps {
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(201, 168, 76, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.transportAppsIntro {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--cream);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.transportAppsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.transportApp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.transportAppName {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.transportAppDesc {
+  font-family: var(--font-sans);
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: var(--cream-dim);
+  line-height: 1.6;
+}
+
+.transportAppsFootnote {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  opacity: 0.6;
+  font-style: italic;
+}
+
 /* ─── Kakao T Setup Reminder ─────────────────────────────── */
 
 .kakaoReminder {

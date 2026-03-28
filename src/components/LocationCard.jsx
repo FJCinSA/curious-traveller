@@ -3,20 +3,33 @@
 // Three expandable/action areas:
 //   "Tell me more" — history, suggested activities, and practical info
 //   "What's nearby" — other locations on the same day, from the siblings prop
-//   "Navigate here" — opens Naver Maps from current GPS to this location (if coords present)
+//   Navigation row — smart transport buttons based on GPS distance (Korean chapters)
 // Only one panel can be open at a time.
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useSlowTravel } from '../context/SlowTravelContext'
 import styles from './LocationCard.module.css'
 
-// Builds a Naver Maps directions URL from current GPS location to the given coordinates.
-// lng,lat order is correct for Naver Maps path parameters.
+const KRIDE_URL = 'https://www.kride.app'
+
+// Haversine formula — returns distance in kilometres between two lat/lng points
+function haversineKm(lat1, lng1, lat2, lng2) {
+  const R = 6371
+  const dLat = (lat2 - lat1) * Math.PI / 180
+  const dLng = (lng2 - lng1) * Math.PI / 180
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+    Math.sin(dLng / 2) ** 2
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+}
+
+// Naver Maps walking directions URL — lng,lat order is correct for Naver path params
 function buildNaverUrl(coords, name) {
   const { lat, lng } = coords
   return `https://map.naver.com/v5/directions/-/${lng},${lat},${encodeURIComponent(name)},-/walk`
 }
 
-// Builds a Kakao Taxi deep link. Falls back to kakaomobility.com if the app isn't installed.
+// Kakao Taxi deep link — falls back to kakaomobility.com if the app isn't installed
 function buildKakaoUrl(coords, name) {
   const { lat, lng } = coords
   return `kakaot://taxi?dest_name=${encodeURIComponent(name)}&dest_lat=${lat}&dest_lng=${lng}`
@@ -24,35 +37,55 @@ function buildKakaoUrl(coords, name) {
 
 function handleKakaoClick(e, coords, name) {
   e.preventDefault()
-  const deep = buildKakaoUrl(coords, name)
-  const fallback = 'https://www.kakaomobility.com'
-  // Attempt to open the app; if it doesn't launch within 1.5s, open the web fallback
   const start = Date.now()
-  window.location = deep
+  window.location = buildKakaoUrl(coords, name)
   setTimeout(() => {
     if (Date.now() - start < 2000) {
-      window.open(fallback, '_blank', 'noopener,noreferrer')
+      window.open('https://www.kakaomobility.com', '_blank', 'noopener,noreferrer')
     }
   }, 1500)
 }
 
-export default function LocationCard({ location, siblings = [] }) {
+export default function LocationCard({ location, siblings = [], isKorean = false }) {
   const [showMore, setShowMore]     = useState(false)
   const [showNearby, setShowNearby] = useState(false)
   const { slowTravel } = useSlowTravel()
   const leadText = slowTravel && location.slowNote ? location.slowNote : location.wow
 
-  // Toggle "Tell me more" — closes "What's nearby" if it was open
+  // GPS-based transport mode — Korean chapters only.
+  // null  = GPS not yet available → show all buttons with equal weight
+  // walk  = < 1 km → show only Walk (Naver Maps)
+  // near  = 1–5 km → show all three buttons equally
+  // far   = > 5 km → taxi buttons prominent, Navigate dimmed
+  const [transportMode, setTransportMode] = useState(null)
+
+  useEffect(() => {
+    if (!isKorean || !location.coords || !navigator.geolocation) return
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        const km = haversineKm(
+          coords.latitude, coords.longitude,
+          location.coords.lat, location.coords.lng
+        )
+        setTransportMode(km < 1 ? 'walk' : km <= 5 ? 'near' : 'far')
+      },
+      () => { /* GPS denied or unavailable — buttons shown equally */ },
+      { timeout: 8000, maximumAge: 120000 }
+    )
+  }, []) // intentionally run once on mount; maximumAge means subsequent calls are free
+
   const toggleMore = () => {
     setShowMore(v => !v)
     if (!showMore) setShowNearby(false)
   }
 
-  // Toggle "What's nearby" — closes "Tell me more" if it was open
   const toggleNearby = () => {
     setShowNearby(v => !v)
     if (!showNearby) setShowMore(false)
   }
+
+  const isWalk = transportMode === 'walk'
+  const isFar  = transportMode === 'far'
 
   return (
     <article className={styles.card} style={{ '--accent': location.accent }}>
@@ -123,24 +156,43 @@ export default function LocationCard({ location, siblings = [] }) {
         </div>
       )}
 
-      {/* Navigation row — Naver Maps + Kakao Taxi, shown when coords are present */}
+      {/* Navigation row — smart transport suggestions based on GPS distance */}
       {location.coords && (
         <div className={styles.navRow}>
+
+          {/* Navigate / Walk — always shown; label changes based on distance */}
           <a
             href={buildNaverUrl(location.coords, location.name)}
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.navigate}
+            className={`${styles.navBtn} ${isFar ? styles.navBtnDim : ''}`}
           >
-            Navigate here ↗
+            {isWalk ? '🚶 Walk' : '↗ Navigate'}
           </a>
-          <a
-            href={buildKakaoUrl(location.coords, location.name)}
-            onClick={(e) => handleKakaoClick(e, location.coords, location.name)}
-            className={styles.kakaoTaxi}
-          >
-            🚕 Kakao Taxi
-          </a>
+
+          {/* Kakao Taxi — hidden when under 1 km */}
+          {!isWalk && (
+            <a
+              href={buildKakaoUrl(location.coords, location.name)}
+              onClick={(e) => handleKakaoClick(e, location.coords, location.name)}
+              className={`${styles.navBtn} ${isFar ? styles.navBtnProminent : ''}`}
+            >
+              🚕 Kakao Taxi
+            </a>
+          )}
+
+          {/* KRide — Korean chapters only, hidden when under 1 km */}
+          {isKorean && !isWalk && (
+            <a
+              href={KRIDE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.navBtn} ${isFar ? styles.navBtnProminent : ''}`}
+            >
+              🚖 KRide
+            </a>
+          )}
+
         </div>
       )}
 

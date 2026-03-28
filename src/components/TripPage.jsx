@@ -21,9 +21,12 @@ function nightsLabel(nights) {
   return 'nights'
 }
 
+const KOREAN_CHAPTERS = ['busan', 'jinhae', 'gyeongju', 'seoul']
+
 export default function TripPage({ trip, onBack }) {
   // null = show all days; a day.id = show only that day
   const [activeDay, setActiveDay] = useState(null)
+  const isKorean = KOREAN_CHAPTERS.includes(trip.id)
   const visibleDays = activeDay === null
     ? trip.days
     : trip.days.filter(d => d.id === activeDay)
@@ -92,7 +95,7 @@ export default function TripPage({ trip, onBack }) {
         {/* Day sections */}
         <div className={styles.days}>
           {visibleDays.map(day => (
-            <DayView key={day.id} day={day} />
+            <DayView key={day.id} day={day} isKorean={isKorean} />
           ))}
         </div>
 

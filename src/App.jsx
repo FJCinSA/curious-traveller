@@ -10,6 +10,7 @@ import MemoryJarView from './components/MemoryJarView'
 import TheLetter from './components/TheLetter'
 import JourneyPage from './components/JourneyPage'
 import ThresholdMoment from './components/ThresholdMoment'
+import ArrivalMoment from './components/ArrivalMoment'
 import InstallPrompt from './components/InstallPrompt'
 import UpdateManager from './components/UpdateManager'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -83,6 +84,8 @@ export default function App() {
         </ErrorBoundary>
         {/* ThresholdMoment — full-screen overlay on city transition days */}
         <ThresholdMoment />
+        {/* ArrivalMoment — city name fades in on first open in each new destination */}
+        <ArrivalMoment />
         <InstallPrompt />
         <UpdateManager />
       </div>

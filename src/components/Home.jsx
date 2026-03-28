@@ -7,6 +7,7 @@ import Greeting from './Greeting'
 import DawnNote from './DawnNote'
 import JourneyMap from './JourneyMap'
 import CherryBlossoms from './CherryBlossoms'
+import JinhaeWarning from './JinhaeWarning'
 import NavDrawer from './NavDrawer'
 import SerendipityButton from './SerendipityButton'
 import { useSlowTravel } from '../context/SlowTravelContext'
@@ -42,10 +43,10 @@ function getTripStatus(trip, today) {
 }
 
 function getLetterAnticipation(today) {
-  if (today >= '2026-04-16') return 'Your letter is waiting. 💌'
+  if (today >= '2026-04-16') return 'Your letter is waiting.'
   if (today === '2026-04-15') return 'Tonight your companion writes your letter.'
-  if (today === '2026-04-14') return '1 day until your letter is written.'
-  if (today === '2026-04-13') return '2 days until your letter is written.'
+  if (today === '2026-04-14') return 'Tomorrow your companion writes your letter.'
+  if (today === '2026-04-13') return 'In two days, your companion writes your letter.'
   return null
 }
 
@@ -93,13 +94,18 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
     prevMemoryCountRef.current = memories.length
   }, [memories.length])
 
-  // Feature 6 — tortoise on slow travel toggle-on
+  // Feature 6 — tortoise walks across once, the very first time slow travel is ever enabled
   useEffect(() => {
     if (slowTravel && !prevSlowTravelRef.current) {
-      setShowTortoise(true)
-      const t = setTimeout(() => setShowTortoise(false), 3200)
-      prevSlowTravelRef.current = slowTravel
-      return () => clearTimeout(t)
+      try {
+        if (!localStorage.getItem('ct_tortoise_shown')) {
+          localStorage.setItem('ct_tortoise_shown', '1')
+          setShowTortoise(true)
+          const t = setTimeout(() => setShowTortoise(false), 3200)
+          prevSlowTravelRef.current = slowTravel
+          return () => clearTimeout(t)
+        }
+      } catch { /* storage unavailable */ }
     }
     prevSlowTravelRef.current = slowTravel
   }, [slowTravel])
@@ -112,6 +118,9 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
 
       {/* Feature 1 — cherry blossoms on 3 April */}
       {isCherryDay && <CherryBlossoms />}
+
+      {/* Jinhae amber warning — once at 18:00 on 2 April */}
+      <JinhaeWarning />
 
       {/* Feature 6 — tortoise walks across on slow travel toggle */}
       {showTortoise && (
@@ -170,12 +179,7 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
           {progress.pct !== null && (
             <div className={styles.progressTrack}>
               <div
-                className={[
-                  styles.progressFill,
-                  honeymoonDay === 5  ? styles.milestone5  : '',
-                  honeymoonDay === 10 ? styles.milestone10 : '',
-                  honeymoonDay === 17 ? styles.milestone17 : '',
-                ].filter(Boolean).join(' ')}
+                className={styles.progressFill}
                 style={{ width: `${progress.pct}%` }}
               />
             </div>
@@ -192,17 +196,15 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
             const SkylineSVG  = skylineMap[trip.theme]
             const status      = getTripStatus(trip, today)
             const totalStops  = trip.days.reduce((n, d) => n + d.locations.length, 0)
-            const isArrivalDay = status === 'current' && today === trip.startDate
 
             return (
               <button
                 key={trip.id}
                 className={[
                   styles.card,
-                  trip.wide            ? styles.wide       : '',
-                  status === 'past'    ? styles.past       : '',
-                  status === 'current' ? styles.current    : '',
-                  isArrivalDay         ? styles.arrivalDay : '',
+                  trip.wide            ? styles.wide    : '',
+                  status === 'past'    ? styles.past    : '',
+                  status === 'current' ? styles.current : '',
                 ].filter(Boolean).join(' ')}
                 onClick={() => onSelect(trip.id)}
                 aria-label={`Open ${trip.city} chapter`}

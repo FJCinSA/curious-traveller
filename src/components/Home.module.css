@@ -357,17 +357,6 @@
   margin-top: 0.3rem;
 }
 
-/* ─── Feature 2 — Arrival Day: border fades in quietly ──── */
-
-.arrivalDay {
-  animation: arrivalBorderIn 2s ease forwards;
-}
-
-@keyframes arrivalBorderIn {
-  from { border-color: rgba(201, 168, 76, 0);    box-shadow: none; }
-  to   { border-color: rgba(201, 168, 76, 0.55); box-shadow: 0 0 18px rgba(201, 168, 76, 0.08); }
-}
-
 /* ─── Feature 3 — Memory Jar Glow: one gentle pulse ─────── */
 
 .memGlow {
@@ -437,14 +426,6 @@
   to   { transform: translateX(110vw); }
 }
 
-/* ─── Feature 7 — Progress Milestones: text only, no animation */
-
-.milestone5,
-.milestone10,
-.milestone17 {
-  /* No animation — the words are enough */
-}
-
 .almostHome {
   font-family: var(--font-serif);
   font-style: italic;
@@ -505,8 +486,7 @@
 /* ─── Reduced motion ─────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
-  .arrivalDay { animation: none; }
-  .memGlow    { animation: none; }
-  .keptMsg    { animation: none; opacity: 0.9; }
-  .tortoise   { animation: none; display: none; }
+  .memGlow  { animation: none; }
+  .keptMsg  { animation: none; opacity: 0.9; }
+  .tortoise { animation: none; display: none; }
 }

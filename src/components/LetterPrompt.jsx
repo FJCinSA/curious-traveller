@@ -78,11 +78,9 @@ export default function LetterPrompt() {
 
   if (loading) {
     return (
-      <div className={styles.wrap}>
-        <div className={styles.loadingState}>
-          <CompassRose className={styles.spinner} />
-          <p className={styles.loadingText}>Your companion is writing…</p>
-        </div>
+      <div className={styles.fullScreen}>
+        <CompassRose className={styles.spinner} />
+        <p className={styles.loadingText}>Your companion is writing…</p>
       </div>
     )
   }

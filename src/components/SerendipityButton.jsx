@@ -1,5 +1,5 @@
 // Serendipity Button — fixed gold compass, bottom right.
-// Tap: button spins 380ms, then the suggestion slides up in a beautiful card.
+// Tap: suggestion slides up immediately in a beautiful card.
 // Card background has a city-appropriate colour wash.
 // "Surprise me again" cycles to a new suggestion without closing.
 // theme prop: 'singapore' | 'busan' | 'jinhae' | 'gyeongju' | 'seoul' | ''
@@ -15,9 +15,8 @@ const THEME_WASH = {
 }
 
 export default function SerendipityButton({ serendipity = [], theme = '' }) {
-  const [open,     setOpen]     = useState(false)
-  const [spinning, setSpinning] = useState(false)
-  const [index,    setIndex]    = useState(() =>
+  const [open,  setOpen]  = useState(false)
+  const [index, setIndex] = useState(() =>
     Math.floor(Math.random() * Math.max(serendipity.length, 1))
   )
 
@@ -29,15 +28,10 @@ export default function SerendipityButton({ serendipity = [], theme = '' }) {
   }, [serendipity])
 
   const handleOpen = useCallback(() => {
-    if (serendipity.length === 0 || spinning) return
-    const next = pickNext(index)
-    setIndex(next)
-    setSpinning(true)
-    setTimeout(() => {
-      setSpinning(false)
-      setOpen(true)
-    }, 380)
-  }, [serendipity, index, spinning, pickNext])
+    if (serendipity.length === 0) return
+    setIndex(prev => pickNext(prev))
+    setOpen(true)
+  }, [serendipity, pickNext])
 
   const handleSurprise = useCallback(() => {
     setIndex(prev => pickNext(prev))
@@ -52,7 +46,7 @@ export default function SerendipityButton({ serendipity = [], theme = '' }) {
   return (
     <>
       <button
-        className={`${styles.btn} ${spinning ? styles.spinning : ''}`}
+        className={styles.btn}
         onClick={handleOpen}
         aria-label="Serendipity — an unexpected suggestion"
         title="Something unexpected"

@@ -1,0 +1,85 @@
+/* ─── Overlay ─────────────────────────────────────────────── */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 490;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: overlayIn 3s ease forwards;
+}
+
+@keyframes overlayIn {
+  0%   { opacity: 0; }
+  30%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+/* ─── Content ─────────────────────────────────────────────── */
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  animation: contentSettle 3s ease forwards;
+}
+
+@keyframes contentSettle {
+  0%   { opacity: 0; transform: translateY(28px); }
+  40%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.arriving {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.65;
+}
+
+.city {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 14vw, 7rem);
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.flag {
+  font-size: 2rem;
+  line-height: 1;
+  margin-top: 0.25rem;
+}
+
+.tap {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  opacity: 0;
+  margin-top: 2.5rem;
+  animation: tapAppear 1s ease 3s forwards;
+}
+
+@keyframes tapAppear {
+  from { opacity: 0; }
+  to   { opacity: 0.3; }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay  { animation: none; }
+  .content  { animation: none; }
+  .tap      { animation: none; opacity: 0.3; }
+}

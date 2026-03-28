@@ -103,3 +103,21 @@
   0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
   50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
 }
+
+/* ─── Letter-by-letter city name (Jinhae, 3 April) ──────── */
+
+.cityChar {
+  display: inline-block;
+  opacity: 0;
+  animation: letterReveal 0.5s ease forwards;
+}
+
+@keyframes letterReveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cityChar { animation: none; opacity: 1; }
+  @keyframes bounce { 0%, 100%, 50% { transform: translateX(-50%) translateY(0); opacity: 0.6; } }
+}

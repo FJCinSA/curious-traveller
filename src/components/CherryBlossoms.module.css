@@ -1,0 +1,45 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 3; /* above background, below all interactive content */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -18px;
+  border-radius: 50% 0 50% 0; /* irregular leaf/petal shape */
+  animation: fall linear infinite;
+  will-change: transform, opacity;
+}
+
+.pink {
+  background: radial-gradient(ellipse at 40% 40%, #ffd6e0 20%, #f9a8d4 80%);
+}
+
+.white {
+  background: radial-gradient(ellipse at 40% 40%, rgba(255,255,255,0.92) 20%, rgba(249,168,212,0.55) 80%);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-18px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(110vh) translateX(var(--drift)) rotate(var(--rotate));
+    opacity: 0;
+  }
+}
+
+/* Honour the user's system preference — disable all motion */
+@media (prefers-reduced-motion: reduce) {
+  .layer { display: none; }
+}

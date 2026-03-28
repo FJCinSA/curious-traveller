@@ -6,6 +6,26 @@ export { TRIP_START, TRIP_END }
 
 // The six stops of the honeymoon route.
 // Jinhae is a day trip from Busan and does not appear as a separate stop.
+// Distances from Potchefstroom, South Africa (nearest major departure point)
+export const DISTANCES_FROM_HOME = {
+  johannesburg: 0,
+  singapore:    9200,
+  busan:        9400,
+  gyeongju:     9350,
+  seoul:        9300,
+  home:         0,
+}
+
+// City facts used in Family View on the Journey Tracker
+export const CITY_FACTS = {
+  johannesburg: 'A golden city at the start of an extraordinary journey.',
+  singapore:    'One of the most extraordinary cities on Earth — a tropical island that became a nation through sheer will and vision.',
+  busan:        "South Korea's second city, where mountains meet the sea and every meal is an adventure you won't forget.",
+  gyeongju:     'The ancient capital of the Silla Kingdom — a city that has been beautiful for a thousand years.',
+  seoul:        'Ten million people, one extraordinary capital, and some of the most extraordinary food, history, and beauty on the planet.',
+  home:         'Back where it all began — carrying eighteen days of extraordinary beauty.',
+}
+
 export const JOURNEY_STOPS = [
   {
     id: 'johannesburg',

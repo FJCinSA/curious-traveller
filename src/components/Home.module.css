@@ -380,6 +380,145 @@
   margin-top: 0.3rem;
 }
 
+/* ─── Feature 2 — Arrival Day Burst ─────────────────────── */
+
+.arrivalDay {
+  animation: arrivalBurst 2.5s ease-out forwards;
+}
+
+@keyframes arrivalBurst {
+  0%   { box-shadow: 0 0 0 0px rgba(201, 168, 76, 0.75), 0 0 20px rgba(201, 168, 76, 0.12); }
+  25%  { box-shadow: 0 0 0 8px rgba(201, 168, 76, 0.4),  0 0 35px rgba(201, 168, 76, 0.25); }
+  60%  { box-shadow: 0 0 0 20px rgba(201, 168, 76, 0.1), 0 0 40px rgba(201, 168, 76, 0.15); }
+  100% { box-shadow: 0 0 0 30px rgba(201, 168, 76, 0),   0 0 20px rgba(201, 168, 76, 0.12); }
+}
+
+/* ─── Feature 3 — Memory Jar Glow ───────────────────────── */
+
+.memGlow {
+  animation: memPulse 2s ease-in-out;
+  border-color: rgba(201, 168, 76, 0.7) !important;
+  color: var(--gold) !important;
+}
+
+@keyframes memPulse {
+  0%   { box-shadow: none; }
+  16%  { box-shadow: 0 0 8px rgba(201, 168, 76, 0.5); }
+  33%  { box-shadow: none; }
+  50%  { box-shadow: 0 0 8px rgba(201, 168, 76, 0.5); }
+  66%  { box-shadow: none; }
+  83%  { box-shadow: 0 0 8px rgba(201, 168, 76, 0.5); }
+  100% { box-shadow: none; }
+}
+
+.memBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 14px;
+  height: 14px;
+  background: var(--gold);
+  color: var(--bg);
+  font-size: 0.5rem;
+  font-weight: 700;
+  border-radius: 7px;
+  padding: 0 3px;
+  margin-left: 0.3rem;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.keptMsg {
+  position: fixed;
+  top: 3.5rem;
+  right: 1.25rem;
+  z-index: 30;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--gold);
+  opacity: 0;
+  animation: keptFade 3s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes keptFade {
+  0%   { opacity: 0; transform: translateY(-4px); }
+  15%  { opacity: 0.9; transform: translateY(0); }
+  70%  { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+
+/* ─── Feature 6 — Tortoise ───────────────────────────────── */
+
+.tortoise {
+  position: fixed;
+  bottom: 5rem;
+  left: -2.5rem;
+  font-size: 2rem;
+  z-index: 100;
+  pointer-events: none;
+  animation: tortoiseWalk 3s linear forwards;
+}
+
+@keyframes tortoiseWalk {
+  from { transform: translateX(0); }
+  to   { transform: translateX(110vw); }
+}
+
+/* ─── Feature 7 — Progress Milestones ───────────────────── */
+
+.milestone5 {
+  animation: shimmerBurst 1.5s ease-in-out;
+}
+
+.milestone10 {
+  background: linear-gradient(90deg, var(--gold) 0%, #ffe87a 50%, var(--gold) 100%);
+  background-size: 200% 100%;
+  animation: goldSweep 2.5s ease-in-out infinite;
+}
+
+.milestone17 {
+  animation: goldGlow 2s ease-in-out infinite;
+}
+
+@keyframes shimmerBurst {
+  0%   { filter: brightness(1); }
+  40%  { filter: brightness(2); }
+  100% { filter: brightness(1); }
+}
+
+@keyframes goldSweep {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@keyframes goldGlow {
+  0%, 100% { opacity: 0.7; box-shadow: none; }
+  50%       { opacity: 1;   box-shadow: 0 0 10px rgba(201, 168, 76, 0.6); }
+}
+
+.almostHome {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-top: -0.2rem;
+}
+
+/* ─── Feature 8 — Letter Anticipation ───────────────────── */
+
+.letterHint {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+  opacity: 0.6;
+  letter-spacing: 0.01em;
+  margin-top: 0.2rem;
+}
+
 /* ─── Responsive ─────────────────────────────────────────── */
 
 @media (max-width: 900px) {
@@ -414,4 +553,16 @@
   .cardCity {
     font-size: 1.5rem;
   }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .arrivalDay  { animation: none; }
+  .memGlow     { animation: none; }
+  .keptMsg     { animation: none; opacity: 0.9; }
+  .tortoise    { animation: none; display: none; }
+  .milestone5  { animation: none; }
+  .milestone10 { animation: none; }
+  .milestone17 { animation: none; }
 }

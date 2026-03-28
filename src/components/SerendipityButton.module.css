@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
@@ -25,6 +25,18 @@
 
 .btn:active {
   transform: scale(0.96);
+}
+
+/* Spin animation triggered on tap */
+.spinning {
+  animation: compassSpin 0.38s ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes compassSpin {
+  0%   { transform: rotate(0deg)   scale(1);    }
+  40%  { transform: rotate(200deg) scale(1.12); }
+  100% { transform: rotate(360deg) scale(1);    }
 }
 
 .rose {
@@ -39,11 +51,11 @@
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(8, 14, 26, 0.85);
+  background: rgba(8, 14, 26, 0.88);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 0 1.5rem 2rem;
   animation: fadeIn 0.2s ease;
 }
 
@@ -57,16 +69,29 @@
 .card {
   background: var(--surface);
   border: 1px solid rgba(201, 168, 76, 0.3);
-  border-radius: 6px;
+  border-radius: 8px 8px 6px 6px;
   padding: 2rem;
-  max-width: 480px;
+  max-width: 520px;
   width: 100%;
-  animation: slideUp 0.25s ease;
+  animation: slideUp 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background 0.3s ease;
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* City-appropriate colour washes */
+.washTeal   { background: color-mix(in srgb, var(--surface) 88%, rgba(34,211,238,1) 12%); }
+.washPink   { background: color-mix(in srgb, var(--surface) 88%, rgba(249,168,212,1) 12%); }
+.washAmber  { background: color-mix(in srgb, var(--surface) 88%, rgba(251,191,36,1) 12%); }
+
+/* Fallback for browsers without color-mix */
+@supports not (background: color-mix(in srgb, red 50%, blue 50%)) {
+  .washTeal  { background: #0f1e2f; }
+  .washPink  { background: #1a1020; }
+  .washAmber { background: #1a1508; }
 }
 
 .cardHeader {
@@ -101,6 +126,34 @@
   margin-bottom: 1.75rem;
 }
 
+/* ─── Footer row ─────────────────────────────────────────── */
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.surpriseBtn {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(201, 168, 76, 0.4);
+}
+
+.surpriseBtn:hover { opacity: 1; }
+
 .cardClose {
   font-family: var(--font-sans);
   font-size: 0.72rem;
@@ -118,4 +171,12 @@
 .cardClose:hover {
   color: var(--gold);
   border-color: rgba(201, 168, 76, 0.4);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .spinning  { animation: none; }
+  .card      { animation: none; }
+  .overlay   { animation: none; }
 }

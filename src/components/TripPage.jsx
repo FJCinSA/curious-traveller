@@ -111,7 +111,7 @@ export default function TripPage({ trip, onBack }) {
       </main>
 
       {/* Serendipity button — fixed bottom-right, city-specific suggestions */}
-      <SerendipityButton serendipity={trip.serendipity || []} />
+      <SerendipityButton serendipity={trip.serendipity || []} theme={trip.theme || ''} />
 
       <footer className={styles.footer}>
         <p>The Curious Traveller &nbsp;·&nbsp; {trip.city} 2026</p>

@@ -38,6 +38,22 @@
   opacity: 0.92;
 }
 
+/* Cherry blossom day — soft warm glow */
+.cherryGlow {
+  background: rgba(249, 168, 212, 0.07);
+  border-color: rgba(249, 168, 212, 0.35);
+  animation: dawnGlowPulse 3s ease-in-out infinite;
+}
+
+@keyframes dawnGlowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(249, 168, 212, 0.10); }
+  50%       { box-shadow: 0 0 40px rgba(249, 168, 212, 0.22); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cherryGlow { animation: none; }
+}
+
 @media (max-width: 580px) {
   .wrap {
     margin: 0 1.5rem 2rem;

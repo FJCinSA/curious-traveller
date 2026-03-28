@@ -164,7 +164,7 @@ export const dailyWhispers = {
   '2026-03-31': 'The world is large and you are in it.',
   '2026-04-01': 'A city built on water and will and wonder.',
   '2026-04-02': 'The sea has been waiting for you.',
-  '2026-04-03': 'Some days are made of the kind of beauty that changes people.',
+  '2026-04-03': 'Today is the day the world turns pink.',
   '2026-04-04': 'A city reveals itself slowly to those who let it.',
   '2026-04-05': 'The best meals are eaten standing up in markets.',
   '2026-04-06': 'Some places hold their history lightly. This one holds it deep.',

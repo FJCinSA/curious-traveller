@@ -35,8 +35,10 @@ export default function DawnNote() {
   // No note for this date, or already past 11am
   if (!note || past11) return null
 
+  const isCherryDay = today === '2026-04-03'
+
   return (
-    <div className={`${styles.wrap} ${visible ? styles.visible : ''}`}>
+    <div className={`${styles.wrap} ${visible ? styles.visible : ''} ${isCherryDay ? styles.cherryGlow : ''}`}>
       <span className={styles.icon} aria-hidden="true">✦</span>
       <p className={styles.text}>{note}</p>
     </div>

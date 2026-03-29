@@ -95,7 +95,7 @@ export default function TripPage({ trip, onBack }) {
         {/* Day sections */}
         <div className={styles.days}>
           {visibleDays.map(day => (
-            <DayView key={day.id} day={day} isKorean={isKorean} />
+            <DayView key={day.id} day={day} isKorean={isKorean} city={trip.city} country={trip.country} />
           ))}
         </div>
 

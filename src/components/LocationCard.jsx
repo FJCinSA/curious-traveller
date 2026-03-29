@@ -10,6 +10,25 @@ import { useSlowTravel } from '../context/SlowTravelContext'
 import styles from './LocationCard.module.css'
 import NavigateButton from './NavigateButton'
 
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December']
+
+function formatDateNice(iso) {
+  const [y, m, d] = iso.split('-').map(Number)
+  return `${d} ${MONTHS[m - 1]} ${y}`
+}
+
+function buildCaption(location, city, country) {
+  const date = formatDateNice(new Date().toISOString().slice(0, 10))
+  const tag = s => '#' + s.replace(/\s+/g, '')
+  return [
+    `${location.name}, ${city}.`,
+    location.wow,
+    location.history,
+    `Visited ${date}. 🌸`,
+    `${tag(city)} ${tag(country)} #CuriousTraveller`,
+  ].filter(Boolean).join('\n')
+}
+
 // Haversine formula — returns distance in kilometres between two lat/lng points
 function haversineKm(lat1, lng1, lat2, lng2) {
   const R = 6371
@@ -22,10 +41,21 @@ function haversineKm(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
 }
 
-export default function LocationCard({ location, siblings = [], isKorean = false }) {
+export default function LocationCard({ location, siblings = [], isKorean = false, city = '', country = '' }) {
   const [showMore, setShowMore]     = useState(false)
   const [showNearby, setShowNearby] = useState(false)
+  const [copied, setCopied]         = useState(false)
   const { slowTravel } = useSlowTravel()
+
+  function handleCopyCaption() {
+    try {
+      const caption = buildCaption(location, city, country)
+      navigator.clipboard.writeText(caption).then(() => {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2100)
+      }).catch(() => {})
+    } catch {}
+  }
   const leadText = slowTravel && location.slowNote ? location.slowNote : location.wow
 
   // GPS-based transport mode — Korean chapters only.
@@ -141,6 +171,24 @@ export default function LocationCard({ location, siblings = [], isKorean = false
         isWalk={isWalk}
         isFar={isFar}
       />
+
+      {/* Copy Caption — social media caption to clipboard */}
+      <div className={styles.captionRow}>
+        <button
+          className={styles.captionBtn}
+          onClick={handleCopyCaption}
+          aria-label="Copy social media caption to clipboard"
+        >
+          Copy Caption
+        </button>
+      </div>
+
+      {/* Toast — appears for 2 seconds after copy */}
+      {copied && (
+        <p className={styles.copyToast} aria-live="polite">
+          Caption copied. Ready to share. 🌸
+        </p>
+      )}
 
     </article>
   )

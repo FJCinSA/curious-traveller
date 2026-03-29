@@ -137,6 +137,7 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
           </p>
         )}
         <p className={styles.companionLine}>A wise and patient companion for the curious.</p>
+        <p className={styles.mantra}>The world is large and you are in it.</p>
       </header>
 
       <DawnNote />
@@ -219,6 +220,7 @@ export default function Home({ trips, onSelect, onOpenChecklist, onOpenMemoryJar
       <JourneyMap onOpenJourney={onOpenJourney} />
 
       <footer className={styles.footer}>
+        <p className={styles.footerMantra}>The world is large and you are in it.</p>
         <p>The Curious Traveller · 2026</p>
         <p className={styles.footerCredit}>Built with care. 27 March 2026.</p>
       </footer>

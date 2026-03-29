@@ -57,7 +57,7 @@ export default defineConfig({
       workbox: {
         // Incrementing cacheId forces all devices to abandon the old precache and
         // install a fresh one — busts stale service worker caches on existing installs.
-        cacheId: 'curious-traveller-v2',
+        cacheId: 'curious-traveller-v3',
         // Precache all built assets
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
         // Cache Google Fonts

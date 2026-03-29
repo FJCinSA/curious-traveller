@@ -154,6 +154,12 @@
   letter-spacing: 0.03em;
 }
 
+@media (min-width: 769px) {
+  .back {
+    left: calc(var(--col-offset) + 1.25rem);
+  }
+}
+
 @media (max-width: 600px) {
   .main {
     padding: 0 1rem 3rem;

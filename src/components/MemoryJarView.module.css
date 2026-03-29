@@ -292,6 +292,18 @@
   color: var(--gold);
 }
 
+/* ─── Desktop fixed-element repositioning ─────────────────── */
+
+@media (min-width: 769px) {
+  .back {
+    left: calc(var(--col-offset) + 1.25rem);
+  }
+
+  .letterBtn {
+    right: calc(var(--col-offset) + 1.25rem);
+  }
+}
+
 /* ─── Hold Hint ──────────────────────────────────────────── */
 
 .holdHint {

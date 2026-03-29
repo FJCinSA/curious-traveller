@@ -52,6 +52,18 @@ body {
   max-width: 100vw;
 }
 
+/* ─── Desktop phone-frame layout ─────────────────────────── */
+
+@media (min-width: 769px) {
+  :root {
+    --col-offset: calc(50vw - 240px);
+  }
+
+  body {
+    background: #02060f;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }

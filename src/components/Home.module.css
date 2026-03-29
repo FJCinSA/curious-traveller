@@ -492,6 +492,14 @@
   }
 }
 
+/* ─── Desktop fixed-element repositioning ─────────────────── */
+
+@media (min-width: 769px) {
+  .menuBtn {
+    right: calc(var(--col-offset) + 1rem);
+  }
+}
+
 /* ─── Reduced motion ─────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {

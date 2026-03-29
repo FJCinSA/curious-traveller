@@ -78,6 +78,8 @@
   color: var(--gold);
   line-height: 1.5;
   margin-bottom: 1.75rem;
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 .para {
@@ -89,6 +91,8 @@
   letter-spacing: 0.01em;
   margin-bottom: 1.4rem;
   white-space: pre-wrap;
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 .para:last-child {

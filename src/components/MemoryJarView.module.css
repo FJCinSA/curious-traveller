@@ -164,6 +164,8 @@
   line-height: 1.7;
   letter-spacing: 0.01em;
   opacity: 0.75;
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 /* ─── Dual-layer display ─────────────────────────────────── */
@@ -195,6 +197,8 @@
   color: var(--gold);
   line-height: 1.8;
   letter-spacing: 0.01em;
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 /* ─── Regenerate button ──────────────────────────────────── */
